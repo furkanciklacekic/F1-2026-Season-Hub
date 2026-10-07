@@ -122,14 +122,16 @@
   .info { padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1; }
   .info h3 { font-size: 1.02rem; margin-bottom: 2px; }
   .info .meta { color: var(--muted); font-size: .83rem; }
-  .info .win { margin-top: 8px; font-size: .86rem; display: flex; align-items: center; gap: 8px; }
+  .info .win { margin: 8px 0 12px; font-size: .86rem; display: flex; align-items: center; gap: 8px; }
   .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; display: inline-block; }
   .watch-btn {
-    margin-top: 12px; width: 100%; border: 1px solid var(--line); border-radius: 9px; padding: 8px;
+    width: 100%; border: 1px solid var(--line); border-radius: 9px; padding: 8px;
     background: #101217; color: var(--muted); font-weight: 700; cursor: pointer; font-size: .85rem;
   }
   .watch-btn:hover { color: var(--text); }
   .watch-btn.done { border-color: rgba(54,214,123,.35); background: rgba(54,214,123,.1); color: #8af0b5; }
+  .card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .card-actions .watch-btn { flex: 1 1 auto; width: auto; white-space: nowrap; padding: 8px 12px; }
 
   /* Calendar */
   .list { display: grid; gap: 10px; }
@@ -156,6 +158,7 @@
   .team .head h3 { flex: 1; font-size: 1.1rem; }
   .team .pts { font-weight: 800; font-size: 1.2rem; }
   .team .pts small { color: var(--muted); font-weight: 400; font-size: .75rem; }
+  .team .car { display: block; width: 100%; height: 90px; object-fit: contain; margin: 2px 0 8px; }
   .drv { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid var(--line); font-size: .93rem; }
   .drv span:first-child { color: var(--muted); }
   table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 10px; overflow: hidden; }
@@ -168,11 +171,11 @@
   .drv-link:hover, .drv-link:focus-visible { color: var(--text); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; }
 
   /* Driver profile */
-  dialog#driver {
+  dialog#modal {
     width: min(880px, calc(100% - 24px)); max-height: calc(100vh - 32px); padding: 0; margin: auto;
     border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--text); overflow: auto;
   }
-  dialog#driver::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(3px); }
+  dialog#modal::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(3px); }
   .dp { display: grid; grid-template-columns: 300px 1fr; }
   .dp-photo {
     position: relative; min-height: 360px; overflow: hidden; display: flex; align-items: center; justify-content: center;
@@ -197,9 +200,25 @@
   .dp-stats div { background: #0a0b0e; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
   .dp-stats dd { font-size: 1.15rem; font-weight: 800; }
   .dp-link { margin-top: 20px; }
+  .dp-car { display: block; width: 100%; max-width: 520px; max-height: 150px; object-fit: contain; }
+
+  /* Race results */
+  .rr { padding: 22px 24px 24px; }
+  .rr-head small { color: var(--muted); font-size: .8rem; }
+  .rr-head h3 { font-size: 1.6rem; line-height: 1.15; margin: 2px 40px 12px 0; }
+  .rr-head .btn { margin-bottom: 16px; }
+  .rr table { background: #0f1015; }
+  .rr td, .rr th { padding: 8px 10px; font-size: .88rem; white-space: nowrap; }
+  .rr tbody tr:nth-child(-n+3) td:first-child { color: var(--red); font-weight: 800; }
+  .rr .fl { display: inline-block; margin-left: 6px; padding: 0 5px; border-radius: 4px; background: #8e3bd6; color: #fff; font-size: .66rem; font-weight: 800; vertical-align: middle; }
+  .rr .drv-link { font-weight: 700; color: var(--text); }
   @media (max-width: 680px) {
     .dp { grid-template-columns: 1fr; }
     .dp-photo { min-height: 280px; }
+    .rr { padding: 18px 12px; }
+    .rr .opt { display: none; }
+    .rr td, .rr th { padding: 7px 6px; font-size: .82rem; }
+    .rr th, .rr td { white-space: normal; }
   }
 
   @media (max-width: 560px) {
@@ -261,7 +280,7 @@
 
 </main>
 
-<dialog id="driver" aria-labelledby="dp-name"></dialog>
+<dialog id="modal"></dialog>
 
 <script src="data.js"></script>
 <script>
@@ -339,7 +358,10 @@ function renderHighlights() {
           <h3>${esc(r.gp)}</h3>
           <div class="meta">${fmtDate(r.start)} · ${esc(r.circuit)}</div>
           ${result}
-          <button class="watch-btn${done ? " done" : ""}" data-toggle="${r.n}">${done ? "✓ Watched" : "○ Mark as watched"}</button>
+          <div class="card-actions">
+            <button class="watch-btn${done ? " done" : ""}" data-toggle="${r.n}">${done ? "✓ Watched" : "○ Mark as watched"}</button>
+            ${r.results ? `<button class="watch-btn" data-results="${r.n}">Results</button>` : ""}
+          </div>
         </div>
       </div>`;
   }).join("");
@@ -359,8 +381,8 @@ function renderHighlights() {
   }
 }
 
-// Opening a video marks it as watched; the button can undo it.
-document.getElementById("highlights").addEventListener("click", e => {
+// Opening a video (on a card or in the results dialog) marks it as watched; the button can undo it.
+document.addEventListener("click", e => {
   const link = e.target.closest("a[data-n]");
   if (link) {
     watched.add(Number(link.dataset.n));
@@ -368,6 +390,8 @@ document.getElementById("highlights").addEventListener("click", e => {
     setTimeout(renderHighlights, 0); // re-render after the link has opened
     return;
   }
+  const res = e.target.closest("button[data-results]");
+  if (res) return openResults(Number(res.dataset.results));
   const btn = e.target.closest("button[data-toggle]");
   if (btn) {
     const n = Number(btn.dataset.toggle);
@@ -441,6 +465,7 @@ function renderTeams() {
           <h3>${esc(t.name)}</h3>
           <div class="pts">${t.pts} <small>pts</small></div>
         </div>
+        ${t.car ? `<img class="car" src="${esc(t.car)}" alt="${esc(t.name)} 2026 car" loading="lazy" onerror="this.remove()">` : ""}
         ${roster.map(d => `<div class="drv"><span>${driverLink(d)} <small>(${d.nat})</small></span><b>${d.pts}</b></div>`).join("")}
       </div>`;
   }).join("");
@@ -457,7 +482,7 @@ function renderTeams() {
 
 /* ============ DRIVER PROFILE ============ */
 
-const dialog = document.getElementById("driver");
+const dialog = document.getElementById("modal");
 
 function driverLink(d) { return `<button class="drv-link" data-driver="${esc(d.id)}">${esc(d.name)}</button>`; }
 function ordinal(n) { const s = ["th", "st", "nd", "rd"], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
@@ -495,14 +520,56 @@ function openDriver(id) {
         <h3 id="dp-name">${esc(d.name)}</h3>
         <div class="dp-team"><span class="dot" style="background:${teamColor(d.team)}"></span>${esc(team.name)}</div>
         <dl class="dp-facts">${facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+        ${team.car ? `<h4>2026 Car</h4><img class="dp-car" src="${esc(team.car)}" alt="${esc(team.name)} 2026 car" onerror="this.previousElementSibling.remove(); this.remove()">` : ""}
         <h4>2026 Season</h4>
         ${statGrid(season)}
         ${p.career?.length ? `<h4>Career</h4>${statGrid(p.career)}` : ""}
         ${p.url ? `<a class="btn dp-link" href="${esc(p.url)}" target="_blank" rel="noopener">Full profile on formula1.com ↗</a>` : ""}
       </div>
     </div>`;
-  dialog.showModal();
+  showDialog("dp-name");
+}
+
+function showDialog(labelId) {
+  dialog.setAttribute("aria-labelledby", labelId);
+  if (!dialog.open) dialog.showModal();
   dialog.scrollTop = 0;
+}
+
+/* ============ RACE RESULTS ============ */
+
+function openResults(n) {
+  const r = RACES.find(x => x.n === n);
+  if (!r?.results) return;
+  const number = id => DRIVERS.find(d => d.id === id)?.number || "";
+  const name = x => DRIVERS.some(d => d.id === x.id) ? driverLink(x) : esc(x.name);
+  dialog.innerHTML = `
+    <button class="dp-close" aria-label="Close">×</button>
+    <div class="rr">
+      <div class="rr-head">
+        <small>Round ${r.n} · ${fmtDate(r.start)} · ${esc(r.circuit)}</small>
+        <h3 id="rr-title">${esc(r.gp)}</h3>
+        ${r.yt ? `<a class="btn" href="${videoUrl(r)}" target="_blank" rel="noopener" data-n="${r.n}">▶ Watch highlights</a>` : ""}
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th class="num">Pos.</th><th class="num opt">No.</th><th>Driver</th><th class="opt">Team</th><th class="num opt">Grid</th><th class="num opt">Laps</th><th>Time / Retired</th><th class="num">Pts.</th></tr></thead>
+          <tbody>${r.results.map(x => `
+            <tr>
+              <td class="num">${esc(x.pos)}</td>
+              <td class="num opt">${esc(number(x.id))}</td>
+              <td><span class="dot" style="background:${teamColor(x.team)};margin-right:8px"></span>${name(x)}</td>
+              <td class="opt">${esc(teamOf(x.team).name)}</td>
+              <td class="num opt">${x.grid ?? (x.pos === "DNS" ? "—" : "PL")}</td>
+              <td class="num opt">${x.laps}</td>
+              <td>${esc(x.time)}${x.fastestLap ? '<span class="fl" title="Fastest lap">FL</span>' : ""}</td>
+              <td class="num"><b>${x.pts}</b></td>
+            </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+  showDialog("rr-title");
 }
 
 document.getElementById("teams").addEventListener("click", e => {
@@ -511,7 +578,9 @@ document.getElementById("teams").addEventListener("click", e => {
 });
 // Close with the × button or a click on the backdrop (Esc is handled by <dialog>).
 dialog.addEventListener("click", e => {
-  if (e.target === dialog || e.target.closest(".dp-close")) dialog.close();
+  if (e.target === dialog || e.target.closest(".dp-close")) return dialog.close();
+  const b = e.target.closest("button[data-driver]");
+  if (b) openDriver(b.dataset.driver);
 });
 
 /* ============ GENERAL ============ */

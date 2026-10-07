@@ -11,6 +11,30 @@ window.F1DATA = {
       "start": "2026-03-08T04:00:00Z",
       "fp1": "2026-03-06T01:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 58, "time": "1:23:06.801", "pts": 25 },
+        { "pos": "2", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 58, "time": "+2.974s", "pts": 18 },
+        { "pos": "3", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 58, "time": "+15.519s", "pts": 15 },
+        { "pos": "4", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 7, "laps": 58, "time": "+16.144s", "pts": 12 },
+        { "pos": "5", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 6, "laps": 58, "time": "+51.741s", "pts": 10 },
+        { "pos": "6", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 20, "laps": 58, "time": "+54.617s", "pts": 8, "fastestLap": true },
+        { "pos": "7", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 12, "laps": 57, "time": "+4.593s", "pts": 6 },
+        { "pos": "8", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 9, "laps": 57, "time": "+11.816s", "pts": 4 },
+        { "pos": "9", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 10, "laps": 57, "time": "+12.775s", "pts": 2 },
+        { "pos": "10", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 14, "laps": 57, "time": "+29.027s", "pts": 1 },
+        { "pos": "11", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 13, "laps": 57, "time": "+29.850s", "pts": 0 },
+        { "pos": "12", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 15, "laps": 57, "time": "+56.075s", "pts": 0 },
+        { "pos": "13", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 8, "laps": 57, "time": "+57.173s", "pts": 0 },
+        { "pos": "14", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 16, "laps": 56, "time": "+8.487s", "pts": 0 },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 21, "laps": 56, "time": "+36.886s", "pts": 0 },
+        { "pos": "16", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 18, "laps": 55, "time": "+7.850s", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 43, "time": "+15 Laps", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 17, "laps": 21, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 15, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 3, "laps": 10, "time": "DNF", "pts": 0 },
+        { "pos": "DNS", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 5, "laps": 0, "time": "DNS", "pts": 0 },
+        { "pos": "DNS", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 0, "time": "DNS", "pts": 0 }
+      ],
       "winner": "George Russell",
       "team": "mercedes",
       "yt": "lL_d84cN1UY"
@@ -22,6 +46,30 @@ window.F1DATA = {
       "start": "2026-03-15T07:00:00Z",
       "fp1": "2026-03-13T03:30:00Z",
       "sprint": true,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 56, "time": "1:33:15.607", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 2, "laps": 56, "time": "+5.515s", "pts": 18 },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 3, "laps": 56, "time": "+25.267s", "pts": 15 },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 56, "time": "+28.894s", "pts": 12 },
+        { "pos": "5", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 10, "laps": 56, "time": "+57.268s", "pts": 10 },
+        { "pos": "6", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 7, "laps": 56, "time": "+59.647s", "pts": 8 },
+        { "pos": "7", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 14, "laps": 56, "time": "+1:20.588s", "pts": 6 },
+        { "pos": "8", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 9, "laps": 56, "time": "+1:27.247s", "pts": 4 },
+        { "pos": "9", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 17, "laps": 55, "time": "+11.673s", "pts": 2 },
+        { "pos": "10", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 12, "laps": 55, "time": "+12.403s", "pts": 1 },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 55, "time": "+21.109s", "pts": 0 },
+        { "pos": "12", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 15, "laps": 55, "time": "+22.828s", "pts": 0 },
+        { "pos": "13", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 55, "time": "+56.158s", "pts": 0 },
+        { "pos": "14", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 13, "laps": 55, "time": "+1:06.256s", "pts": 0 },
+        { "pos": "15", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 21, "laps": 55, "time": "+1:14.641s", "pts": 0 },
+        { "pos": "NC", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 8, "laps": 45, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 18, "laps": 32, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 20, "laps": 9, "time": "DNF", "pts": 0 },
+        { "pos": "DNS", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 5, "laps": 0, "time": "DNS", "pts": 0 },
+        { "pos": "DNS", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 6, "laps": 0, "time": "DNS", "pts": 0 },
+        { "pos": "DNS", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 16, "laps": 0, "time": "DNS", "pts": 0 },
+        { "pos": "DNS", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 22, "laps": 0, "time": "DNS", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "t8HpVlineX4"
@@ -33,6 +81,30 @@ window.F1DATA = {
       "start": "2026-03-29T05:00:00Z",
       "fp1": "2026-03-27T02:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 53, "time": "1:28:03.403", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 3, "laps": 53, "time": "+13.722s", "pts": 18 },
+        { "pos": "3", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 53, "time": "+15.270s", "pts": 15 },
+        { "pos": "4", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 2, "laps": 53, "time": "+15.754s", "pts": 12 },
+        { "pos": "5", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 5, "laps": 53, "time": "+23.479s", "pts": 10 },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 6, "laps": 53, "time": "+25.037s", "pts": 8 },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 7, "laps": 53, "time": "+32.340s", "pts": 6 },
+        { "pos": "8", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 11, "laps": 53, "time": "+32.677s", "pts": 4 },
+        { "pos": "9", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 14, "laps": 53, "time": "+50.180s", "pts": 2 },
+        { "pos": "10", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 12, "laps": 53, "time": "+51.216s", "pts": 1 },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 13, "laps": 53, "time": "+52.280s", "pts": 0 },
+        { "pos": "12", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 8, "laps": 53, "time": "+56.154s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 9, "laps": 53, "time": "+59.078s", "pts": 0 },
+        { "pos": "14", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 10, "laps": 53, "time": "+59.848s", "pts": 0 },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 16, "laps": 53, "time": "+1:05.008s", "pts": 0 },
+        { "pos": "16", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 15, "laps": 53, "time": "+1:05.773s", "pts": 0 },
+        { "pos": "17", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 19, "laps": 53, "time": "+1:32.453s", "pts": 0 },
+        { "pos": "18", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 21, "laps": 52, "time": "+26.548s", "pts": 0 },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 20, "laps": 52, "time": "+42.621s", "pts": 0 },
+        { "pos": "20", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 17, "laps": 51, "time": "+5.067s", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 30, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 18, "laps": 20, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "oAtYfF0_4-I"
@@ -44,6 +116,30 @@ window.F1DATA = {
       "start": "2026-05-03T20:00:00Z",
       "fp1": "2026-05-01T16:00:00Z",
       "sprint": true,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 57, "time": "1:33:19.273", "pts": 25 },
+        { "pos": "2", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 4, "laps": 57, "time": "+3.264s", "pts": 18, "fastestLap": true },
+        { "pos": "3", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 57, "time": "+27.092s", "pts": 15 },
+        { "pos": "4", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 5, "laps": 57, "time": "+43.051s", "pts": 12 },
+        { "pos": "5", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 2, "laps": 57, "time": "+48.949s", "pts": 10 },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 6, "laps": 57, "time": "+53.753s", "pts": 8 },
+        { "pos": "7", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 8, "laps": 57, "time": "+1:01.871s", "pts": 6 },
+        { "pos": "8", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 3, "laps": 57, "time": "+1:04.245s", "pts": 4 },
+        { "pos": "9", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 13, "laps": 57, "time": "+1:22.072s", "pts": 2 },
+        { "pos": "10", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 15, "laps": 57, "time": "+1:30.972s", "pts": 1 },
+        { "pos": "11", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 12, "laps": 56, "time": "+6.400s", "pts": 0 },
+        { "pos": "12", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 21, "laps": 56, "time": "+9.353s", "pts": 0 },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 14, "laps": 56, "time": "+13.873s", "pts": 0 },
+        { "pos": "14", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 16, "laps": 56, "time": "+44.781s", "pts": 0 },
+        { "pos": "15", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 17, "laps": 56, "time": "+1:14.964s", "pts": 0 },
+        { "pos": "16", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 56, "time": "+1:17.513s", "pts": 0 },
+        { "pos": "17", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 18, "laps": 56, "time": "+1:22.631s", "pts": 0 },
+        { "pos": "18", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 55, "time": "+1:08.255s", "pts": 0 },
+        { "pos": "NC", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 10, "laps": 7, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 11, "laps": 6, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 9, "laps": 4, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 22, "laps": 4, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "5gYys4GL7S0"
@@ -55,6 +151,30 @@ window.F1DATA = {
       "start": "2026-05-24T20:00:00Z",
       "fp1": "2026-05-22T16:30:00Z",
       "sprint": true,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 68, "time": "1:28:15.758", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 5, "laps": 68, "time": "+10.768s", "pts": 18 },
+        { "pos": "3", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 6, "laps": 68, "time": "+11.276s", "pts": 15 },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 8, "laps": 68, "time": "+44.151s", "pts": 12 },
+        { "pos": "5", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 7, "laps": 67, "time": "+5.033s", "pts": 10 },
+        { "pos": "6", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 10, "laps": 67, "time": "+19.510s", "pts": 8 },
+        { "pos": "7", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 12, "laps": 67, "time": "+34.235s", "pts": 6 },
+        { "pos": "8", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 14, "laps": 67, "time": "+34.572s", "pts": 4 },
+        { "pos": "9", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 15, "laps": 67, "time": "+58.014s", "pts": 2 },
+        { "pos": "10", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 16, "laps": 67, "time": "+59.049s", "pts": 1 },
+        { "pos": "11", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 4, "laps": 66, "time": "+12.699s", "pts": 0 },
+        { "pos": "12", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 66, "time": "+14.182s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 13, "laps": 66, "time": "+21.156s", "pts": 0 },
+        { "pos": "14", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 17, "laps": 66, "time": "+1:08.635s", "pts": 0 },
+        { "pos": "15", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 64, "time": "+18.397s", "pts": 0 },
+        { "pos": "16", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 21, "laps": 64, "time": "+53.390s", "pts": 0 },
+        { "pos": "NC", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 39, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 3, "laps": 38, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 29, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 19, "laps": 23, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 18, "laps": 11, "time": "DNF", "pts": 0 },
+        { "pos": "DNS", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 9, "laps": 0, "time": "DNS", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "QrRh2vOJQbw"
@@ -66,6 +186,30 @@ window.F1DATA = {
       "start": "2026-06-07T13:00:00Z",
       "fp1": "2026-06-05T11:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 78, "time": "2:23:31.243", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 3, "laps": 78, "time": "+6.271s", "pts": 18 },
+        { "pos": "3", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 5, "laps": 78, "time": "+23.394s", "pts": 15 },
+        { "pos": "4", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 78, "time": "+24.261s", "pts": 12 },
+        { "pos": "5", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 10, "laps": 78, "time": "+26.553s", "pts": 10 },
+        { "pos": "6", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 15, "laps": 78, "time": "+29.010s", "pts": 8 },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 9, "laps": 78, "time": "+30.369s", "pts": 6 },
+        { "pos": "8", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 11, "laps": 78, "time": "+33.413s", "pts": 4 },
+        { "pos": "9", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 17, "laps": 78, "time": "+37.140s", "pts": 2 },
+        { "pos": "10", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 21, "laps": 78, "time": "+41.899s", "pts": 1 },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 16, "laps": 78, "time": "+42.748s", "pts": 0 },
+        { "pos": "12", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 6, "laps": 78, "time": "+43.353s", "pts": 0 },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 13, "laps": 78, "time": "+44.102s", "pts": 0 },
+        { "pos": "14", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 14, "laps": 78, "time": "+48.964s", "pts": 0 },
+        { "pos": "15", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 18, "laps": 78, "time": "+49.153s", "pts": 0 },
+        { "pos": "16", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 12, "laps": 70, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 64, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 56, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 8, "laps": 43, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 19, "laps": 27, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 20, "laps": 15, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 2, "laps": 0, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "ipOT9ruRobc"
@@ -77,6 +221,30 @@ window.F1DATA = {
       "start": "2026-06-14T13:00:00Z",
       "fp1": "2026-06-12T11:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 2, "laps": 66, "time": "1:32:28.105", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 66, "time": "+19.561s", "pts": 18 },
+        { "pos": "3", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 4, "laps": 66, "time": "+23.719s", "pts": 15 },
+        { "pos": "4", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 5, "laps": 66, "time": "+40.497s", "pts": 12 },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 66, "time": "+58.661s", "pts": 10 },
+        { "pos": "6", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 6, "laps": 65, "time": "+24.627s", "pts": 8 },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 14, "laps": 65, "time": "+55.789s", "pts": 6 },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 8, "laps": 65, "time": "+1:12.224s", "pts": 4 },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 11, "laps": 65, "time": "+1:18.074s", "pts": 2 },
+        { "pos": "10", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 13, "laps": 65, "time": "+1:19.867s", "pts": 1 },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 12, "laps": 64, "time": "+26.687s", "pts": 0 },
+        { "pos": "12", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 16, "laps": 64, "time": "+27.866s", "pts": 0 },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 17, "laps": 64, "time": "+59.149s", "pts": 0 },
+        { "pos": "14", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 19, "laps": 63, "time": "+7.769s", "pts": 0 },
+        { "pos": "15", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 10, "laps": 62, "time": "DNF", "pts": 0 },
+        { "pos": "16", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 3, "laps": 61, "time": "DNF", "pts": 0 },
+        { "pos": "17", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 15, "laps": 60, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 18, "laps": 55, "time": "+11 Laps", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 22, "laps": 37, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 9, "laps": 29, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 20, "laps": 15, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 21, "laps": 5, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Lewis Hamilton",
       "team": "ferrari",
       "yt": "Ey8j_BlLvFM"
@@ -88,6 +256,30 @@ window.F1DATA = {
       "start": "2026-06-28T13:00:00Z",
       "fp1": "2026-06-26T11:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 71, "time": "1:26:37.979", "pts": 25 },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 5, "laps": 71, "time": "+1.611s", "pts": 18 },
+        { "pos": "3", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 4, "laps": 71, "time": "+1.986s", "pts": 15, "fastestLap": true },
+        { "pos": "4", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 71, "time": "+21.809s", "pts": 12 },
+        { "pos": "5", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 3, "laps": 71, "time": "+26.393s", "pts": 10 },
+        { "pos": "6", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 8, "laps": 71, "time": "+29.399s", "pts": 8 },
+        { "pos": "7", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 6, "laps": 71, "time": "+31.505s", "pts": 6 },
+        { "pos": "8", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 2, "laps": 71, "time": "+45.659s", "pts": 4 },
+        { "pos": "9", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 9, "laps": 70, "time": "+15.334s", "pts": 2 },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 10, "laps": 70, "time": "+19.030s", "pts": 1 },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 12, "laps": 70, "time": "+30.315s", "pts": 0 },
+        { "pos": "12", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 14, "laps": 70, "time": "+38.484s", "pts": 0 },
+        { "pos": "13", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 11, "laps": 70, "time": "+39.251s", "pts": 0 },
+        { "pos": "14", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 13, "laps": 70, "time": "+1:02.677s", "pts": 0 },
+        { "pos": "15", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 16, "laps": 70, "time": "+1:05.647s", "pts": 0 },
+        { "pos": "16", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 15, "laps": 69, "time": "+25.932s", "pts": 0 },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 18, "laps": 69, "time": "+28.082s", "pts": 0 },
+        { "pos": "18", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 21, "laps": 68, "time": "+4.833s", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 45, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 17, "laps": 23, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 19, "laps": 4, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 20, "laps": 2, "time": "DNF", "pts": 0 }
+      ],
       "winner": "George Russell",
       "team": "mercedes",
       "yt": "usP9O0zFVaA"
@@ -99,6 +291,30 @@ window.F1DATA = {
       "start": "2026-07-05T14:00:00Z",
       "fp1": "2026-07-03T11:30:00Z",
       "sprint": true,
+      "results": [
+        { "pos": "1", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 2, "laps": 52, "time": "1:27:11.335", "pts": 25 },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 4, "laps": 52, "time": "+0.427s", "pts": 18 },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 3, "laps": 52, "time": "+0.772s", "pts": 15 },
+        { "pos": "4", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 6, "laps": 52, "time": "+1.149s", "pts": 12 },
+        { "pos": "5", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 5, "laps": 52, "time": "+1.598s", "pts": 10 },
+        { "pos": "6", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 10, "laps": 52, "time": "+2.023s", "pts": 8 },
+        { "pos": "7", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 9, "laps": 52, "time": "+2.214s", "pts": 6 },
+        { "pos": "8", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 11, "laps": 52, "time": "+2.413s", "pts": 4 },
+        { "pos": "9", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 19, "laps": 52, "time": "+3.229s", "pts": 2 },
+        { "pos": "10", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 15, "laps": 52, "time": "+3.445s", "pts": 1 },
+        { "pos": "11", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 8, "laps": 52, "time": "+4.014s", "pts": 0 },
+        { "pos": "12", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 13, "laps": 52, "time": "+5.245s", "pts": 0 },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 17, "laps": 52, "time": "+5.512s", "pts": 0 },
+        { "pos": "14", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 52, "time": "+7.403s", "pts": 0 },
+        { "pos": "15", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 52, "time": "+8.005s", "pts": 0, "fastestLap": true },
+        { "pos": "16", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 18, "laps": 52, "time": "+8.162s", "pts": 0 },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 14, "laps": 51, "time": "+4.391s", "pts": 0 },
+        { "pos": "18", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 21, "laps": 51, "time": "+4.980s", "pts": 0 },
+        { "pos": "19", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 51, "time": "+6.750s", "pts": 0 },
+        { "pos": "20", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 7, "laps": 46, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 16, "laps": 43, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 12, "laps": 36, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Charles Leclerc",
       "team": "ferrari",
       "yt": "rnjmSOUYVp8"
@@ -110,6 +326,30 @@ window.F1DATA = {
       "start": "2026-07-19T13:00:00Z",
       "fp1": "2026-07-17T11:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 44, "time": "1:24:42.479", "pts": 25 },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 44, "time": "+1.952s", "pts": 18 },
+        { "pos": "3", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 2, "laps": 44, "time": "+11.586s", "pts": 15 },
+        { "pos": "4", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 5, "laps": 44, "time": "+17.245s", "pts": 12 },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 6, "laps": 44, "time": "+18.988s", "pts": 10 },
+        { "pos": "6", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 21, "laps": 44, "time": "+23.307s", "pts": 8 },
+        { "pos": "7", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 13, "laps": 44, "time": "+24.014s", "pts": 6, "fastestLap": true },
+        { "pos": "8", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 8, "laps": 44, "time": "+49.140s", "pts": 4 },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 7, "laps": 44, "time": "+50.406s", "pts": 2 },
+        { "pos": "10", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 11, "laps": 44, "time": "+1:16.037s", "pts": 1 },
+        { "pos": "11", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 10, "laps": 44, "time": "+1:16.991s", "pts": 0 },
+        { "pos": "12", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 9, "laps": 44, "time": "+1:17.523s", "pts": 0 },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 12, "laps": 44, "time": "+1:18.348s", "pts": 0 },
+        { "pos": "14", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 14, "laps": 44, "time": "+1:34.465s", "pts": 0 },
+        { "pos": "15", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 15, "laps": 44, "time": "+1:44.684s", "pts": 0 },
+        { "pos": "16", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 19, "laps": 44, "time": "+1:45.856s", "pts": 0 },
+        { "pos": "17", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 16, "laps": 44, "time": "+1:50.925s", "pts": 0 },
+        { "pos": "18", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 17, "laps": 43, "time": "+1:00.979s", "pts": 0 },
+        { "pos": "19", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 22, "laps": 42, "time": "+20.848s", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 20, "laps": 25, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 18, "laps": 13, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 3, "laps": 0, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "I6RfOY_7leA"
@@ -121,6 +361,30 @@ window.F1DATA = {
       "start": "2026-07-26T13:00:00Z",
       "fp1": "2026-07-24T11:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 1, "laps": 70, "time": "1:39:56.180", "pts": 25 },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 4, "laps": 70, "time": "+15.080s", "pts": 18 },
+        { "pos": "3", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 7, "laps": 70, "time": "+18.728s", "pts": 15 },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 2, "laps": 70, "time": "+23.840s", "pts": 12, "fastestLap": true },
+        { "pos": "5", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 5, "laps": 70, "time": "+24.540s", "pts": 10 },
+        { "pos": "6", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 8, "laps": 70, "time": "+55.488s", "pts": 8 },
+        { "pos": "7", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 6, "laps": 70, "time": "+57.503s", "pts": 6 },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 11, "laps": 69, "time": "+28.033s", "pts": 4 },
+        { "pos": "9", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 10, "laps": 69, "time": "+30.382s", "pts": 2 },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 9, "laps": 69, "time": "+51.050s", "pts": 1 },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 14, "laps": 69, "time": "+52.028s", "pts": 0 },
+        { "pos": "12", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 12, "laps": 69, "time": "+53.429s", "pts": 0 },
+        { "pos": "13", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 20, "laps": 69, "time": "+1:03.828s", "pts": 0 },
+        { "pos": "14", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 16, "laps": 69, "time": "+1:06.052s", "pts": 0 },
+        { "pos": "15", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 13, "laps": 68, "time": "+3.876s", "pts": 0 },
+        { "pos": "16", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 15, "laps": 68, "time": "+12.859s", "pts": 0 },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 19, "laps": 68, "time": "+52.729s", "pts": 0 },
+        { "pos": "18", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 18, "laps": 68, "time": "+52.973s", "pts": 0 },
+        { "pos": "19", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 17, "laps": 68, "time": "+57.198s", "pts": 0 },
+        { "pos": "NC", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 3, "laps": 55, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 22, "laps": 48, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 21, "laps": 13, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Lando Norris",
       "team": "mclaren",
       "yt": "_JeaXt_3Mhc"
@@ -132,6 +396,30 @@ window.F1DATA = {
       "start": "2026-08-23T13:00:00Z",
       "fp1": "2026-08-21T10:30:00Z",
       "sprint": true,
+      "results": [
+        { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 1, "laps": 72, "time": "2:04:44.859", "pts": 25 },
+        { "pos": "2", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 3, "laps": 72, "time": "+11.536s", "pts": 18 },
+        { "pos": "3", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 2, "laps": 72, "time": "+15.906s", "pts": 15 },
+        { "pos": "4", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 5, "laps": 72, "time": "+16.755s", "pts": 12 },
+        { "pos": "5", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 6, "laps": 72, "time": "+17.258s", "pts": 10, "fastestLap": true },
+        { "pos": "6", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 4, "laps": 72, "time": "+32.332s", "pts": 8 },
+        { "pos": "7", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "grid": 8, "laps": 72, "time": "+1:19.915s", "pts": 6 },
+        { "pos": "8", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 13, "laps": 71, "time": "+36.049s", "pts": 4 },
+        { "pos": "9", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 18, "laps": 71, "time": "+48.393s", "pts": 2 },
+        { "pos": "10", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 11, "laps": 71, "time": "+49.640s", "pts": 1 },
+        { "pos": "11", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "grid": 12, "laps": 71, "time": "+54.322s", "pts": 0 },
+        { "pos": "12", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 10, "laps": 71, "time": "+1:05.680s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 9, "laps": 71, "time": "+1:06.235s", "pts": 0 },
+        { "pos": "14", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 14, "laps": 70, "time": "+20.534s", "pts": 0 },
+        { "pos": "15", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 22, "laps": 70, "time": "+58.582s", "pts": 0 },
+        { "pos": "16", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 17, "laps": 70, "time": "+1:10.271s", "pts": 0 },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 16, "laps": 66, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 21, "laps": 61, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 15, "laps": 52, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 19, "laps": 45, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 20, "laps": 2, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 7, "laps": 0, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Lando Norris",
       "team": "mclaren",
       "yt": "3OMLs3yI-KE"
@@ -143,6 +431,30 @@ window.F1DATA = {
       "start": "2026-09-06T13:00:00Z",
       "fp1": "2026-09-04T10:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 19, "laps": 53, "time": "1:51:15.281", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 2, "laps": 53, "time": "+3.857s", "pts": 18 },
+        { "pos": "3", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 5, "laps": 53, "time": "+14.718s", "pts": 15 },
+        { "pos": "4", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 8, "laps": 53, "time": "+19.056s", "pts": 12 },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 6, "laps": 53, "time": "+19.253s", "pts": 10 },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 4, "laps": 53, "time": "+24.655s", "pts": 8 },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 1, "laps": 53, "time": "+27.351s", "pts": 6 },
+        { "pos": "8", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 9, "laps": 53, "time": "+45.136s", "pts": 4 },
+        { "pos": "9", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 7, "laps": 53, "time": "+47.353s", "pts": 2 },
+        { "pos": "10", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "grid": 15, "laps": 53, "time": "+58.187s", "pts": 1 },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 10, "laps": 53, "time": "+1:05.187s", "pts": 0 },
+        { "pos": "12", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 12, "laps": 53, "time": "+1:06.187s", "pts": 0 },
+        { "pos": "13", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 13, "laps": 53, "time": "+1:14.117s", "pts": 0 },
+        { "pos": "14", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "grid": 22, "laps": 53, "time": "+1:15.609s", "pts": 0 },
+        { "pos": "15", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 11, "laps": 53, "time": "+1:18.958s", "pts": 0 },
+        { "pos": "16", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 14, "laps": 52, "time": "+6.591s", "pts": 0 },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 20, "laps": 52, "time": "+20.268s", "pts": 0 },
+        { "pos": "18", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 17, "laps": 52, "time": "+1:13.372s", "pts": 0 },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 16, "laps": 51, "time": "+12.880s", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 18, "laps": 26, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 21, "laps": 23, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 3, "laps": 1, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "uptj3to1l7o"
@@ -154,6 +466,30 @@ window.F1DATA = {
       "start": "2026-09-13T13:00:00Z",
       "fp1": "2026-09-11T11:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 57, "time": "1:34:23.754", "pts": 25 },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 3, "laps": 57, "time": "+4.351s", "pts": 18 },
+        { "pos": "3", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 1, "laps": 57, "time": "+5.089s", "pts": 15 },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 5, "laps": 57, "time": "+29.116s", "pts": 12 },
+        { "pos": "5", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 6, "laps": 57, "time": "+29.829s", "pts": 10, "fastestLap": true },
+        { "pos": "6", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "grid": 8, "laps": 57, "time": "+1:26.746s", "pts": 8 },
+        { "pos": "7", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 9, "laps": 57, "time": "+1:34.281s", "pts": 6 },
+        { "pos": "8", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 57, "time": "+1:35.839s", "pts": 4 },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 10, "laps": 56, "time": "+10.408s", "pts": 2 },
+        { "pos": "10", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 56, "time": "+11.298s", "pts": 1 },
+        { "pos": "11", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 13, "laps": 56, "time": "+15.143s", "pts": 0 },
+        { "pos": "12", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 14, "laps": 56, "time": "+26.152s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 12, "laps": 56, "time": "+28.389s", "pts": 0 },
+        { "pos": "14", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "grid": 15, "laps": 56, "time": "+1:00.163s", "pts": 0 },
+        { "pos": "15", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 16, "laps": 56, "time": "+1:26.212s", "pts": 0 },
+        { "pos": "16", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 22, "laps": 56, "time": "+1:29.963s", "pts": 0 },
+        { "pos": "17", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 17, "laps": 55, "time": "+33.776s", "pts": 0 },
+        { "pos": "18", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 54, "time": "+49.246s", "pts": 0 },
+        { "pos": "NC", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 20, "laps": 43, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 18, "laps": 31, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 21, "laps": 12, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 4, "laps": 6, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
       "yt": "NK7AfP_wi8M"
@@ -165,6 +501,30 @@ window.F1DATA = {
       "start": "2026-09-26T11:00:00Z",
       "fp1": "2026-09-24T08:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 51, "time": "1:38:02.143", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 8, "laps": 51, "time": "+0.196s", "pts": 18 },
+        { "pos": "3", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 4, "laps": 51, "time": "+10.704s", "pts": 15 },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 2, "laps": 51, "time": "+14.136s", "pts": 12 },
+        { "pos": "5", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 16, "laps": 51, "time": "+14.512s", "pts": 10 },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 6, "laps": 51, "time": "+22.382s", "pts": 8 },
+        { "pos": "7", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 15, "laps": 51, "time": "+31.159s", "pts": 6 },
+        { "pos": "8", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 13, "laps": 51, "time": "+31.189s", "pts": 4 },
+        { "pos": "9", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 10, "laps": 51, "time": "+31.929s", "pts": 2 },
+        { "pos": "10", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 14, "laps": 51, "time": "+32.416s", "pts": 1 },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 18, "laps": 51, "time": "+33.231s", "pts": 0 },
+        { "pos": "12", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 11, "laps": 51, "time": "+34.013s", "pts": 0 },
+        { "pos": "13", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 3, "laps": 51, "time": "+36.401s", "pts": 0 },
+        { "pos": "14", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 51, "time": "+41.400s", "pts": 0 },
+        { "pos": "15", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 17, "laps": 51, "time": "+44.230s", "pts": 0 },
+        { "pos": "16", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 49, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 9, "laps": 36, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 7, "laps": 35, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 5, "laps": 35, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 12, "laps": 29, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 21, "laps": 20, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 7, "time": "DNF", "pts": 0 }
+      ],
       "winner": "George Russell",
       "team": "mercedes",
       "yt": "I9oahfzac0I"
@@ -176,123 +536,54 @@ window.F1DATA = {
       "start": "2026-10-04T07:00:00Z",
       "fp1": "2026-10-02T04:30:00Z",
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 1, "laps": 55, "time": "1:47:14.808", "pts": 25, "fastestLap": true },
+        { "pos": "2", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 3, "laps": 55, "time": "+2.307s", "pts": 18 },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 2, "laps": 55, "time": "+4.919s", "pts": 15 },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 55, "time": "+7.258s", "pts": 12 },
+        { "pos": "5", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 8, "laps": 55, "time": "+8.571s", "pts": 10 },
+        { "pos": "6", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 6, "laps": 55, "time": "+9.454s", "pts": 8 },
+        { "pos": "7", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 11, "laps": 55, "time": "+12.753s", "pts": 6 },
+        { "pos": "8", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 12, "laps": 55, "time": "+13.372s", "pts": 4 },
+        { "pos": "9", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 5, "laps": 55, "time": "+13.993s", "pts": 2 },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 22, "laps": 55, "time": "+15.928s", "pts": 1 },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 15, "laps": 55, "time": "+17.404s", "pts": 0 },
+        { "pos": "12", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 14, "laps": 55, "time": "+18.052s", "pts": 0 },
+        { "pos": "13", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 21, "laps": 55, "time": "+18.997s", "pts": 0 },
+        { "pos": "14", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 16, "laps": 55, "time": "+22.305s", "pts": 0 },
+        { "pos": "15", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 17, "laps": 55, "time": "+22.532s", "pts": 0 },
+        { "pos": "16", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 9, "laps": 55, "time": "+23.315s", "pts": 0 },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 13, "laps": 55, "time": "+25.431s", "pts": 0 },
+        { "pos": "18", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 10, "laps": 55, "time": "+28.233s", "pts": 0 },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 55, "time": "+29.310s", "pts": 0 },
+        { "pos": "20", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 7, "laps": 49, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 18, "laps": 41, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 7, "time": "DNF", "pts": 0 }
+      ],
       "winner": "Max Verstappen",
       "team": "redbull",
       "yt": "U-V7IfBwN1I"
     },
-    {
-      "n": 17,
-      "gp": "Singapore Grand Prix",
-      "circuit": "Marina Bay Street Circuit",
-      "start": "2026-10-11T12:00:00Z",
-      "fp1": "2026-10-09T08:30:00Z",
-      "sprint": true
-    },
-    {
-      "n": 18,
-      "gp": "United States Grand Prix",
-      "circuit": "Circuit of the Americas, Austin",
-      "start": "2026-10-25T20:00:00Z",
-      "fp1": "2026-10-23T17:30:00Z",
-      "sprint": false
-    },
-    {
-      "n": 19,
-      "gp": "Mexico City Grand Prix",
-      "circuit": "Autódromo Hermanos Rodríguez, Mexico City",
-      "start": "2026-11-01T20:00:00Z",
-      "fp1": "2026-10-30T18:30:00Z",
-      "sprint": false
-    },
-    {
-      "n": 20,
-      "gp": "São Paulo Grand Prix",
-      "circuit": "Autódromo José Carlos Pace, São Paulo",
-      "start": "2026-11-08T17:00:00Z",
-      "fp1": "2026-11-06T15:30:00Z",
-      "sprint": false
-    },
-    {
-      "n": 21,
-      "gp": "Las Vegas Grand Prix",
-      "circuit": "Las Vegas Strip Street Circuit",
-      "start": "2026-11-22T04:00:00Z",
-      "fp1": "2026-11-20T00:30:00Z",
-      "sprint": false
-    },
-    {
-      "n": 22,
-      "gp": "Qatar Grand Prix",
-      "circuit": "Lusail International Circuit",
-      "start": "2026-11-29T16:00:00Z",
-      "fp1": "2026-11-27T13:30:00Z",
-      "sprint": false
-    },
-    {
-      "n": 23,
-      "gp": "Abu Dhabi Grand Prix",
-      "circuit": "Yas Marina Circuit, Abu Dhabi",
-      "start": "2026-12-06T13:00:00Z",
-      "fp1": "2026-12-04T09:30:00Z",
-      "sprint": false
-    }
+    { "n": 17, "gp": "Singapore Grand Prix", "circuit": "Marina Bay Street Circuit", "start": "2026-10-11T12:00:00Z", "fp1": "2026-10-09T08:30:00Z", "sprint": true },
+    { "n": 18, "gp": "United States Grand Prix", "circuit": "Circuit of the Americas, Austin", "start": "2026-10-25T20:00:00Z", "fp1": "2026-10-23T17:30:00Z", "sprint": false },
+    { "n": 19, "gp": "Mexico City Grand Prix", "circuit": "Autódromo Hermanos Rodríguez, Mexico City", "start": "2026-11-01T20:00:00Z", "fp1": "2026-10-30T18:30:00Z", "sprint": false },
+    { "n": 20, "gp": "São Paulo Grand Prix", "circuit": "Autódromo José Carlos Pace, São Paulo", "start": "2026-11-08T17:00:00Z", "fp1": "2026-11-06T15:30:00Z", "sprint": false },
+    { "n": 21, "gp": "Las Vegas Grand Prix", "circuit": "Las Vegas Strip Street Circuit", "start": "2026-11-22T04:00:00Z", "fp1": "2026-11-20T00:30:00Z", "sprint": false },
+    { "n": 22, "gp": "Qatar Grand Prix", "circuit": "Lusail International Circuit", "start": "2026-11-29T16:00:00Z", "fp1": "2026-11-27T13:30:00Z", "sprint": false },
+    { "n": 23, "gp": "Abu Dhabi Grand Prix", "circuit": "Yas Marina Circuit, Abu Dhabi", "start": "2026-12-06T13:00:00Z", "fp1": "2026-12-04T09:30:00Z", "sprint": false }
   ],
   "teams": [
-    {
-      "key": "mercedes",
-      "name": "Mercedes",
-      "pts": 556
-    },
-    {
-      "key": "ferrari",
-      "name": "Ferrari",
-      "pts": 405
-    },
-    {
-      "key": "mclaren",
-      "name": "McLaren",
-      "pts": 316
-    },
-    {
-      "key": "redbull",
-      "name": "Red Bull Racing",
-      "pts": 298
-    },
-    {
-      "key": "racingbulls",
-      "name": "Racing Bulls",
-      "pts": 90
-    },
-    {
-      "key": "alpine",
-      "name": "Alpine",
-      "pts": 68
-    },
-    {
-      "key": "haas",
-      "name": "Haas F1 Team",
-      "pts": 27
-    },
-    {
-      "key": "audi",
-      "name": "Audi",
-      "pts": 17
-    },
-    {
-      "key": "williams",
-      "name": "Williams",
-      "pts": 12
-    },
-    {
-      "key": "astonmartin",
-      "name": "Aston Martin",
-      "pts": 7
-    },
-    {
-      "key": "cadillac",
-      "name": "Cadillac",
-      "pts": 0
-    }
+    { "key": "mercedes", "name": "Mercedes", "pts": 556, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.webp" },
+    { "key": "ferrari", "name": "Ferrari", "pts": 405, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/ferrari/2026ferraricarright.webp" },
+    { "key": "mclaren", "name": "McLaren", "pts": 316, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp" },
+    { "key": "redbull", "name": "Red Bull Racing", "pts": 298, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp" },
+    { "key": "racingbulls", "name": "Racing Bulls", "pts": 90, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp" },
+    { "key": "alpine", "name": "Alpine", "pts": 68, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.webp" },
+    { "key": "haas", "name": "Haas F1 Team", "pts": 27, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.webp" },
+    { "key": "audi", "name": "Audi", "pts": 17, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/audi/2026audicarright.webp" },
+    { "key": "williams", "name": "Williams", "pts": 12, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/williams/2026williamscarright.webp" },
+    { "key": "astonmartin", "name": "Aston Martin", "pts": 7, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/astonmartin/2026astonmartincarright.webp" },
+    { "key": "cadillac", "name": "Cadillac", "pts": 0, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/cadillac/2026cadillaccarright.webp" }
   ],
   "drivers": [
     {
@@ -306,104 +597,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/kimi-antonelli",
         "season": [
-          [
-            "Season Position",
-            "1st"
-          ],
-          [
-            "Season Points",
-            "320"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "294"
-          ],
-          [
-            "Grand Prix Wins",
-            "8"
-          ],
-          [
-            "Grand Prix Podiums",
-            "13"
-          ],
-          [
-            "Grand Prix Poles",
-            "6"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "14"
-          ],
-          [
-            "DHL Fastest Laps",
-            "7"
-          ],
-          [
-            "DNFs",
-            "1"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "26"
-          ],
-          [
-            "Sprint Wins",
-            "1"
-          ],
-          [
-            "Sprint Podiums",
-            "2"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "1st" ],
+          [ "Season Points", "320" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "294" ],
+          [ "Grand Prix Wins", "8" ],
+          [ "Grand Prix Podiums", "13" ],
+          [ "Grand Prix Poles", "6" ],
+          [ "Grand Prix Top 10s", "14" ],
+          [ "DHL Fastest Laps", "7" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "26" ],
+          [ "Sprint Wins", "1" ],
+          [ "Sprint Podiums", "2" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "40"
-          ],
-          [
-            "Career Points",
-            "470"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x8)"
-          ],
-          [
-            "Podiums",
-            "16"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x6)"
-          ],
-          [
-            "Pole Positions",
-            "6"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "5"
-          ]
+          [ "Grands Prix Entered", "40" ],
+          [ "Career Points", "470" ],
+          [ "Highest Race Finish", "1 (x8)" ],
+          [ "Podiums", "16" ],
+          [ "Highest Grid Position", "1 (x6)" ],
+          [ "Pole Positions", "6" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "5" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
         "country": "Italy",
@@ -422,104 +641,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/george-russell",
         "season": [
-          [
-            "Season Position",
-            "2nd"
-          ],
-          [
-            "Season Points",
-            "236"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "202"
-          ],
-          [
-            "Grand Prix Wins",
-            "3"
-          ],
-          [
-            "Grand Prix Podiums",
-            "8"
-          ],
-          [
-            "Grand Prix Poles",
-            "5"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "12"
-          ],
-          [
-            "DHL Fastest Laps",
-            "2"
-          ],
-          [
-            "DNFs",
-            "3"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "34"
-          ],
-          [
-            "Sprint Wins",
-            "3"
-          ],
-          [
-            "Sprint Podiums",
-            "3"
-          ],
-          [
-            "Sprint Poles",
-            "3"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "2nd" ],
+          [ "Season Points", "236" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "202" ],
+          [ "Grand Prix Wins", "3" ],
+          [ "Grand Prix Podiums", "8" ],
+          [ "Grand Prix Poles", "5" ],
+          [ "Grand Prix Top 10s", "12" ],
+          [ "DHL Fastest Laps", "2" ],
+          [ "DNFs", "3" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "34" ],
+          [ "Sprint Wins", "3" ],
+          [ "Sprint Podiums", "3" ],
+          [ "Sprint Poles", "3" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "168"
-          ],
-          [
-            "Career Points",
-            "1269"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x8)"
-          ],
-          [
-            "Podiums",
-            "32"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x13)"
-          ],
-          [
-            "Pole Positions",
-            "13"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "22"
-          ]
+          [ "Grands Prix Entered", "168" ],
+          [ "Career Points", "1269" ],
+          [ "Highest Race Finish", "1 (x8)" ],
+          [ "Podiums", "32" ],
+          [ "Highest Grid Position", "1 (x13)" ],
+          [ "Pole Positions", "13" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "22" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
         "country": "Great Britain",
@@ -538,104 +685,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/lewis-hamilton",
         "season": [
-          [
-            "Season Position",
-            "3rd"
-          ],
-          [
-            "Season Points",
-            "214"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "194"
-          ],
-          [
-            "Grand Prix Wins",
-            "1"
-          ],
-          [
-            "Grand Prix Podiums",
-            "6"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "15"
-          ],
-          [
-            "DHL Fastest Laps",
-            "1"
-          ],
-          [
-            "DNFs",
-            "1"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "20"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "2"
-          ],
-          [
-            "Sprint Poles",
-            "1"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "3rd" ],
+          [ "Season Points", "214" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "194" ],
+          [ "Grand Prix Wins", "1" ],
+          [ "Grand Prix Podiums", "6" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "15" ],
+          [ "DHL Fastest Laps", "1" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "20" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "2" ],
+          [ "Sprint Poles", "1" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "396"
-          ],
-          [
-            "Career Points",
-            "5232.5"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x106)"
-          ],
-          [
-            "Podiums",
-            "208"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x104)"
-          ],
-          [
-            "Pole Positions",
-            "104"
-          ],
-          [
-            "World Championships",
-            "7"
-          ],
-          [
-            "DNFs",
-            "35"
-          ]
+          [ "Grands Prix Entered", "396" ],
+          [ "Career Points", "5232.5" ],
+          [ "Highest Race Finish", "1 (x106)" ],
+          [ "Podiums", "208" ],
+          [ "Highest Grid Position", "1 (x104)" ],
+          [ "Pole Positions", "104" ],
+          [ "World Championships", "7" ],
+          [ "DNFs", "35" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
         "country": "Great Britain",
@@ -654,104 +729,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/charles-leclerc",
         "season": [
-          [
-            "Season Position",
-            "4th"
-          ],
-          [
-            "Season Points",
-            "191"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "163"
-          ],
-          [
-            "Grand Prix Wins",
-            "1"
-          ],
-          [
-            "Grand Prix Podiums",
-            "4"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "13"
-          ],
-          [
-            "DHL Fastest Laps",
-            "2"
-          ],
-          [
-            "DNFs",
-            "3"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "28"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "3"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "4th" ],
+          [ "Season Points", "191" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "163" ],
+          [ "Grand Prix Wins", "1" ],
+          [ "Grand Prix Podiums", "4" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "13" ],
+          [ "DHL Fastest Laps", "2" ],
+          [ "DNFs", "3" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "28" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "3" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "187"
-          ],
-          [
-            "Career Points",
-            "1863"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x9)"
-          ],
-          [
-            "Podiums",
-            "54"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x27)"
-          ],
-          [
-            "Pole Positions",
-            "27"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "26"
-          ]
+          [ "Grands Prix Entered", "187" ],
+          [ "Career Points", "1863" ],
+          [ "Highest Race Finish", "1 (x9)" ],
+          [ "Podiums", "54" ],
+          [ "Highest Grid Position", "1 (x27)" ],
+          [ "Pole Positions", "27" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "26" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/chalec01/2026ferrarichalec01right.webp",
         "country": "Monaco",
@@ -770,104 +773,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/lando-norris",
         "season": [
-          [
-            "Season Position",
-            "5th"
-          ],
-          [
-            "Season Points",
-            "188"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "156"
-          ],
-          [
-            "Grand Prix Wins",
-            "2"
-          ],
-          [
-            "Grand Prix Podiums",
-            "5"
-          ],
-          [
-            "Grand Prix Poles",
-            "3"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "12"
-          ],
-          [
-            "DHL Fastest Laps",
-            "2"
-          ],
-          [
-            "DNFs",
-            "3"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "32"
-          ],
-          [
-            "Sprint Wins",
-            "1"
-          ],
-          [
-            "Sprint Podiums",
-            "4"
-          ],
-          [
-            "Sprint Poles",
-            "1"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "5th" ],
+          [ "Season Points", "188" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "156" ],
+          [ "Grand Prix Wins", "2" ],
+          [ "Grand Prix Podiums", "5" ],
+          [ "Grand Prix Poles", "3" ],
+          [ "Grand Prix Top 10s", "12" ],
+          [ "DHL Fastest Laps", "2" ],
+          [ "DNFs", "3" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "32" ],
+          [ "Sprint Wins", "1" ],
+          [ "Sprint Podiums", "4" ],
+          [ "Sprint Poles", "1" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "167"
-          ],
-          [
-            "Career Points",
-            "1618"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x13)"
-          ],
-          [
-            "Podiums",
-            "49"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x19)"
-          ],
-          [
-            "Pole Positions",
-            "19"
-          ],
-          [
-            "World Championships",
-            "1"
-          ],
-          [
-            "DNFs",
-            "18"
-          ]
+          [ "Grands Prix Entered", "167" ],
+          [ "Career Points", "1618" ],
+          [ "Highest Race Finish", "1 (x13)" ],
+          [ "Podiums", "49" ],
+          [ "Highest Grid Position", "1 (x19)" ],
+          [ "Pole Positions", "19" ],
+          [ "World Championships", "1" ],
+          [ "DNFs", "18" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01right.webp",
         "country": "Great Britain",
@@ -886,104 +817,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/max-verstappen",
         "season": [
-          [
-            "Season Position",
-            "6th"
-          ],
-          [
-            "Season Points",
-            "188"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "176"
-          ],
-          [
-            "Grand Prix Wins",
-            "1"
-          ],
-          [
-            "Grand Prix Podiums",
-            "8"
-          ],
-          [
-            "Grand Prix Poles",
-            "1"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "12"
-          ],
-          [
-            "DHL Fastest Laps",
-            "2"
-          ],
-          [
-            "DNFs",
-            "4"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "12"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "6th" ],
+          [ "Season Points", "188" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "176" ],
+          [ "Grand Prix Wins", "1" ],
+          [ "Grand Prix Podiums", "8" ],
+          [ "Grand Prix Poles", "1" ],
+          [ "Grand Prix Top 10s", "12" ],
+          [ "DHL Fastest Laps", "2" ],
+          [ "DNFs", "4" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "12" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "249"
-          ],
-          [
-            "Career Points",
-            "3632.5"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x72)"
-          ],
-          [
-            "Podiums",
-            "135"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x49)"
-          ],
-          [
-            "Pole Positions",
-            "49"
-          ],
-          [
-            "World Championships",
-            "4"
-          ],
-          [
-            "DNFs",
-            "37"
-          ]
+          [ "Grands Prix Entered", "249" ],
+          [ "Career Points", "3632.5" ],
+          [ "Highest Race Finish", "1 (x72)" ],
+          [ "Podiums", "135" ],
+          [ "Highest Grid Position", "1 (x49)" ],
+          [ "Pole Positions", "49" ],
+          [ "World Championships", "4" ],
+          [ "DNFs", "37" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/maxver01/2026redbullracingmaxver01right.webp",
         "country": "Netherlands",
@@ -1002,104 +861,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/oscar-piastri",
         "season": [
-          [
-            "Season Position",
-            "7th"
-          ],
-          [
-            "Season Points",
-            "128"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "107"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "2"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "10"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "1"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "21"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "1"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "5"
-          ]
+          [ "Season Position", "7th" ],
+          [ "Season Points", "128" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "107" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "2" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "10" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "21" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "1" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "84"
-          ],
-          [
-            "Career Points",
-            "927"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x9)"
-          ],
-          [
-            "Podiums",
-            "28"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x6)"
-          ],
-          [
-            "Pole Positions",
-            "6"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "7"
-          ]
+          [ "Grands Prix Entered", "84" ],
+          [ "Career Points", "927" ],
+          [ "Highest Race Finish", "1 (x9)" ],
+          [ "Podiums", "28" ],
+          [ "Highest Grid Position", "1 (x6)" ],
+          [ "Pole Positions", "6" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "7" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/oscpia01/2026mclarenoscpia01right.webp",
         "country": "Australia",
@@ -1118,104 +905,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/isack-hadjar",
         "season": [
-          [
-            "Season Position",
-            "8th"
-          ],
-          [
-            "Season Points",
-            "96"
-          ],
-          [
-            "Grand Prix Races",
-            "13"
-          ],
-          [
-            "Grand Prix Points",
-            "96"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "2"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "10"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "2"
-          ],
-          [
-            "Sprint Races",
-            "4"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "2"
-          ]
+          [ "Season Position", "8th" ],
+          [ "Season Points", "96" ],
+          [ "Grand Prix Races", "13" ],
+          [ "Grand Prix Points", "96" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "2" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "10" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "2" ],
+          [ "Sprint Races", "4" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "36"
-          ],
-          [
-            "Career Points",
-            "147"
-          ],
-          [
-            "Highest Race Finish",
-            "3 (x3)"
-          ],
-          [
-            "Podiums",
-            "3"
-          ],
-          [
-            "Highest Grid Position",
-            "3 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "4"
-          ]
+          [ "Grands Prix Entered", "36" ],
+          [ "Career Points", "147" ],
+          [ "Highest Race Finish", "3 (x3)" ],
+          [ "Podiums", "3" ],
+          [ "Highest Grid Position", "3 (x1)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "4" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/isahad01/2026redbullracingisahad01right.webp",
         "country": "France",
@@ -1234,104 +949,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/liam-lawson",
         "season": [
-          [
-            "Season Position",
-            "9th"
-          ],
-          [
-            "Season Points",
-            "65"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "62"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "11"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "1"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "3"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "2"
-          ]
+          [ "Season Position", "9th" ],
+          [ "Season Points", "65" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "62" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "11" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "3" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "51"
-          ],
-          [
-            "Career Points",
-            "109"
-          ],
-          [
-            "Highest Race Finish",
-            "5 (x2)"
-          ],
-          [
-            "Podiums",
-            "0"
-          ],
-          [
-            "Highest Grid Position",
-            "3 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "8"
-          ]
+          [ "Grands Prix Entered", "51" ],
+          [ "Career Points", "109" ],
+          [ "Highest Race Finish", "5 (x2)" ],
+          [ "Podiums", "0" ],
+          [ "Highest Grid Position", "3 (x1)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "8" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/racingbulls/lialaw01/2026racingbullslialaw01right.webp",
         "country": "New Zealand",
@@ -1350,104 +993,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/pierre-gasly",
         "season": [
-          [
-            "Season Position",
-            "10th"
-          ],
-          [
-            "Season Points",
-            "41"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "39"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "1"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "9"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "2"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "2"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "2"
-          ]
+          [ "Season Position", "10th" ],
+          [ "Season Points", "41" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "39" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "1" ],
+          [ "Grand Prix Top 10s", "9" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "2" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "2" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "193"
-          ],
-          [
-            "Career Points",
-            "499"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x1)"
-          ],
-          [
-            "Podiums",
-            "5"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "1"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "30"
-          ]
+          [ "Grands Prix Entered", "193" ],
+          [ "Career Points", "499" ],
+          [ "Highest Race Finish", "1 (x1)" ],
+          [ "Podiums", "5" ],
+          [ "Highest Grid Position", "1 (x1)" ],
+          [ "Pole Positions", "1" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "30" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/alpine/piegas01/2026alpinepiegas01right.webp",
         "country": "France",
@@ -1466,104 +1037,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/arvid-lindblad",
         "season": [
-          [
-            "Season Position",
-            "11th"
-          ],
-          [
-            "Season Points",
-            "38"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "37"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "11"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "0"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "1"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "3"
-          ]
+          [ "Season Position", "11th" ],
+          [ "Season Points", "38" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "37" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "11" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "0" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "1" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "3" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "15"
-          ],
-          [
-            "Career Points",
-            "38"
-          ],
-          [
-            "Highest Race Finish",
-            "6 (x1)"
-          ],
-          [
-            "Podiums",
-            "0"
-          ],
-          [
-            "Highest Grid Position",
-            "7 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "1"
-          ]
+          [ "Grands Prix Entered", "15" ],
+          [ "Career Points", "38" ],
+          [ "Highest Race Finish", "6 (x1)" ],
+          [ "Podiums", "0" ],
+          [ "Highest Grid Position", "7 (x1)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "1" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/racingbulls/arvlin01/2026racingbullsarvlin01right.webp",
         "country": "Great Britain",
@@ -1582,104 +1081,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/franco-colapinto",
         "season": [
-          [
-            "Season Position",
-            "12th"
-          ],
-          [
-            "Season Points",
-            "27"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "27"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "8"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "1"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "2"
-          ]
+          [ "Season Position", "12th" ],
+          [ "Season Points", "27" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "27" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "8" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "42"
-          ],
-          [
-            "Career Points",
-            "32"
-          ],
-          [
-            "Highest Race Finish",
-            "6 (x1)"
-          ],
-          [
-            "Podiums",
-            "0"
-          ],
-          [
-            "Highest Grid Position",
-            "7 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "5"
-          ]
+          [ "Grands Prix Entered", "42" ],
+          [ "Career Points", "32" ],
+          [ "Highest Race Finish", "6 (x1)" ],
+          [ "Podiums", "0" ],
+          [ "Highest Grid Position", "7 (x1)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "5" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/alpine/fracol01/2026alpinefracol01right.webp",
         "country": "Argentina",
@@ -1698,104 +1125,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/oliver-bearman",
         "season": [
-          [
-            "Season Position",
-            "13th"
-          ],
-          [
-            "Season Points",
-            "20"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "19"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "4"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "4"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "1"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "1"
-          ]
+          [ "Season Position", "13th" ],
+          [ "Season Points", "20" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "19" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "4" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "4" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "1" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "43"
-          ],
-          [
-            "Career Points",
-            "68"
-          ],
-          [
-            "Highest Race Finish",
-            "4 (x1)"
-          ],
-          [
-            "Podiums",
-            "0"
-          ],
-          [
-            "Highest Grid Position",
-            "8 (x2)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "7"
-          ]
+          [ "Grands Prix Entered", "43" ],
+          [ "Career Points", "68" ],
+          [ "Highest Race Finish", "4 (x1)" ],
+          [ "Podiums", "0" ],
+          [ "Highest Grid Position", "8 (x2)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "7" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/haas/olibea01/2026haasolibea01right.webp",
         "country": "Great Britain",
@@ -1814,104 +1169,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/gabriel-bortoleto",
         "season": [
-          [
-            "Season Position",
-            "14th"
-          ],
-          [
-            "Season Points",
-            "10"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "10"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "3"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "0"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "1"
-          ]
+          [ "Season Position", "14th" ],
+          [ "Season Points", "10" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "10" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "3" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "0" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "39"
-          ],
-          [
-            "Career Points",
-            "29"
-          ],
-          [
-            "Highest Race Finish",
-            "6 (x1)"
-          ],
-          [
-            "Podiums",
-            "0"
-          ],
-          [
-            "Highest Grid Position",
-            "7 (x3)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "6"
-          ]
+          [ "Grands Prix Entered", "39" ],
+          [ "Career Points", "29" ],
+          [ "Highest Race Finish", "6 (x1)" ],
+          [ "Podiums", "0" ],
+          [ "Highest Grid Position", "7 (x3)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "6" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/audi/gabbor01/2026audigabbor01right.webp",
         "country": "Brazil",
@@ -1930,104 +1213,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/nico-hulkenberg",
         "season": [
-          [
-            "Season Position",
-            "15th"
-          ],
-          [
-            "Season Points",
-            "7"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "7"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "3"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "3"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "0"
-          ]
+          [ "Season Position", "15th" ],
+          [ "Season Points", "7" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "7" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "3" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "3" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "265"
-          ],
-          [
-            "Career Points",
-            "629"
-          ],
-          [
-            "Highest Race Finish",
-            "3 (x1)"
-          ],
-          [
-            "Podiums",
-            "1"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "1"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "50"
-          ]
+          [ "Grands Prix Entered", "265" ],
+          [ "Career Points", "629" ],
+          [ "Highest Race Finish", "3 (x1)" ],
+          [ "Podiums", "1" ],
+          [ "Highest Grid Position", "1 (x1)" ],
+          [ "Pole Positions", "1" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "50" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/audi/nichul01/2026audinichul01right.webp",
         "country": "Germany",
@@ -2046,104 +1257,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/esteban-ocon",
         "season": [
-          [
-            "Season Position",
-            "16th"
-          ],
-          [
-            "Season Points",
-            "7"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "7"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "3"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "1"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "1"
-          ]
+          [ "Season Position", "16th" ],
+          [ "Season Points", "7" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "7" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "3" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "196"
-          ],
-          [
-            "Career Points",
-            "490"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x1)"
-          ],
-          [
-            "Podiums",
-            "4"
-          ],
-          [
-            "Highest Grid Position",
-            "3 (x3)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "28"
-          ]
+          [ "Grands Prix Entered", "196" ],
+          [ "Career Points", "490" ],
+          [ "Highest Race Finish", "1 (x1)" ],
+          [ "Podiums", "4" ],
+          [ "Highest Grid Position", "3 (x3)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "28" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/haas/estoco01/2026haasestoco01right.webp",
         "country": "France",
@@ -2162,104 +1301,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/fernando-alonso",
         "season": [
-          [
-            "Season Position",
-            "17th"
-          ],
-          [
-            "Season Points",
-            "7"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "7"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "3"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "6"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "0"
-          ]
+          [ "Season Position", "17th" ],
+          [ "Season Points", "7" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "7" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "3" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "6" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "443"
-          ],
-          [
-            "Career Points",
-            "2400"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x32)"
-          ],
-          [
-            "Podiums",
-            "106"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x22)"
-          ],
-          [
-            "Pole Positions",
-            "22"
-          ],
-          [
-            "World Championships",
-            "2"
-          ],
-          [
-            "DNFs",
-            "94"
-          ]
+          [ "Grands Prix Entered", "443" ],
+          [ "Career Points", "2400" ],
+          [ "Highest Race Finish", "1 (x32)" ],
+          [ "Podiums", "106" ],
+          [ "Highest Grid Position", "1 (x22)" ],
+          [ "Pole Positions", "22" ],
+          [ "World Championships", "2" ],
+          [ "DNFs", "94" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/astonmartin/feralo01/2026astonmartinferalo01right.webp",
         "country": "Spain",
@@ -2278,104 +1345,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/carlos-sainz",
         "season": [
-          [
-            "Season Position",
-            "18th"
-          ],
-          [
-            "Season Points",
-            "7"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "7"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "4"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "3"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "1"
-          ]
+          [ "Season Position", "18th" ],
+          [ "Season Points", "7" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "7" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "4" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "3" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "245"
-          ],
-          [
-            "Career Points",
-            "1343.5"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x4)"
-          ],
-          [
-            "Podiums",
-            "29"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x6)"
-          ],
-          [
-            "Pole Positions",
-            "6"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "46"
-          ]
+          [ "Grands Prix Entered", "245" ],
+          [ "Career Points", "1343.5" ],
+          [ "Highest Race Finish", "1 (x4)" ],
+          [ "Podiums", "29" ],
+          [ "Highest Grid Position", "1 (x6)" ],
+          [ "Pole Positions", "6" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "46" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/williams/carsai01/2026williamscarsai01right.webp",
         "country": "Spain",
@@ -2394,104 +1389,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/alexander-albon",
         "season": [
-          [
-            "Season Position",
-            "19th"
-          ],
-          [
-            "Season Points",
-            "5"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "5"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "2"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "5"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "0"
-          ]
+          [ "Season Position", "19th" ],
+          [ "Season Points", "5" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "5" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "2" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "5" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "143"
-          ],
-          [
-            "Career Points",
-            "318"
-          ],
-          [
-            "Highest Race Finish",
-            "3 (x2)"
-          ],
-          [
-            "Podiums",
-            "2"
-          ],
-          [
-            "Highest Grid Position",
-            "4 (x5)"
-          ],
-          [
-            "Pole Positions",
-            "0"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "28"
-          ]
+          [ "Grands Prix Entered", "143" ],
+          [ "Career Points", "318" ],
+          [ "Highest Race Finish", "3 (x2)" ],
+          [ "Podiums", "2" ],
+          [ "Highest Grid Position", "4 (x5)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "28" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/williams/alealb01/2026williamsalealb01right.webp",
         "country": "Thailand",
@@ -2499,16 +1422,7 @@ window.F1DATA = {
         "birthplace": "London, England"
       }
     },
-    {
-      "id": "tsunoda",
-      "name": "Yuki Tsunoda",
-      "number": "22",
-      "nat": "JPN",
-      "nationality": "Japanese",
-      "team": "racingbulls",
-      "pts": 1,
-      "roster": false
-    },
+    { "id": "tsunoda", "name": "Yuki Tsunoda", "number": "22", "nat": "JPN", "nationality": "Japanese", "team": "racingbulls", "pts": 1, "roster": false },
     {
       "id": "stroll",
       "name": "Lance Stroll",
@@ -2520,104 +1434,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/lance-stroll",
         "season": [
-          [
-            "Season Position",
-            "21st"
-          ],
-          [
-            "Season Points",
-            "0"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "0"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "0"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "10"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "0"
-          ]
+          [ "Season Position", "21st" ],
+          [ "Season Points", "0" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "0" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "0" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "10" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "205"
-          ],
-          [
-            "Career Points",
-            "325"
-          ],
-          [
-            "Highest Race Finish",
-            "3 (x3)"
-          ],
-          [
-            "Podiums",
-            "3"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x1)"
-          ],
-          [
-            "Pole Positions",
-            "1"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "44"
-          ]
+          [ "Grands Prix Entered", "205" ],
+          [ "Career Points", "325" ],
+          [ "Highest Race Finish", "3 (x3)" ],
+          [ "Podiums", "3" ],
+          [ "Highest Grid Position", "1 (x1)" ],
+          [ "Pole Positions", "1" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "44" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/astonmartin/lanstr01/2026astonmartinlanstr01right.webp",
         "country": "Canada",
@@ -2636,104 +1478,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/valtteri-bottas",
         "season": [
-          [
-            "Season Position",
-            "22nd"
-          ],
-          [
-            "Season Points",
-            "0"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "0"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "0"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "8"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "0"
-          ]
+          [ "Season Position", "22nd" ],
+          [ "Season Points", "0" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "0" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "0" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "8" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "262"
-          ],
-          [
-            "Career Points",
-            "1797"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x10)"
-          ],
-          [
-            "Podiums",
-            "67"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x20)"
-          ],
-          [
-            "Pole Positions",
-            "20"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "37"
-          ]
+          [ "Grands Prix Entered", "262" ],
+          [ "Career Points", "1797" ],
+          [ "Highest Race Finish", "1 (x10)" ],
+          [ "Podiums", "67" ],
+          [ "Highest Grid Position", "1 (x20)" ],
+          [ "Pole Positions", "20" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "37" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/cadillac/valbot01/2026cadillacvalbot01right.webp",
         "country": "Finland",
@@ -2752,104 +1522,32 @@ window.F1DATA = {
       "profile": {
         "url": "https://www.formula1.com/en/drivers/sergio-perez",
         "season": [
-          [
-            "Season Position",
-            "23rd"
-          ],
-          [
-            "Season Points",
-            "0"
-          ],
-          [
-            "Grand Prix Races",
-            "16"
-          ],
-          [
-            "Grand Prix Points",
-            "0"
-          ],
-          [
-            "Grand Prix Wins",
-            "0"
-          ],
-          [
-            "Grand Prix Podiums",
-            "0"
-          ],
-          [
-            "Grand Prix Poles",
-            "0"
-          ],
-          [
-            "Grand Prix Top 10s",
-            "0"
-          ],
-          [
-            "DHL Fastest Laps",
-            "0"
-          ],
-          [
-            "DNFs",
-            "5"
-          ],
-          [
-            "Sprint Races",
-            "5"
-          ],
-          [
-            "Sprint Points",
-            "0"
-          ],
-          [
-            "Sprint Wins",
-            "0"
-          ],
-          [
-            "Sprint Podiums",
-            "0"
-          ],
-          [
-            "Sprint Poles",
-            "0"
-          ],
-          [
-            "Sprint Top 10s",
-            "0"
-          ]
+          [ "Season Position", "23rd" ],
+          [ "Season Points", "0" ],
+          [ "Grand Prix Races", "16" ],
+          [ "Grand Prix Points", "0" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "0" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "5" ],
+          [ "Sprint Races", "5" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [
-            "Grands Prix Entered",
-            "297"
-          ],
-          [
-            "Career Points",
-            "1638"
-          ],
-          [
-            "Highest Race Finish",
-            "1 (x6)"
-          ],
-          [
-            "Podiums",
-            "39"
-          ],
-          [
-            "Highest Grid Position",
-            "1 (x3)"
-          ],
-          [
-            "Pole Positions",
-            "3"
-          ],
-          [
-            "World Championships",
-            "0"
-          ],
-          [
-            "DNFs",
-            "47"
-          ]
+          [ "Grands Prix Entered", "297" ],
+          [ "Career Points", "1638" ],
+          [ "Highest Race Finish", "1 (x6)" ],
+          [ "Podiums", "39" ],
+          [ "Highest Grid Position", "1 (x3)" ],
+          [ "Pole Positions", "3" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "47" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/cadillac/serper01/2026cadillacserper01right.webp",
         "country": "Mexico",

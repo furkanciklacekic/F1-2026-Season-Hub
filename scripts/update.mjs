@@ -128,6 +128,56 @@ async function fetchProfiles(drivers, previous) {
   return profiles;
 }
 
+// Car images from the formula1.com teams page, matched to our teams by name ("Haas F1 Team" ↔ haasf1team).
+async function fetchCars(teams) {
+  const html = await get(`${F1_SITE}/en/teams`, "text");
+  const cars = new Map([...html.matchAll(/https:\/\/media\.formula1\.com\/image\/upload\/[^"'\s]*?\/common\/f1\/\d{4}\/([a-z0-9]+)\/\d{4}[a-z0-9]+carright\.webp/g)]
+    .map(m => [m[1], m[0]]));
+  if (!cars.size) throw new Error("no car images found on the teams page");
+  return new Map(teams.filter(t => cars.has(norm(t.name))).map(t => [t.key, cars.get(norm(t.name))]));
+}
+
+// Jolpica pages at 100 rows; fetch every page of a list endpoint.
+async function getAllRaces(path) {
+  const races = new Map();
+  for (let offset = 0, total = 1; offset < total; offset += 100) {
+    const page = (await get(`${API}${path}?limit=100&offset=${offset}`)).MRData;
+    total = Number(page.total);
+    for (const r of page.RaceTable.Races) {
+      const prev = races.get(r.round);
+      races.set(r.round, prev ? { ...prev, Results: [...prev.Results, ...r.Results] } : r); // a race can span two pages
+    }
+  }
+  return races;
+}
+
+// Shown the way formula1.com shows them in race classifications.
+const POSITION_CODES = { R: "NC", D: "DQ", E: "EX", W: "DNS", F: "DNQ", N: "NC" };
+const STATUS_CODES = { Retired: "DNF", "Did not start": "DNS", Disqualified: "DSQ" };
+
+function classification(apiResults) {
+  const leaderLaps = Number(apiResults[0]?.laps || 0);
+  return apiResults.map(x => {
+    const laps = Number(x.laps);
+    const down = leaderLaps - laps;
+    const time = x.Time?.time
+      ? x.Time.time.replace(/^(\+[\d:.]+)$/, "$1s")
+      : x.status === "Lapped" && down > 0 ? `+${down} Lap${down > 1 ? "s" : ""}` : STATUS_CODES[x.status] || x.status;
+    const row = {
+      pos: POSITION_CODES[x.positionText] || x.positionText,
+      id: x.Driver.driverId,
+      name: DRIVER_NAMES[x.Driver.driverId] || `${x.Driver.givenName} ${x.Driver.familyName}`,
+      team: teamOf(x.Constructor.constructorId).key,
+      grid: Number(x.grid) || null, // 0 = pit lane start
+      laps,
+      time,
+      pts: Number(x.points)
+    };
+    if (x.FastestLap?.rank === "1") row.fastestLap = true;
+    return row;
+  });
+}
+
 async function isOfficialVideo(id) {
   try {
     const o = await get(`https://www.youtube.com/oembed?url=https://youtu.be/${id}&format=json`);
@@ -142,9 +192,9 @@ async function isOfficialVideo(id) {
 const existing = await readExisting();
 const knownVideo = new Map(existing.races.filter(r => r.yt).map(r => [r.n, r.yt]));
 
-const [schedule, results, lastRace, driverSt, teamSt, feed] = await Promise.all([
+const [schedule, raceResults, lastRace, driverSt, teamSt, feed] = await Promise.all([
   get(`${API}/`),
-  get(`${API}/results/1/?limit=100`),
+  getAllRaces("/results/"),
   get(`${API}/last/results/?limit=100`),
   get(`${API}/driverstandings/`),
   get(`${API}/constructorstandings/`),
@@ -156,8 +206,6 @@ const [schedule, results, lastRace, driverSt, teamSt, feed] = await Promise.all(
 
 const apiRaces = schedule.MRData.RaceTable.Races;
 if (apiRaces.length < 20) throw new Error(`Unexpected number of races in schedule: ${apiRaces.length}`);
-
-const winners = new Map(results.MRData.RaceTable.Races.map(r => [Number(r.round), r.Results[0]]));
 
 // "Race Highlights | 2026 ..." videos in the YouTube feed
 const feedVideos = [...feed.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => ({
@@ -185,10 +233,11 @@ const races = apiRaces.map(r => {
     sprint: Boolean(r.Sprint)
   };
 
-  const win = winners.get(n);
-  if (win) {
-    race.winner = DRIVER_NAMES[win.Driver.driverId] || `${win.Driver.givenName} ${win.Driver.familyName}`;
-    race.team = teamOf(win.Constructor.constructorId).key;
+  const apiResults = raceResults.get(r.round)?.Results;
+  if (apiResults?.length) {
+    race.results = classification(apiResults);
+    race.winner = race.results[0].name;
+    race.team = race.results[0].team;
   }
 
   let yt = knownVideo.get(n);
@@ -241,25 +290,39 @@ const teams = teamSt.MRData.StandingsTable.StandingsLists[0].ConstructorStanding
   pts: Number(x.points)
 }));
 
-// Driver profiles change only after a race, so formula1.com is only visited when the standings
-// round moves on, a new driver appears, or the previous refresh failed.
+// Driver profiles and car images change only after a race, so formula1.com is only visited when the
+// standings round moves on, a new driver or team appears, or the previous refresh failed.
 const standingsRound = Number(dList.round);
 const previousDrivers = new Map((existing.drivers || []).map(d => [d.id, d]));
+const previousCars = new Map((existing.teams || []).filter(t => t.car).map(t => [t.key, t.car]));
 let profilesRound = existing.profilesRound ?? null;
 let profiles = new Map([...previousDrivers].filter(([, d]) => d.profile).map(([id, d]) => [id, d.profile]));
-if (profilesRound !== standingsRound || drivers.some(d => !previousDrivers.has(d.id))) {
+let cars = previousCars;
+if (profilesRound !== standingsRound || drivers.some(d => !previousDrivers.has(d.id)) || teams.some(t => !previousCars.has(t.key))) {
+  let ok = true;
   try {
     profiles = await fetchProfiles(drivers, previousDrivers);
-    profilesRound = standingsRound;
     console.log(`Driver profiles refreshed (${profiles.size}/${drivers.length}).`);
   } catch (err) {
+    ok = false;
     console.warn(`Driver profiles not refreshed, keeping previous ones: ${err.message}`);
   }
+  try {
+    cars = new Map([...previousCars, ...await fetchCars(teams)]);
+    console.log(`Car images refreshed (${cars.size}/${teams.length}).`);
+  } catch (err) {
+    ok = false;
+    console.warn(`Car images not refreshed, keeping previous ones: ${err.message}`);
+  }
+  if (ok) profilesRound = standingsRound;
 }
 for (const d of drivers) if (profiles.has(d.id)) d.profile = profiles.get(d.id);
+for (const t of teams) if (cars.has(t.key)) t.car = cars.get(t.key);
 
 const data = { season: SEASON, standingsRound, profilesRound, races, teams, drivers };
-const out = `// Generated automatically by scripts/update.mjs — do not edit by hand.\nwindow.F1DATA = ${JSON.stringify(data, null, 2)};\n`;
+// Pretty-print, but keep flat arrays/objects (result rows, stat pairs) on one line each.
+const json = JSON.stringify(data, null, 2).replace(/[\[{]\n[^\[\]{}]*?\n\s*[\]}]/g, m => m.replace(/\n\s*/g, " "));
+const out = `// Generated automatically by scripts/update.mjs — do not edit by hand.\nwindow.F1DATA = ${json};\n`;
 
 const before = await readFile(DATA_FILE, "utf8").catch(() => "");
 if (before === out) {
