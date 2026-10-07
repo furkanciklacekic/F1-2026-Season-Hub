@@ -10,6 +10,7 @@ Site: https://furkanciklacekic.github.io/F1-2026-Season-Hub/
 
 - Schedule, results and standings come from the [Jolpica F1 API](https://github.com/jolpica/jolpica-f1).
 - Highlights are looked up in the official [FORMULA 1 YouTube](https://www.youtube.com/@Formula1) channel's RSS feed by their "Race Highlights | 2026 …" title.
+- Driver photos and stats come from the official formula1.com driver pages, refreshed once after each race.
 - If `data.js` changed, it is committed and the site is redeployed.
 
 ## If a video is not found automatically

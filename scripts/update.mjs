@@ -8,6 +8,7 @@ const SEASON = 2026;
 const API = `https://api.jolpi.ca/ergast/f1/${SEASON}`;
 const F1_CHANNEL_ID = "UCB_qr75-ydFVKSF9Dmo6izg";
 const F1_CHANNEL_NAME = "FORMULA 1";
+const F1_SITE = process.env.F1_SITE || "https://www.formula1.com";
 const DATA_FILE = new URL("../data.js", import.meta.url);
 
 // API race name → official F1 name (shown on the page and used in YouTube highlights titles).
@@ -71,6 +72,60 @@ async function readExisting() {
   } catch {
     return { races: [] };
   }
+}
+
+const htmlText = s => s.replace(/<[^>]+>/g, " ")
+  .replace(/&amp;/g, "&").replace(/&quot;/g, "\"").replace(/&#x27;|&#39;/g, "'").replace(/&nbsp;/g, " ")
+  .replace(/\s+/g, " ").trim();
+
+// Reads stats, facts and the headshot from a formula1.com driver page. Returns null if nothing parses.
+function parseProfile(html, url) {
+  const out = { url, season: [], career: [] };
+  const bio = {};
+  let section = "";
+  const tokens = /<h([1-6])[^>]*>([\s\S]*?)<\/h\1>|<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/g;
+  for (const m of html.matchAll(tokens)) {
+    if (m[1]) {
+      const h = htmlText(m[2]).toLowerCase();
+      section = h.includes("season") ? "season" : h.includes("career") ? "career" : h.includes("biography") ? "bio" : "";
+      continue;
+    }
+    const pair = [htmlText(m[3]), htmlText(m[4])];
+    if (section === "season" || section === "career") out[section].push(pair);
+    else if (section === "bio") bio[pair[0]] = pair[1];
+  }
+  if (!out.season.length && !out.career.length) return null;
+
+  out.photo = html.match(/https:\/\/media\.formula1\.com\/image\/upload\/[^"'\s]*?\/common\/f1\/\d{4}\/[a-z0-9]+\/[a-z0-9]+\/\d{4}[a-z0-9]+right\.webp/)?.[0] || null;
+  out.country = html.match(/<title>Flag of ([^<]+)<\/title>/)?.[1]?.trim() || null;
+  out.dob = bio["Date of Birth"] || null;
+  out.birthplace = bio["Place of Birth"] || null;
+  return out;
+}
+
+// Refreshes formula1.com profiles; keeps the previous profile for any driver whose page fails.
+async function fetchProfiles(drivers, previous) {
+  const listing = await get(`${F1_SITE}/en/drivers`, "text");
+  const slugs = [...new Set([...listing.matchAll(/href="\/en\/drivers\/([a-z0-9-]+)"/g)].map(m => m[1]))];
+  if (!slugs.length) throw new Error("no driver links found on the drivers page");
+
+  const profiles = new Map();
+  for (const d of drivers) {
+    const keepPrevious = () => { if (previous.get(d.id)?.profile) profiles.set(d.id, previous.get(d.id).profile); };
+    const slug = slugs.find(s => norm(s) === norm(d.name));
+    if (!slug) { keepPrevious(); continue; } // e.g. a driver no longer on the current grid
+    try {
+      const url = `${F1_SITE}/en/drivers/${slug}`;
+      const profile = parseProfile(await get(url, "text"), url);
+      if (!profile) throw new Error("page structure not recognised");
+      profiles.set(d.id, profile);
+    } catch (err) {
+      console.warn(`Profile for ${d.name} not updated: ${err.message}`);
+      keepPrevious();
+    }
+    await new Promise(r => setTimeout(r, 500));
+  }
+  return profiles;
 }
 
 async function isOfficialVideo(id) {
@@ -171,7 +226,9 @@ const drivers = dList.DriverStandings.map(x => {
   const d = {
     id,
     name: DRIVER_NAMES[id] || `${x.Driver.givenName} ${x.Driver.familyName}`,
+    number: x.Driver.permanentNumber || null,
     nat: NATIONALITY[x.Driver.nationality] || x.Driver.nationality.slice(0, 3).toUpperCase(),
+    nationality: x.Driver.nationality,
     team: teamOf(teamId).key,
     pts: Number(x.points)
   };
@@ -184,7 +241,24 @@ const teams = teamSt.MRData.StandingsTable.StandingsLists[0].ConstructorStanding
   pts: Number(x.points)
 }));
 
-const data = { season: SEASON, standingsRound: Number(dList.round), races, teams, drivers };
+// Driver profiles change only after a race, so formula1.com is only visited when the standings
+// round moves on, a new driver appears, or the previous refresh failed.
+const standingsRound = Number(dList.round);
+const previousDrivers = new Map((existing.drivers || []).map(d => [d.id, d]));
+let profilesRound = existing.profilesRound ?? null;
+let profiles = new Map([...previousDrivers].filter(([, d]) => d.profile).map(([id, d]) => [id, d.profile]));
+if (profilesRound !== standingsRound || drivers.some(d => !previousDrivers.has(d.id))) {
+  try {
+    profiles = await fetchProfiles(drivers, previousDrivers);
+    profilesRound = standingsRound;
+    console.log(`Driver profiles refreshed (${profiles.size}/${drivers.length}).`);
+  } catch (err) {
+    console.warn(`Driver profiles not refreshed, keeping previous ones: ${err.message}`);
+  }
+}
+for (const d of drivers) if (profiles.has(d.id)) d.profile = profiles.get(d.id);
+
+const data = { season: SEASON, standingsRound, profilesRound, races, teams, drivers };
 const out = `// Generated automatically by scripts/update.mjs — do not edit by hand.\nwindow.F1DATA = ${JSON.stringify(data, null, 2)};\n`;
 
 const before = await readFile(DATA_FILE, "utf8").catch(() => "");
