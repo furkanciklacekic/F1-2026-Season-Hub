@@ -453,7 +453,8 @@ function saveWatched() {
 /* ============ SPOILER-FREE MODE ============ */
 
 const SPOILER_KEY = "f1-2026-spoiler-free";
-let spoilerFree = (() => { try { return localStorage.getItem(SPOILER_KEY) === "1"; } catch { return false; } })();
+// On by default; only an explicit choice to turn it off is remembered as off.
+let spoilerFree = (() => { try { return localStorage.getItem(SPOILER_KEY) !== "0"; } catch { return true; } })();
 const revealedOnce = new Set(); // races whose results were shown anyway during this visit
 const finished = () => RACES.filter(r => r.results);
 
