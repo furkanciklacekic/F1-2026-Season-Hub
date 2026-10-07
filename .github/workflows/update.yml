@@ -45,12 +45,12 @@ jobs:
       - name: Commit if changed
         id: commit
         run: |
-          if git diff --quiet -- data.js; then
+          if git diff --quiet -- data.js calendar.ics; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data.js
+            git add data.js calendar.ics
             git commit -m "Update data"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -59,7 +59,7 @@ jobs:
       # On scheduled runs, only deploy when the data changed.
       - name: Prepare site folder
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
-        run: mkdir _site && cp index.html data.js _site/
+        run: mkdir _site && cp -r index.html data.js calendar.ics manifest.webmanifest sw.js icons _site/
 
       - uses: actions/configure-pages@v5
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'

@@ -9,7 +9,13 @@ window.F1DATA = {
       "gp": "Australian Grand Prix",
       "circuit": "Albert Park Grand Prix Circuit, Melbourne",
       "start": "2026-03-08T04:00:00Z",
-      "fp1": "2026-03-06T01:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-03-06T01:30:00Z" ],
+        [ "Practice 2", "2026-03-06T05:00:00Z" ],
+        [ "Practice 3", "2026-03-07T01:30:00Z" ],
+        [ "Qualifying", "2026-03-07T05:00:00Z" ],
+        [ "Race", "2026-03-08T04:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 58, "time": "1:23:06.801", "pts": 25 },
@@ -37,14 +43,52 @@ window.F1DATA = {
       ],
       "winner": "George Russell",
       "team": "mercedes",
-      "yt": "lL_d84cN1UY"
+      "qualifying": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:19.507", "q2": "1:18.934", "q3": "1:18.518" },
+        { "pos": "2", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:20.120", "q2": "1:19.435", "q3": "1:18.811" },
+        { "pos": "3", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:20.023", "q2": "1:19.653", "q3": "1:19.303" },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:20.226", "q2": "1:19.357", "q3": "1:19.327" },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:19.664", "q2": "1:19.525", "q3": "1:19.380" },
+        { "pos": "6", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:20.010", "q2": "1:19.882", "q3": "1:19.475" },
+        { "pos": "7", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:19.811", "q2": "1:19.921", "q3": "1:19.478" },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:20.491", "q2": "1:20.144", "q3": "1:19.994" },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:20.409", "q2": "1:19.971", "q3": "1:21.247" },
+        { "pos": "10", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:20.495", "q2": "1:20.221" },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:21.024", "q2": "1:20.303" },
+        { "pos": "12", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:21.247", "q2": "1:20.311" },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:20.759", "q2": "1:20.491" },
+        { "pos": "14", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:21.138", "q2": "1:20.501" },
+        { "pos": "15", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:21.051", "q2": "1:20.941" },
+        { "pos": "16", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:21.200", "q2": "1:21.270" },
+        { "pos": "17", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:21.969" },
+        { "pos": "18", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:22.605" },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:23.244" }
+      ],
+      "yt": "lL_d84cN1UY",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/australia",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.278km" ],
+          [ "First Grand Prix", "1996" ],
+          [ "Number of Laps", "58" ],
+          [ "Lap record", "1:19.813 · Charles Leclerc (2024)" ],
+          [ "Race Distance", "306.124km" ]
+        ]
+      }
     },
     {
       "n": 2,
       "gp": "Chinese Grand Prix",
       "circuit": "Shanghai International Circuit",
       "start": "2026-03-15T07:00:00Z",
-      "fp1": "2026-03-13T03:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-03-13T03:30:00Z" ],
+        [ "Sprint Qualifying", "2026-03-13T07:30:00Z" ],
+        [ "Sprint", "2026-03-14T03:00:00Z" ],
+        [ "Qualifying", "2026-03-14T07:00:00Z" ],
+        [ "Race", "2026-03-15T07:00:00Z" ]
+      ],
       "sprint": true,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 56, "time": "1:33:15.607", "pts": 25, "fastestLap": true },
@@ -72,14 +116,79 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "t8HpVlineX4"
+      "sprintResults": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 19, "time": "33:38.998", "pts": 8 },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 6, "laps": 19, "time": "+0.674s", "pts": 7, "fastestLap": true },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 4, "laps": 19, "time": "+2.554s", "pts": 6 },
+        { "pos": "4", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 3, "laps": 19, "time": "+4.433s", "pts": 5 },
+        { "pos": "5", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 19, "time": "+5.688s", "pts": 4 },
+        { "pos": "6", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 5, "laps": 19, "time": "+6.809s", "pts": 3 },
+        { "pos": "7", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 13, "laps": 19, "time": "+10.900s", "pts": 2 },
+        { "pos": "8", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 9, "laps": 19, "time": "+11.271s", "pts": 1 },
+        { "pos": "9", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 8, "laps": 19, "time": "+11.619s", "pts": 0 },
+        { "pos": "10", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 12, "laps": 19, "time": "+13.887s", "pts": 0 },
+        { "pos": "11", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 7, "laps": 19, "time": "+14.780s", "pts": 0 },
+        { "pos": "12", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 17, "laps": 19, "time": "+15.753s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 14, "laps": 19, "time": "+15.858s", "pts": 0 },
+        { "pos": "14", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 16, "laps": 19, "time": "+16.393s", "pts": 0 },
+        { "pos": "15", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 10, "laps": 19, "time": "+16.430s", "pts": 0 },
+        { "pos": "16", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 22, "laps": 19, "time": "+20.014s", "pts": 0 },
+        { "pos": "17", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 18, "laps": 19, "time": "+21.599s", "pts": 0 },
+        { "pos": "18", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 19, "laps": 19, "time": "+21.971s", "pts": 0 },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 21, "laps": 19, "time": "+28.241s", "pts": 0 },
+        { "pos": "NC", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 12, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 20, "laps": 12, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 15, "laps": 11, "time": "DNF", "pts": 0 }
+      ],
+      "qualifying": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:33.305", "q2": "1:32.443", "q3": "1:32.064" },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:33.262", "q2": "1:32.523", "q3": "1:32.286" },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:33.522", "q2": "1:32.567", "q3": "1:32.415" },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:33.175", "q2": "1:32.486", "q3": "1:32.428" },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:33.590", "q2": "1:33.130", "q3": "1:32.550" },
+        { "pos": "6", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:33.535", "q2": "1:32.910", "q3": "1:32.608" },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:33.788", "q2": "1:33.003", "q3": "1:32.873" },
+        { "pos": "8", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:33.417", "q2": "1:33.098", "q3": "1:33.002" },
+        { "pos": "9", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:33.632", "q2": "1:33.352", "q3": "1:33.121" },
+        { "pos": "10", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:33.687", "q2": "1:33.197", "q3": "1:33.292" },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:34.116", "q2": "1:33.354" },
+        { "pos": "12", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:33.634", "q2": "1:33.357" },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:33.974", "q2": "1:33.538" },
+        { "pos": "14", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:34.139", "q2": "1:33.765" },
+        { "pos": "15", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:33.906", "q2": "1:33.784" },
+        { "pos": "16", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:33.549", "q2": "1:33.965" },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:34.317" },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:34.772" },
+        { "pos": "19", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:35.203" },
+        { "pos": "20", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:35.436" },
+        { "pos": "21", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:35.995" },
+        { "pos": "22", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:36.906" }
+      ],
+      "yt": "t8HpVlineX4",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/china",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.451km" ],
+          [ "First Grand Prix", "2004" ],
+          [ "Number of Laps", "56" ],
+          [ "Lap record", "1:32.238 · Michael Schumacher (2004)" ],
+          [ "Race Distance", "305.066km" ]
+        ]
+      }
     },
     {
       "n": 3,
       "gp": "Japanese Grand Prix",
       "circuit": "Suzuka Circuit",
       "start": "2026-03-29T05:00:00Z",
-      "fp1": "2026-03-27T02:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-03-27T02:30:00Z" ],
+        [ "Practice 2", "2026-03-27T06:00:00Z" ],
+        [ "Practice 3", "2026-03-28T02:30:00Z" ],
+        [ "Qualifying", "2026-03-28T06:00:00Z" ],
+        [ "Race", "2026-03-29T05:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 53, "time": "1:28:03.403", "pts": 25, "fastestLap": true },
@@ -107,14 +216,55 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "oAtYfF0_4-I"
+      "qualifying": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:30.035", "q2": "1:29.048", "q3": "1:28.778" },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:29.967", "q2": "1:29.686", "q3": "1:29.076" },
+        { "pos": "3", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:30.200", "q2": "1:29.451", "q3": "1:29.132" },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:29.915", "q2": "1:29.303", "q3": "1:29.405" },
+        { "pos": "5", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:30.401", "q2": "1:29.795", "q3": "1:29.409" },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:30.309", "q2": "1:29.589", "q3": "1:29.567" },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:30.584", "q2": "1:29.874", "q3": "1:29.691" },
+        { "pos": "8", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:30.662", "q2": "1:30.104", "q3": "1:29.978" },
+        { "pos": "9", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:30.359", "q2": "1:29.990", "q3": "1:30.274" },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:30.781", "q2": "1:30.109", "q3": "1:30.319" },
+        { "pos": "11", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:30.519", "q2": "1:30.262" },
+        { "pos": "12", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:30.915", "q2": "1:30.309" },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:30.358", "q2": "1:30.387" },
+        { "pos": "14", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:30.657", "q2": "1:30.495" },
+        { "pos": "15", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:30.931", "q2": "1:30.627" },
+        { "pos": "16", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:30.927", "q2": "1:31.033" },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:31.088" },
+        { "pos": "18", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:31.090" },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:32.206" },
+        { "pos": "20", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:32.330" },
+        { "pos": "21", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:32.646" },
+        { "pos": "22", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:32.920" }
+      ],
+      "yt": "oAtYfF0_4-I",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/japan",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.807km" ],
+          [ "First Grand Prix", "1987" ],
+          [ "Number of Laps", "53" ],
+          [ "Lap record", "1:30.965 · Kimi Antonelli (2025)" ],
+          [ "Race Distance", "307.471km" ]
+        ]
+      }
     },
     {
       "n": 4,
       "gp": "Miami Grand Prix",
       "circuit": "Miami International Autodrome",
       "start": "2026-05-03T20:00:00Z",
-      "fp1": "2026-05-01T16:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-05-01T16:00:00Z" ],
+        [ "Sprint Qualifying", "2026-05-01T20:30:00Z" ],
+        [ "Sprint", "2026-05-02T16:00:00Z" ],
+        [ "Qualifying", "2026-05-02T20:00:00Z" ],
+        [ "Race", "2026-05-03T20:00:00Z" ]
+      ],
       "sprint": true,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 57, "time": "1:33:19.273", "pts": 25 },
@@ -142,14 +292,79 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "5gYys4GL7S0"
+      "sprintResults": [
+        { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 1, "laps": 19, "time": "29:15.045", "pts": 8, "fastestLap": true },
+        { "pos": "2", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 3, "laps": 19, "time": "+3.766s", "pts": 7 },
+        { "pos": "3", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 19, "time": "+6.251s", "pts": 6 },
+        { "pos": "4", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 6, "laps": 19, "time": "+12.951s", "pts": 5 },
+        { "pos": "5", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 5, "laps": 19, "time": "+13.639s", "pts": 4 },
+        { "pos": "6", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 19, "time": "+13.777s", "pts": 3 },
+        { "pos": "7", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 7, "laps": 19, "time": "+21.665s", "pts": 2 },
+        { "pos": "8", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 10, "laps": 19, "time": "+30.525s", "pts": 1 },
+        { "pos": "9", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 9, "laps": 19, "time": "+35.346s", "pts": 0 },
+        { "pos": "10", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 8, "laps": 19, "time": "+36.970s", "pts": 0 },
+        { "pos": "11", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 16, "laps": 19, "time": "+56.972s", "pts": 0 },
+        { "pos": "12", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 13, "laps": 19, "time": "+57.365s", "pts": 0 },
+        { "pos": "13", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 14, "laps": 19, "time": "+58.504s", "pts": 0 },
+        { "pos": "14", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 15, "laps": 19, "time": "+59.358s", "pts": 0 },
+        { "pos": "15", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 20, "laps": 19, "time": "+1:16.067s", "pts": 0 },
+        { "pos": "16", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 17, "laps": 19, "time": "+1:16.691s", "pts": 0 },
+        { "pos": "17", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 21, "laps": 19, "time": "+1:17.626s", "pts": 0 },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 18, "laps": 19, "time": "+1:28.173s", "pts": 0 },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 19, "time": "+1:29.597s", "pts": 0 },
+        { "pos": "DNS", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 12, "laps": 0, "time": "DNS", "pts": 0 },
+        { "pos": "DNS", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 22, "laps": 0, "time": "DNS", "pts": 0 },
+        { "pos": "DQ", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 11, "laps": 19, "time": "DSQ", "pts": 0 }
+      ],
+      "qualifying": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:28.653", "q2": "1:28.289", "q3": "1:27.798" },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:29.099", "q2": "1:28.116", "q3": "1:27.964" },
+        { "pos": "3", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:28.938", "q2": "1:28.315", "q3": "1:28.143" },
+        { "pos": "4", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:29.183", "q2": "1:28.920", "q3": "1:28.183" },
+        { "pos": "5", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:29.492", "q2": "1:28.477", "q3": "1:28.197" },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:29.483", "q2": "1:28.477", "q3": "1:28.319" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:29.920", "q2": "1:28.332", "q3": "1:28.500" },
+        { "pos": "8", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:29.584", "q2": "1:28.975", "q3": "1:28.762" },
+        { "pos": "9", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:29.914", "q2": "1:29.070", "q3": "1:28.810" },
+        { "pos": "10", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:29.645", "q2": "1:29.439" },
+        { "pos": "11", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:29.595", "q2": "1:29.499" },
+        { "pos": "12", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:29.340", "q2": "1:29.567" },
+        { "pos": "13", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:29.540", "q2": "1:29.568" },
+        { "pos": "14", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:29.838", "q2": "1:29.772" },
+        { "pos": "15", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:29.720", "q2": "1:29.946" },
+        { "pos": "16", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:30.133" },
+        { "pos": "17", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:31.098" },
+        { "pos": "18", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:31.164" },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:31.629" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:31.967" },
+        { "pos": "21", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:33.737" },
+        { "pos": "22", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull" }
+      ],
+      "yt": "5gYys4GL7S0",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/miami",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.412km" ],
+          [ "First Grand Prix", "2022" ],
+          [ "Number of Laps", "57" ],
+          [ "Lap record", "1:29.708 · Max Verstappen (2023)" ],
+          [ "Race Distance", "308.326km" ]
+        ]
+      }
     },
     {
       "n": 5,
       "gp": "Canadian Grand Prix",
       "circuit": "Circuit Gilles Villeneuve, Montreal",
       "start": "2026-05-24T20:00:00Z",
-      "fp1": "2026-05-22T16:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-05-22T16:30:00Z" ],
+        [ "Sprint Qualifying", "2026-05-22T20:30:00Z" ],
+        [ "Sprint", "2026-05-23T16:00:00Z" ],
+        [ "Qualifying", "2026-05-23T20:00:00Z" ],
+        [ "Race", "2026-05-24T20:00:00Z" ]
+      ],
       "sprint": true,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 68, "time": "1:28:15.758", "pts": 25, "fastestLap": true },
@@ -177,14 +392,79 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "QrRh2vOJQbw"
+      "sprintResults": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 23, "time": "28:50.951", "pts": 8 },
+        { "pos": "2", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 3, "laps": 23, "time": "+1.272s", "pts": 7 },
+        { "pos": "3", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 23, "time": "+1.843s", "pts": 6, "fastestLap": true },
+        { "pos": "4", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 4, "laps": 23, "time": "+9.797s", "pts": 5 },
+        { "pos": "5", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 6, "laps": 23, "time": "+9.929s", "pts": 4 },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 5, "laps": 23, "time": "+10.545s", "pts": 3 },
+        { "pos": "7", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 7, "laps": 23, "time": "+15.935s", "pts": 2 },
+        { "pos": "8", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 9, "laps": 23, "time": "+29.710s", "pts": 1 },
+        { "pos": "9", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 13, "laps": 23, "time": "+31.621s", "pts": 0 },
+        { "pos": "10", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 10, "laps": 23, "time": "+36.793s", "pts": 0 },
+        { "pos": "11", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 18, "laps": 23, "time": "+1:01.344s", "pts": 0 },
+        { "pos": "12", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 12, "laps": 23, "time": "+1:01.814s", "pts": 0 },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 14, "laps": 23, "time": "+1:04.209s", "pts": 0 },
+        { "pos": "14", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 16, "laps": 23, "time": "+1:10.402s", "pts": 0 },
+        { "pos": "15", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 23, "time": "+1:12.158s", "pts": 0 },
+        { "pos": "16", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 17, "laps": 22, "time": "+13.127s", "pts": 0 },
+        { "pos": "17", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 21, "laps": 22, "time": "+17.861s", "pts": 0 },
+        { "pos": "18", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 19, "laps": 22, "time": "+23.846s", "pts": 0 },
+        { "pos": "19", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 22, "laps": 22, "time": "+53.493s", "pts": 0 },
+        { "pos": "20", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 20, "laps": 22, "time": "+1:08.477s", "pts": 0 },
+        { "pos": "21", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 8, "laps": 20, "time": "+18.135s", "pts": 0 },
+        { "pos": "NC", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 15, "laps": 15, "time": "DNF", "pts": 0 }
+      ],
+      "qualifying": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:13.953", "q2": "1:13.079", "q3": "1:12.578" },
+        { "pos": "2", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:13.380", "q2": "1:13.076", "q3": "1:12.646" },
+        { "pos": "3", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:13.503", "q2": "1:13.049", "q3": "1:12.729" },
+        { "pos": "4", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:13.559", "q2": "1:13.285", "q3": "1:12.781" },
+        { "pos": "5", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:13.767", "q2": "1:13.041", "q3": "1:12.868" },
+        { "pos": "6", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:14.067", "q2": "1:13.479", "q3": "1:12.907" },
+        { "pos": "7", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:13.654", "q2": "1:12.975", "q3": "1:12.935" },
+        { "pos": "8", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:13.825", "q2": "1:13.496", "q3": "1:12.976" },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:13.895", "q2": "1:13.548", "q3": "1:13.280" },
+        { "pos": "10", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:14.466", "q2": "1:13.857", "q3": "1:13.697" },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:14.562", "q2": "1:13.886" },
+        { "pos": "12", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:14.346", "q2": "1:13.897" },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:14.775", "q2": "1:14.071" },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:14.276", "q2": "1:14.273" },
+        { "pos": "16", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:14.449", "q2": "1:14.416" },
+        { "pos": "14", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:14.698", "q2": "1:14.187" },
+        { "pos": "17", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:14.845" },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:14.851" },
+        { "pos": "19", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:15.196" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:15.429" },
+        { "pos": "21", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:16.195" },
+        { "pos": "22", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:16.272" }
+      ],
+      "yt": "QrRh2vOJQbw",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/canada",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.361km" ],
+          [ "First Grand Prix", "1978" ],
+          [ "Number of Laps", "70" ],
+          [ "Lap record", "1:13.078 · Valtteri Bottas (2019)" ],
+          [ "Race Distance", "305.27km" ]
+        ]
+      }
     },
     {
       "n": 6,
       "gp": "Monaco Grand Prix",
       "circuit": "Circuit de Monaco, Monte Carlo",
       "start": "2026-06-07T13:00:00Z",
-      "fp1": "2026-06-05T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-06-05T11:30:00Z" ],
+        [ "Practice 2", "2026-06-05T15:00:00Z" ],
+        [ "Practice 3", "2026-06-06T10:30:00Z" ],
+        [ "Qualifying", "2026-06-06T14:00:00Z" ],
+        [ "Race", "2026-06-07T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 78, "time": "2:23:31.243", "pts": 25, "fastestLap": true },
@@ -212,14 +492,55 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "ipOT9ruRobc"
+      "qualifying": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:13.599", "q2": "1:12.704", "q3": "1:12.051" },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:13.490", "q2": "1:12.499", "q3": "1:12.094" },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:13.777", "q2": "1:12.934", "q3": "1:12.279" },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:13.293", "q2": "1:12.774", "q3": "1:12.351" },
+        { "pos": "5", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:14.408", "q2": "1:12.722", "q3": "1:12.434" },
+        { "pos": "6", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:14.214", "q2": "1:13.238", "q3": "1:12.445" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:14.159", "q2": "1:12.983", "q3": "1:12.624" },
+        { "pos": "8", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:13.630", "q2": "1:12.919", "q3": "1:12.765" },
+        { "pos": "9", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:14.469", "q2": "1:13.762", "q3": "1:13.226" },
+        { "pos": "10", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:14.498", "q2": "1:13.471", "q3": "1:13.412" },
+        { "pos": "11", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:14.321", "q2": "1:13.787" },
+        { "pos": "12", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:14.348", "q2": "1:13.815" },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:13.923", "q2": "1:13.902" },
+        { "pos": "14", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:14.573", "q2": "1:13.995" },
+        { "pos": "15", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:14.685", "q2": "1:14.248" },
+        { "pos": "16", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:14.683" },
+        { "pos": "17", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:14.722" },
+        { "pos": "18", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:14.747" },
+        { "pos": "19", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:14.814" },
+        { "pos": "20", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:15.283" },
+        { "pos": "21", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:15.349" },
+        { "pos": "22", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:16.061" }
+      ],
+      "yt": "ipOT9ruRobc",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/monaco",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp",
+        "facts": [
+          [ "Circuit Length", "3.337km" ],
+          [ "First Grand Prix", "1950" ],
+          [ "Number of Laps", "78" ],
+          [ "Lap record", "1:12.909 · Lewis Hamilton (2021)" ],
+          [ "Race Distance", "260.286km" ]
+        ]
+      }
     },
     {
       "n": 7,
       "gp": "Barcelona-Catalunya Grand Prix",
       "circuit": "Circuit de Barcelona-Catalunya",
       "start": "2026-06-14T13:00:00Z",
-      "fp1": "2026-06-12T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-06-12T11:30:00Z" ],
+        [ "Practice 2", "2026-06-12T15:00:00Z" ],
+        [ "Practice 3", "2026-06-13T10:30:00Z" ],
+        [ "Qualifying", "2026-06-13T14:00:00Z" ],
+        [ "Race", "2026-06-14T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 2, "laps": 66, "time": "1:32:28.105", "pts": 25, "fastestLap": true },
@@ -247,14 +568,55 @@ window.F1DATA = {
       ],
       "winner": "Lewis Hamilton",
       "team": "ferrari",
-      "yt": "Ey8j_BlLvFM"
+      "qualifying": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:15.717", "q2": "1:15.228", "q3": "1:14.679" },
+        { "pos": "2", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:15.625", "q2": "1:15.418", "q3": "1:14.743" },
+        { "pos": "3", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:15.977", "q2": "1:15.295", "q3": "1:14.998" },
+        { "pos": "4", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:16.287", "q2": "1:15.361", "q3": "1:15.001" },
+        { "pos": "5", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:16.352", "q2": "1:15.484", "q3": "1:15.021" },
+        { "pos": "6", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:16.427", "q2": "1:15.754", "q3": "1:15.077" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:16.138", "q2": "1:15.518", "q3": "1:15.090" },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:16.673", "q2": "1:15.585", "q3": "1:16.542" },
+        { "pos": "9", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:16.066", "q2": "1:15.768", "q3": "1:16.657" },
+        { "pos": "10", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:15.964", "q2": "1:15.281" },
+        { "pos": "11", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:16.425", "q2": "1:15.840" },
+        { "pos": "12", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:16.616", "q2": "1:16.001" },
+        { "pos": "13", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:16.590", "q2": "1:16.191" },
+        { "pos": "14", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:16.599", "q2": "1:16.261" },
+        { "pos": "15", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:16.571", "q2": "1:16.389" },
+        { "pos": "16", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:16.881", "q2": "1:17.827" },
+        { "pos": "17", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:17.073" },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:17.424" },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:17.545" },
+        { "pos": "20", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:17.757" },
+        { "pos": "21", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:18.758" },
+        { "pos": "22", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:18.815" }
+      ],
+      "yt": "Ey8j_BlLvFM",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/barcelona-catalunya",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackcatalunyadetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.657km" ],
+          [ "First Grand Prix", "1991" ],
+          [ "Number of Laps", "66" ],
+          [ "Lap record", "1:15.743 · Oscar Piastri (2025)" ],
+          [ "Race Distance", "307.236km" ]
+        ]
+      }
     },
     {
       "n": 8,
       "gp": "Austrian Grand Prix",
       "circuit": "Red Bull Ring, Spielberg",
       "start": "2026-06-28T13:00:00Z",
-      "fp1": "2026-06-26T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-06-26T11:30:00Z" ],
+        [ "Practice 2", "2026-06-26T15:00:00Z" ],
+        [ "Practice 3", "2026-06-27T10:30:00Z" ],
+        [ "Qualifying", "2026-06-27T14:00:00Z" ],
+        [ "Race", "2026-06-28T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 71, "time": "1:26:37.979", "pts": 25 },
@@ -282,14 +644,55 @@ window.F1DATA = {
       ],
       "winner": "George Russell",
       "team": "mercedes",
-      "yt": "usP9O0zFVaA"
+      "qualifying": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:07.398", "q2": "1:06.979", "q3": "1:06.113" },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:07.543", "q2": "1:07.030", "q3": "1:06.349" },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:07.290", "q2": "1:06.994", "q3": "1:06.408" },
+        { "pos": "4", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:07.083", "q2": "1:06.763", "q3": "1:06.414" },
+        { "pos": "5", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:07.407", "q2": "1:07.183", "q3": "1:06.475" },
+        { "pos": "6", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:07.259", "q2": "1:06.897", "q3": "1:06.502" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:07.487", "q2": "1:06.890", "q3": "1:06.511" },
+        { "pos": "8", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:07.408", "q2": "1:07.086", "q3": "1:06.632" },
+        { "pos": "9", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:07.385", "q2": "1:07.136", "q3": "1:06.955" },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:07.549", "q2": "1:07.155", "q3": "1:07.007" },
+        { "pos": "11", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:08.038", "q2": "1:07.223" },
+        { "pos": "12", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:08.035", "q2": "1:07.293" },
+        { "pos": "13", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:08.061", "q2": "1:07.523" },
+        { "pos": "14", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:08.066", "q2": "1:07.611" },
+        { "pos": "15", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:08.231", "q2": "1:07.817" },
+        { "pos": "16", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:07.894", "q2": "1:08.171" },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:08.252" },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:08.509" },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:08.945" },
+        { "pos": "20", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:09.030" },
+        { "pos": "21", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:09.942" },
+        { "pos": "22", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:10.363" }
+      ],
+      "yt": "usP9O0zFVaA",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/austria",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspielbergdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.326km" ],
+          [ "First Grand Prix", "1970" ],
+          [ "Number of Laps", "71" ],
+          [ "Lap record", "1:07.924 · Oscar Piastri (2025)" ],
+          [ "Race Distance", "307.026km" ]
+        ]
+      }
     },
     {
       "n": 9,
       "gp": "British Grand Prix",
       "circuit": "Silverstone Circuit",
       "start": "2026-07-05T14:00:00Z",
-      "fp1": "2026-07-03T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-07-03T11:30:00Z" ],
+        [ "Sprint Qualifying", "2026-07-03T15:30:00Z" ],
+        [ "Sprint", "2026-07-04T11:00:00Z" ],
+        [ "Qualifying", "2026-07-04T15:00:00Z" ],
+        [ "Race", "2026-07-05T14:00:00Z" ]
+      ],
       "sprint": true,
       "results": [
         { "pos": "1", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 2, "laps": 52, "time": "1:27:11.335", "pts": 25 },
@@ -317,14 +720,79 @@ window.F1DATA = {
       ],
       "winner": "Charles Leclerc",
       "team": "ferrari",
-      "yt": "rnjmSOUYVp8"
+      "sprintResults": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 17, "time": "26:12.129", "pts": 8, "fastestLap": true },
+        { "pos": "2", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 1, "laps": 17, "time": "+2.745s", "pts": 7 },
+        { "pos": "3", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 6, "laps": 17, "time": "+9.783s", "pts": 6 },
+        { "pos": "4", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 5, "laps": 17, "time": "+10.639s", "pts": 5 },
+        { "pos": "5", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 17, "time": "+12.620s", "pts": 4 },
+        { "pos": "6", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 3, "laps": 17, "time": "+16.550s", "pts": 3 },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 17, "time": "+17.551s", "pts": 2 },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 9, "laps": 17, "time": "+30.233s", "pts": 1 },
+        { "pos": "9", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 8, "laps": 17, "time": "+30.953s", "pts": 0 },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 10, "laps": 17, "time": "+35.110s", "pts": 0 },
+        { "pos": "11", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 11, "laps": 17, "time": "+40.273s", "pts": 0 },
+        { "pos": "12", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 14, "laps": 17, "time": "+41.026s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 12, "laps": 17, "time": "+42.499s", "pts": 0 },
+        { "pos": "14", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 16, "laps": 17, "time": "+45.784s", "pts": 0 },
+        { "pos": "15", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 13, "laps": 17, "time": "+46.680s", "pts": 0 },
+        { "pos": "16", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 17, "laps": 17, "time": "+49.810s", "pts": 0 },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 15, "laps": 17, "time": "+50.379s", "pts": 0 },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 22, "laps": 17, "time": "+50.757s", "pts": 0 },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 17, "time": "+1:15.117s", "pts": 0 },
+        { "pos": "20", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 20, "laps": 17, "time": "+1:31.872s", "pts": 0 },
+        { "pos": "21", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 21, "laps": 16, "time": "+22.277s", "pts": 0 },
+        { "pos": "22", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 18, "laps": 16, "time": "+33.566s", "pts": 0 }
+      ],
+      "qualifying": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:29.719", "q2": "1:28.493", "q3": "1:28.111" },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:29.534", "q2": "1:28.626", "q3": "1:28.286" },
+        { "pos": "3", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:29.644", "q2": "1:28.864", "q3": "1:28.458" },
+        { "pos": "4", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:29.985", "q2": "1:28.920", "q3": "1:28.481" },
+        { "pos": "5", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:29.276", "q2": "1:29.069", "q3": "1:28.746" },
+        { "pos": "6", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:30.186", "q2": "1:29.383", "q3": "1:28.877" },
+        { "pos": "7", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:29.549", "q2": "1:29.113", "q3": "1:28.893" },
+        { "pos": "8", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:29.971", "q2": "1:29.218", "q3": "1:29.032" },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:29.661", "q2": "1:29.324", "q3": "1:29.305" },
+        { "pos": "10", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:29.300", "q2": "1:29.429", "q3": "1:29.716" },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:30.269", "q2": "1:29.461" },
+        { "pos": "12", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:30.345", "q2": "1:30.063" },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:29.539", "q2": "1:30.076" },
+        { "pos": "14", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:30.570", "q2": "1:30.501" },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:30.562", "q2": "1:30.623" },
+        { "pos": "16", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:30.638", "q2": "1:31.341" },
+        { "pos": "17", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:30.680" },
+        { "pos": "18", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:31.227" },
+        { "pos": "19", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:31.321" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:31.451" },
+        { "pos": "21", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:32.863" },
+        { "pos": "22", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:33.025" }
+      ],
+      "yt": "rnjmSOUYVp8",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/great-britain",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksilverstonedetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.891km" ],
+          [ "First Grand Prix", "1950" ],
+          [ "Number of Laps", "52" ],
+          [ "Lap record", "1:27.097 · Max Verstappen (2020)" ],
+          [ "Race Distance", "306.198km" ]
+        ]
+      }
     },
     {
       "n": 10,
       "gp": "Belgian Grand Prix",
       "circuit": "Circuit de Spa-Francorchamps",
       "start": "2026-07-19T13:00:00Z",
-      "fp1": "2026-07-17T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-07-17T11:30:00Z" ],
+        [ "Practice 2", "2026-07-17T15:00:00Z" ],
+        [ "Practice 3", "2026-07-18T10:30:00Z" ],
+        [ "Qualifying", "2026-07-18T14:00:00Z" ],
+        [ "Race", "2026-07-19T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 44, "time": "1:24:42.479", "pts": 25 },
@@ -352,14 +820,55 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "I6RfOY_7leA"
+      "qualifying": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:46.304", "q2": "1:45.142", "q3": "1:44.361" },
+        { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:45.930", "q2": "1:45.589", "q3": "1:44.678" },
+        { "pos": "3", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:45.865", "q2": "1:45.454", "q3": "1:44.801" },
+        { "pos": "5", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:46.278", "q2": "1:45.397", "q3": "1:44.893" },
+        { "pos": "10", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:46.062", "q2": "1:45.823" },
+        { "pos": "4", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:46.185", "q2": "1:45.689", "q3": "1:44.869" },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:46.124", "q2": "1:45.543", "q3": "1:44.895" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:46.433", "q2": "1:45.671", "q3": "1:45.016" },
+        { "pos": "8", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:46.191", "q2": "1:45.629", "q3": "1:45.143" },
+        { "pos": "9", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:46.609", "q2": "1:46.082", "q3": "1:45.628" },
+        { "pos": "11", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:46.501", "q2": "1:46.120" },
+        { "pos": "12", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:46.679", "q2": "1:46.331" },
+        { "pos": "13", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:46.795", "q2": "1:46.392" },
+        { "pos": "14", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:46.893", "q2": "1:46.671" },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:47.080", "q2": "1:46.777" },
+        { "pos": "16", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:47.113", "q2": "1:46.779" },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:47.120" },
+        { "pos": "18", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:47.801" },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:47.823" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:47.971" },
+        { "pos": "21", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:50.002" },
+        { "pos": "22", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:50.177" }
+      ],
+      "yt": "I6RfOY_7leA",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/belgium",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspafrancorchampsdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "7.004km" ],
+          [ "First Grand Prix", "1950" ],
+          [ "Number of Laps", "44" ],
+          [ "Lap record", "1:44.701 · Sergio Perez (2024)" ],
+          [ "Race Distance", "308.054km" ]
+        ]
+      }
     },
     {
       "n": 11,
       "gp": "Hungarian Grand Prix",
       "circuit": "Hungaroring, Budapest",
       "start": "2026-07-26T13:00:00Z",
-      "fp1": "2026-07-24T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-07-24T11:30:00Z" ],
+        [ "Practice 2", "2026-07-24T15:00:00Z" ],
+        [ "Practice 3", "2026-07-25T10:30:00Z" ],
+        [ "Qualifying", "2026-07-25T14:00:00Z" ],
+        [ "Race", "2026-07-26T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 1, "laps": 70, "time": "1:39:56.180", "pts": 25 },
@@ -387,14 +896,55 @@ window.F1DATA = {
       ],
       "winner": "Lando Norris",
       "team": "mclaren",
-      "yt": "_JeaXt_3Mhc"
+      "qualifying": [
+        { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:18.277", "q2": "1:17.456", "q3": "1:17.207" },
+        { "pos": "2", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:18.730", "q2": "1:17.803", "q3": "1:17.219" },
+        { "pos": "3", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:18.984", "q2": "1:17.626", "q3": "1:17.445" },
+        { "pos": "4", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:18.726", "q2": "1:18.393", "q3": "1:17.479" },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:18.891", "q2": "1:17.928", "q3": "1:17.684" },
+        { "pos": "6", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:18.656", "q2": "1:18.249", "q3": "1:17.725" },
+        { "pos": "7", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:18.856", "q2": "1:18.445", "q3": "1:17.760" },
+        { "pos": "8", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:18.754", "q2": "1:17.872", "q3": "1:17.856" },
+        { "pos": "9", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:19.233", "q2": "1:18.360", "q3": "1:18.281" },
+        { "pos": "10", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:18.796", "q2": "1:18.639", "q3": "1:18.686" },
+        { "pos": "11", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:19.161", "q2": "1:18.765" },
+        { "pos": "12", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:19.741", "q2": "1:18.844" },
+        { "pos": "13", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:19.771", "q2": "1:19.027" },
+        { "pos": "14", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:19.069", "q2": "1:19.105" },
+        { "pos": "15", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:20.010", "q2": "1:19.734" },
+        { "pos": "16", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:20.126", "q2": "1:19.808" },
+        { "pos": "17", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:20.233" },
+        { "pos": "18", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:20.621" },
+        { "pos": "19", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:20.658" },
+        { "pos": "20", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:20.659" },
+        { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:20.886" },
+        { "pos": "22", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:21.322" }
+      ],
+      "yt": "_JeaXt_3Mhc",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/hungary",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackhungaroringdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.381km" ],
+          [ "First Grand Prix", "1986" ],
+          [ "Number of Laps", "70" ],
+          [ "Lap record", "1:16.627 · Lewis Hamilton (2020)" ],
+          [ "Race Distance", "306.63km" ]
+        ]
+      }
     },
     {
       "n": 12,
       "gp": "Dutch Grand Prix",
       "circuit": "Circuit Park Zandvoort",
       "start": "2026-08-23T13:00:00Z",
-      "fp1": "2026-08-21T10:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-08-21T10:30:00Z" ],
+        [ "Sprint Qualifying", "2026-08-21T14:30:00Z" ],
+        [ "Sprint", "2026-08-22T10:00:00Z" ],
+        [ "Qualifying", "2026-08-22T14:00:00Z" ],
+        [ "Race", "2026-08-23T13:00:00Z" ]
+      ],
       "sprint": true,
       "results": [
         { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 1, "laps": 72, "time": "2:04:44.859", "pts": 25 },
@@ -422,14 +972,79 @@ window.F1DATA = {
       ],
       "winner": "Lando Norris",
       "team": "mclaren",
-      "yt": "3OMLs3yI-KE"
+      "sprintResults": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 24, "time": "30:25.318", "pts": 8 },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 3, "laps": 24, "time": "+1.360s", "pts": 7 },
+        { "pos": "3", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 2, "laps": 24, "time": "+5.196s", "pts": 6, "fastestLap": true },
+        { "pos": "4", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 5, "laps": 24, "time": "+5.581s", "pts": 5 },
+        { "pos": "5", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 4, "laps": 24, "time": "+10.185s", "pts": 4 },
+        { "pos": "6", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 6, "laps": 24, "time": "+10.529s", "pts": 3 },
+        { "pos": "7", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 7, "laps": 24, "time": "+12.188s", "pts": 2 },
+        { "pos": "8", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 8, "laps": 24, "time": "+42.510s", "pts": 1 },
+        { "pos": "9", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 9, "laps": 24, "time": "+44.437s", "pts": 0 },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 10, "laps": 24, "time": "+44.971s", "pts": 0 },
+        { "pos": "11", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "grid": 11, "laps": 24, "time": "+47.471s", "pts": 0 },
+        { "pos": "12", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 13, "laps": 24, "time": "+54.466s", "pts": 0 },
+        { "pos": "13", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "grid": 12, "laps": 24, "time": "+56.483s", "pts": 0 },
+        { "pos": "14", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 15, "laps": 24, "time": "+1:06.098s", "pts": 0 },
+        { "pos": "15", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 17, "laps": 24, "time": "+1:06.588s", "pts": 0 },
+        { "pos": "16", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 16, "laps": 24, "time": "+1:14.632s", "pts": 0 },
+        { "pos": "17", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 18, "laps": 24, "time": "+1:14.650s", "pts": 0 },
+        { "pos": "18", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 22, "laps": 24, "time": "+1:15.284s", "pts": 0 },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 23, "time": "+3.909s", "pts": 0 },
+        { "pos": "20", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 21, "laps": 23, "time": "+37.723s", "pts": 0 },
+        { "pos": "21", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 21, "time": "+1:02.477s", "pts": 0 },
+        { "pos": "NC", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 14, "laps": 7, "time": "+17 Laps", "pts": 0 }
+      ],
+      "qualifying": [
+        { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:12.695", "q2": "1:11.628", "q3": "1:11.163" },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:12.924", "q2": "1:11.959", "q3": "1:11.265" },
+        { "pos": "3", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:13.022", "q2": "1:11.915", "q3": "1:11.296" },
+        { "pos": "4", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:12.610", "q2": "1:11.641", "q3": "1:11.305" },
+        { "pos": "5", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:12.673", "q2": "1:11.970", "q3": "1:11.494" },
+        { "pos": "6", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:13.064", "q2": "1:11.910", "q3": "1:11.558" },
+        { "pos": "7", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:13.290", "q2": "1:11.874", "q3": "1:11.618" },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "q1": "1:13.392", "q2": "1:12.301", "q3": "1:11.733" },
+        { "pos": "9", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:13.142", "q2": "1:12.433", "q3": "1:12.079" },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:13.074", "q2": "1:12.525", "q3": "1:12.185" },
+        { "pos": "11", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:13.115", "q2": "1:12.616" },
+        { "pos": "12", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "q1": "1:13.085", "q2": "1:12.627" },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:13.188", "q2": "1:12.797" },
+        { "pos": "14", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:13.322", "q2": "1:12.800" },
+        { "pos": "15", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:13.544", "q2": "1:13.137" },
+        { "pos": "16", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:13.552", "q2": "1:13.182" },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:13.574" },
+        { "pos": "18", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:13.650" },
+        { "pos": "19", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:13.818" },
+        { "pos": "20", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:13.826" },
+        { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:14.371" },
+        { "pos": "22", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:14.600" }
+      ],
+      "yt": "3OMLs3yI-KE",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/netherlands",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.259km" ],
+          [ "First Grand Prix", "1952" ],
+          [ "Number of Laps", "72" ],
+          [ "Lap record", "1:11.097 · Lewis Hamilton (2021)" ],
+          [ "Race Distance", "306.592km" ]
+        ]
+      }
     },
     {
       "n": 13,
       "gp": "Italian Grand Prix",
       "circuit": "Autodromo Nazionale di Monza",
       "start": "2026-09-06T13:00:00Z",
-      "fp1": "2026-09-04T10:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-09-04T10:30:00Z" ],
+        [ "Practice 2", "2026-09-04T14:00:00Z" ],
+        [ "Practice 3", "2026-09-05T10:30:00Z" ],
+        [ "Qualifying", "2026-09-05T14:00:00Z" ],
+        [ "Race", "2026-09-06T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 19, "laps": 53, "time": "1:51:15.281", "pts": 25, "fastestLap": true },
@@ -457,14 +1072,55 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "uptj3to1l7o"
+      "qualifying": [
+        { "pos": "1", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:22.612", "q2": "1:22.077", "q3": "1:21.786" },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:22.779", "q2": "1:22.161", "q3": "1:21.846" },
+        { "pos": "3", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:22.924", "q2": "1:22.017", "q3": "1:21.966" },
+        { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:22.902", "q2": "1:22.509", "q3": "1:22.004" },
+        { "pos": "5", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:22.847", "q2": "1:22.516", "q3": "1:22.011" },
+        { "pos": "6", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:22.631", "q2": "1:22.188", "q3": "1:22.070" },
+        { "pos": "7", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:22.758", "q2": "1:21.882", "q3": "1:22.093" },
+        { "pos": "8", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:22.662", "q2": "1:22.400", "q3": "1:22.220" },
+        { "pos": "9", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:22.659", "q2": "1:22.067", "q3": "1:22.256" },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:22.727", "q2": "1:22.345", "q3": "1:22.286" },
+        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:22.946", "q2": "1:22.517" },
+        { "pos": "12", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:22.906", "q2": "1:22.756" },
+        { "pos": "13", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:23.440", "q2": "1:22.779" },
+        { "pos": "14", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "q1": "1:22.989", "q2": "1:22.821" },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:23.616", "q2": "1:23.453" },
+        { "pos": "16", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:23.466", "q2": "1:23.454" },
+        { "pos": "17", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "q1": "1:23.755" },
+        { "pos": "18", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:24.356" },
+        { "pos": "19", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:24.364" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:24.595" },
+        { "pos": "21", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:25.150" },
+        { "pos": "22", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:25.222" }
+      ],
+      "yt": "uptj3to1l7o",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/italy",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.793km" ],
+          [ "First Grand Prix", "1950" ],
+          [ "Number of Laps", "53" ],
+          [ "Lap record", "1:20.901 · Lando Norris (2025)" ],
+          [ "Race Distance", "306.72km" ]
+        ]
+      }
     },
     {
       "n": 14,
       "gp": "Spanish Grand Prix",
       "circuit": "Madring, Madrid",
       "start": "2026-09-13T13:00:00Z",
-      "fp1": "2026-09-11T11:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-09-11T11:30:00Z" ],
+        [ "Practice 2", "2026-09-11T15:00:00Z" ],
+        [ "Practice 3", "2026-09-12T10:30:00Z" ],
+        [ "Qualifying", "2026-09-12T14:00:00Z" ],
+        [ "Race", "2026-09-13T13:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 2, "laps": 57, "time": "1:34:23.754", "pts": 25 },
@@ -492,14 +1148,53 @@ window.F1DATA = {
       ],
       "winner": "Kimi Antonelli",
       "team": "mercedes",
-      "yt": "NK7AfP_wi8M"
+      "qualifying": [
+        { "pos": "1", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:33.469", "q2": "1:32.873", "q3": "1:31.824" },
+        { "pos": "2", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:33.267", "q2": "1:32.591", "q3": "1:31.835" },
+        { "pos": "3", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:33.381", "q2": "1:32.431", "q3": "1:31.964" },
+        { "pos": "4", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:33.531", "q2": "1:32.710", "q3": "1:32.013" },
+        { "pos": "5", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:33.532", "q2": "1:32.755", "q3": "1:32.019" },
+        { "pos": "6", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:33.211", "q2": "1:32.850", "q3": "1:32.149" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:33.829", "q2": "1:33.204", "q3": "1:32.294" },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "redbull", "q1": "1:33.310", "q2": "1:32.780", "q3": "1:32.316" },
+        { "pos": "9", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:33.963", "q2": "1:33.038", "q3": "1:32.903" },
+        { "pos": "10", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:34.340", "q2": "1:33.204", "q3": "1:33.041" },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:34.417", "q2": "1:33.223" },
+        { "pos": "12", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:33.986", "q2": "1:33.388" },
+        { "pos": "13", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:34.667", "q2": "1:33.667" },
+        { "pos": "14", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:34.246", "q2": "1:33.753" },
+        { "pos": "15", "id": "tsunoda", "name": "Yuki Tsunoda", "team": "racingbulls", "q1": "1:34.311", "q2": "1:34.084" },
+        { "pos": "16", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:35.307", "q2": "1:35.532" },
+        { "pos": "17", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:35.312" },
+        { "pos": "18", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:35.388" },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:35.913" },
+        { "pos": "20", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:38.011" }
+      ],
+      "yt": "NK7AfP_wi8M",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/spain",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmadringdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.414km" ],
+          [ "First Grand Prix", "2026" ],
+          [ "Number of Laps", "57" ],
+          [ "Lap record", "1:35.587 · George Russell (2026)" ],
+          [ "Race Distance", "308.399km" ]
+        ]
+      }
     },
     {
       "n": 15,
       "gp": "Azerbaijan Grand Prix",
       "circuit": "Baku City Circuit",
       "start": "2026-09-26T11:00:00Z",
-      "fp1": "2026-09-24T08:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-09-24T08:30:00Z" ],
+        [ "Practice 2", "2026-09-24T12:00:00Z" ],
+        [ "Practice 3", "2026-09-25T08:30:00Z" ],
+        [ "Qualifying", "2026-09-25T12:00:00Z" ],
+        [ "Race", "2026-09-26T11:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 1, "laps": 51, "time": "1:38:02.143", "pts": 25, "fastestLap": true },
@@ -527,14 +1222,55 @@ window.F1DATA = {
       ],
       "winner": "George Russell",
       "team": "mercedes",
-      "yt": "I9oahfzac0I"
+      "qualifying": [
+        { "pos": "1", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:43.615", "q2": "1:43.462", "q3": "1:42.526" },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:44.360", "q2": "1:43.780", "q3": "1:43.363" },
+        { "pos": "3", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:45.014", "q2": "1:43.814", "q3": "1:43.364" },
+        { "pos": "4", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:44.161", "q2": "1:43.880", "q3": "1:43.500" },
+        { "pos": "5", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:44.571", "q2": "1:44.020", "q3": "1:43.672" },
+        { "pos": "6", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:44.260", "q2": "1:44.037", "q3": "1:43.858" },
+        { "pos": "7", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:44.489", "q2": "1:44.106", "q3": "1:44.047" },
+        { "pos": "8", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:44.041", "q2": "1:43.706", "q3": "1:44.081" },
+        { "pos": "9", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:45.104", "q2": "1:44.629", "q3": "1:44.566" },
+        { "pos": "10", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:45.106", "q2": "1:44.683", "q3": "1:44.963" },
+        { "pos": "11", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:45.228", "q2": "1:44.775" },
+        { "pos": "12", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:45.535", "q2": "1:44.860" },
+        { "pos": "13", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:45.031", "q2": "1:45.001" },
+        { "pos": "14", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:45.039", "q2": "1:45.016" },
+        { "pos": "15", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:45.381", "q2": "1:45.106" },
+        { "pos": "16", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:45.504" },
+        { "pos": "17", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:45.799" },
+        { "pos": "18", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:45.920" },
+        { "pos": "19", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:46.593" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:46.658" },
+        { "pos": "21", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:47.337" },
+        { "pos": "22", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:48.290" }
+      ],
+      "yt": "I9oahfzac0I",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/azerbaijan",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackbakudetailed.webp",
+        "facts": [
+          [ "Circuit Length", "6.003km" ],
+          [ "First Grand Prix", "2016" ],
+          [ "Number of Laps", "51" ],
+          [ "Lap record", "1:43.009 · Charles Leclerc (2019)" ],
+          [ "Race Distance", "306.049km" ]
+        ]
+      }
     },
     {
       "n": 16,
       "gp": "Bahrain Grand Prix in Malaysia",
       "circuit": "Sepang International Circuit, Kuala Lumpur",
       "start": "2026-10-04T07:00:00Z",
-      "fp1": "2026-10-02T04:30:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-10-02T04:30:00Z" ],
+        [ "Practice 2", "2026-10-02T08:00:00Z" ],
+        [ "Practice 3", "2026-10-03T04:30:00Z" ],
+        [ "Qualifying", "2026-10-03T08:00:00Z" ],
+        [ "Race", "2026-10-04T07:00:00Z" ]
+      ],
       "sprint": false,
       "results": [
         { "pos": "1", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 1, "laps": 55, "time": "1:47:14.808", "pts": 25, "fastestLap": true },
@@ -562,15 +1298,218 @@ window.F1DATA = {
       ],
       "winner": "Max Verstappen",
       "team": "redbull",
-      "yt": "U-V7IfBwN1I"
+      "qualifying": [
+        { "pos": "1", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:36.477", "q2": "1:35.696", "q3": "1:35.130" },
+        { "pos": "2", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:36.595", "q2": "1:36.032", "q3": "1:35.428" },
+        { "pos": "3", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:36.898", "q2": "1:36.192", "q3": "1:35.558" },
+        { "pos": "4", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:37.041", "q2": "1:35.959", "q3": "1:35.631" },
+        { "pos": "5", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:36.730", "q2": "1:35.970", "q3": "1:35.666" },
+        { "pos": "6", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:37.092", "q2": "1:36.173", "q3": "1:35.757" },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:36.852", "q2": "1:36.020", "q3": "1:35.762" },
+        { "pos": "8", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:37.264", "q2": "1:36.245", "q3": "1:35.871" },
+        { "pos": "9", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:37.174", "q2": "1:36.410", "q3": "1:37.210" },
+        { "pos": "10", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:37.106", "q2": "1:36.814", "q3": "1:37.673" },
+        { "pos": "11", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q1": "1:37.332", "q2": "1:37.023" },
+        { "pos": "12", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:37.721", "q2": "1:37.220" },
+        { "pos": "13", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:37.651", "q2": "1:37.527" },
+        { "pos": "14", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:37.729", "q2": "1:37.566" },
+        { "pos": "15", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:37.179" },
+        { "pos": "16", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:37.883" },
+        { "pos": "17", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:37.970" },
+        { "pos": "18", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:37.980" },
+        { "pos": "19", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "q1": "1:38.233" },
+        { "pos": "20", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:38.600" },
+        { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:38.611" },
+        { "pos": "22", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:38.933" }
+      ],
+      "yt": "U-V7IfBwN1I",
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/bahrain",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackkualalumpurdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.543km" ],
+          [ "First Grand Prix", "1999" ],
+          [ "Number of Laps", "56" ],
+          [ "Lap record", "1:34.080 · Sebastian Vettel (2017)" ],
+          [ "Race Distance", "310.417km" ]
+        ]
+      }
     },
-    { "n": 17, "gp": "Singapore Grand Prix", "circuit": "Marina Bay Street Circuit", "start": "2026-10-11T12:00:00Z", "fp1": "2026-10-09T08:30:00Z", "sprint": true },
-    { "n": 18, "gp": "United States Grand Prix", "circuit": "Circuit of the Americas, Austin", "start": "2026-10-25T20:00:00Z", "fp1": "2026-10-23T17:30:00Z", "sprint": false },
-    { "n": 19, "gp": "Mexico City Grand Prix", "circuit": "Autódromo Hermanos Rodríguez, Mexico City", "start": "2026-11-01T20:00:00Z", "fp1": "2026-10-30T18:30:00Z", "sprint": false },
-    { "n": 20, "gp": "São Paulo Grand Prix", "circuit": "Autódromo José Carlos Pace, São Paulo", "start": "2026-11-08T17:00:00Z", "fp1": "2026-11-06T15:30:00Z", "sprint": false },
-    { "n": 21, "gp": "Las Vegas Grand Prix", "circuit": "Las Vegas Strip Street Circuit", "start": "2026-11-22T04:00:00Z", "fp1": "2026-11-20T00:30:00Z", "sprint": false },
-    { "n": 22, "gp": "Qatar Grand Prix", "circuit": "Lusail International Circuit", "start": "2026-11-29T16:00:00Z", "fp1": "2026-11-27T13:30:00Z", "sprint": false },
-    { "n": 23, "gp": "Abu Dhabi Grand Prix", "circuit": "Yas Marina Circuit, Abu Dhabi", "start": "2026-12-06T13:00:00Z", "fp1": "2026-12-04T09:30:00Z", "sprint": false }
+    {
+      "n": 17,
+      "gp": "Singapore Grand Prix",
+      "circuit": "Marina Bay Street Circuit",
+      "start": "2026-10-11T12:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-10-09T08:30:00Z" ],
+        [ "Sprint Qualifying", "2026-10-09T12:30:00Z" ],
+        [ "Sprint", "2026-10-10T09:00:00Z" ],
+        [ "Qualifying", "2026-10-10T13:00:00Z" ],
+        [ "Race", "2026-10-11T12:00:00Z" ]
+      ],
+      "sprint": true,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/singapore",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksingaporedetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.927km" ],
+          [ "First Grand Prix", "2008" ],
+          [ "Number of Laps", "62" ],
+          [ "Lap record", "1:33.808 · Lewis Hamilton (2025)" ],
+          [ "Race Distance", "305.337km" ]
+        ]
+      }
+    },
+    {
+      "n": 18,
+      "gp": "United States Grand Prix",
+      "circuit": "Circuit of the Americas, Austin",
+      "start": "2026-10-25T20:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-10-23T17:30:00Z" ],
+        [ "Practice 2", "2026-10-23T21:00:00Z" ],
+        [ "Practice 3", "2026-10-24T17:30:00Z" ],
+        [ "Qualifying", "2026-10-24T21:00:00Z" ],
+        [ "Race", "2026-10-25T20:00:00Z" ]
+      ],
+      "sprint": false,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/united-states",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackaustindetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.513km" ],
+          [ "First Grand Prix", "2012" ],
+          [ "Number of Laps", "56" ],
+          [ "Lap record", "1:36.169 · Charles Leclerc (2019)" ],
+          [ "Race Distance", "308.405km" ]
+        ]
+      }
+    },
+    {
+      "n": 19,
+      "gp": "Mexico City Grand Prix",
+      "circuit": "Autódromo Hermanos Rodríguez, Mexico City",
+      "start": "2026-11-01T20:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-10-30T18:30:00Z" ],
+        [ "Practice 2", "2026-10-30T22:00:00Z" ],
+        [ "Practice 3", "2026-10-31T17:30:00Z" ],
+        [ "Qualifying", "2026-10-31T21:00:00Z" ],
+        [ "Race", "2026-11-01T20:00:00Z" ]
+      ],
+      "sprint": false,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/mexico",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.304km" ],
+          [ "First Grand Prix", "1963" ],
+          [ "Number of Laps", "71" ],
+          [ "Lap record", "1:17.774 · Valtteri Bottas (2021)" ],
+          [ "Race Distance", "305.354km" ]
+        ]
+      }
+    },
+    {
+      "n": 20,
+      "gp": "São Paulo Grand Prix",
+      "circuit": "Autódromo José Carlos Pace, São Paulo",
+      "start": "2026-11-08T17:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-11-06T15:30:00Z" ],
+        [ "Practice 2", "2026-11-06T19:00:00Z" ],
+        [ "Practice 3", "2026-11-07T14:30:00Z" ],
+        [ "Qualifying", "2026-11-07T18:00:00Z" ],
+        [ "Race", "2026-11-08T17:00:00Z" ]
+      ],
+      "sprint": false,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/brazil",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "4.309km" ],
+          [ "First Grand Prix", "1973" ],
+          [ "Number of Laps", "71" ],
+          [ "Lap record", "1:10.540 · Valtteri Bottas (2018)" ],
+          [ "Race Distance", "305.879km" ]
+        ]
+      }
+    },
+    {
+      "n": 21,
+      "gp": "Las Vegas Grand Prix",
+      "circuit": "Las Vegas Strip Street Circuit",
+      "start": "2026-11-22T04:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-11-20T00:30:00Z" ],
+        [ "Practice 2", "2026-11-20T04:00:00Z" ],
+        [ "Practice 3", "2026-11-21T00:30:00Z" ],
+        [ "Qualifying", "2026-11-21T04:00:00Z" ],
+        [ "Race", "2026-11-22T04:00:00Z" ]
+      ],
+      "sprint": false,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/las-vegas",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "6.201km" ],
+          [ "First Grand Prix", "2023" ],
+          [ "Number of Laps", "50" ],
+          [ "Lap record", "1:33.365 · Max Verstappen (2025)" ],
+          [ "Race Distance", "309.958km" ]
+        ]
+      }
+    },
+    {
+      "n": 22,
+      "gp": "Qatar Grand Prix",
+      "circuit": "Lusail International Circuit",
+      "start": "2026-11-29T16:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-11-27T13:30:00Z" ],
+        [ "Practice 2", "2026-11-27T17:00:00Z" ],
+        [ "Practice 3", "2026-11-28T14:30:00Z" ],
+        [ "Qualifying", "2026-11-28T18:00:00Z" ],
+        [ "Race", "2026-11-29T16:00:00Z" ]
+      ],
+      "sprint": false,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/qatar",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.419km" ],
+          [ "First Grand Prix", "2021" ],
+          [ "Number of Laps", "57" ],
+          [ "Lap record", "1:22.384 · Lando Norris (2024)" ],
+          [ "Race Distance", "308.611km" ]
+        ]
+      }
+    },
+    {
+      "n": 23,
+      "gp": "Abu Dhabi Grand Prix",
+      "circuit": "Yas Marina Circuit, Abu Dhabi",
+      "start": "2026-12-06T13:00:00Z",
+      "sessions": [
+        [ "Practice 1", "2026-12-04T09:30:00Z" ],
+        [ "Practice 2", "2026-12-04T13:00:00Z" ],
+        [ "Practice 3", "2026-12-05T10:30:00Z" ],
+        [ "Qualifying", "2026-12-05T14:00:00Z" ],
+        [ "Race", "2026-12-06T13:00:00Z" ]
+      ],
+      "sprint": false,
+      "track": {
+        "url": "https://www.formula1.com/en/racing/2026/united-arab-emirates",
+        "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinacircuitdetailed.webp",
+        "facts": [
+          [ "Circuit Length", "5.281km" ],
+          [ "First Grand Prix", "2009" ],
+          [ "Number of Laps", "58" ],
+          [ "Lap record", "--" ],
+          [ "Race Distance", "306.188km" ]
+        ]
+      }
+    }
   ],
   "teams": [
     { "key": "mercedes", "name": "Mercedes", "pts": 556, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.webp" },

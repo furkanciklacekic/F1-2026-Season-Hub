@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>F1 2026 Season Hub</title>
+<meta name="theme-color" content="#0b0c10">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <style>
   :root {
     --bg: #0b0c10;
@@ -212,7 +216,84 @@
   .rr tbody tr:nth-child(-n+3) td:first-child { color: var(--red); font-weight: 800; }
   .rr .fl { display: inline-block; margin-left: 6px; padding: 0 5px; border-radius: 4px; background: #8e3bd6; color: #fff; font-size: .66rem; font-weight: 800; vertical-align: middle; }
   .rr .drv-link { font-weight: 700; color: var(--text); }
+  /* Spoiler-free toggle */
+  .title { justify-content: space-between; }
+  .title-main { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .eye {
+    display: inline-flex; align-items: center; gap: 8px; align-self: center; cursor: pointer;
+    background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+    padding: 6px 12px 6px 10px; font-size: .82rem; font-weight: 700;
+  }
+  .eye:hover { color: var(--text); }
+  .eye[aria-pressed="true"] { color: #fff; border-color: var(--red); background: rgba(225,6,0,.16); }
+  .eye svg { width: 18px; height: 18px; }
+  .card.hidden-result .thumb img { filter: blur(14px) brightness(.6); transform: scale(1.08); }
+  .card .win.muted { color: var(--muted); font-style: italic; }
+  .asof { color: var(--muted); font-size: .85rem; font-weight: 600; margin-left: 8px; }
+  .gate { padding: 26px 0 6px; color: var(--muted); }
+  .gate .btn { margin-top: 14px; }
+
+  /* Results tabs (segmented control) */
+  .seg { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: 14px; background: #0a0b0e; border: 1px solid var(--line); border-radius: 10px; }
+  .seg button { background: none; border: 0; color: var(--muted); padding: 6px 14px; border-radius: 7px; cursor: pointer; font-weight: 700; font-size: .85rem; }
+  .seg button:hover { color: var(--text); }
+  .seg button[aria-selected="true"] { background: var(--panel-2); color: var(--text); }
+
+  /* Calendar details */
+  .cal-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .cal-head h2 { margin: 0; }
+  details.row { display: block; padding: 0; }
+  details.row > summary {
+    list-style: none; cursor: pointer; padding: 14px 18px;
+    display: grid; grid-template-columns: 54px 1fr auto 18px; gap: 14px; align-items: center;
+  }
+  details.row > summary::-webkit-details-marker { display: none; }
+  details.row > summary::after { content: "▾"; color: var(--muted); transition: transform .15s; }
+  details.row[open] > summary::after { transform: rotate(180deg); }
+  details.row[open] { border-color: #3a3f4b; }
+  .cal-more { display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; padding: 4px 18px 18px; border-top: 1px solid var(--line); }
+  .cal-more h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin: 14px 0 8px; }
+  .sessions { list-style: none; display: grid; gap: 6px; }
+  .sessions li { display: flex; justify-content: space-between; gap: 12px; font-size: .9rem; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .sessions li span:last-child { color: var(--muted); white-space: nowrap; }
+  .sessions li.race { font-weight: 700; }
+  .track-map { display: block; width: 100%; max-height: 220px; object-fit: contain; margin-bottom: 10px; }
+  .track-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px 16px; }
+  .track-facts dt { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .6px; font-weight: 700; }
+  .track-facts dd { font-weight: 600; font-size: .92rem; }
+
+  /* Stats */
+  .stats-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+  .stats-head h2 { margin: 0; }
+  .stats-head .seg { margin: 0; }
+  .chart-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 10px; margin-bottom: 34px; position: relative; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .82rem; color: var(--muted); margin-bottom: 6px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend svg { width: 22px; height: 8px; }
+  #chart svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+  #chart svg:focus { outline: none; }
+  #chart svg:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; border-radius: 6px; }
+  #chart text { fill: var(--muted); font-size: 11px; font-family: inherit; }
+  #chart text.end { fill: var(--text); font-size: 12px; font-weight: 600; }
+  .tip {
+    position: absolute; pointer-events: none; z-index: 2; min-width: 170px;
+    background: #0a0b0e; border: 1px solid #3a3f4b; border-radius: 10px; padding: 8px 10px; font-size: .8rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  }
+  .tip .t-head { color: var(--muted); margin-bottom: 4px; }
+  .tip .t-row { display: grid; grid-template-columns: 16px 34px 1fr; align-items: center; gap: 6px; }
+  .tip .t-row b { text-align: right; }
+  .tip .t-row span:last-child { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .records { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .record { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .record dt { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .6px; font-weight: 700; }
+  .record dd { font-size: 1.6rem; font-weight: 800; line-height: 1.2; margin: 4px 0 2px; }
+  .record dd.who { color: var(--muted); font-size: .85rem; font-weight: 400; line-height: 1.35; margin: 0; }
+
   @media (max-width: 680px) {
+    .cal-more { grid-template-columns: 1fr; }
+    .eye .eye-label { display: none; }
+    .eye { padding: 7px; }
     .dp { grid-template-columns: 1fr; }
     .dp-photo { min-height: 280px; }
     .rr { padding: 18px 12px; }
@@ -225,6 +306,13 @@
     .title h1 { font-size: 1.5rem; }
     .row { grid-template-columns: 40px 1fr; }
     .row .date { grid-column: 2; text-align: left; }
+    nav { flex-wrap: nowrap; gap: 5px; }
+    nav button { padding: 8px 10px; font-size: .86rem; flex: 1 1 auto; }
+    .records { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .record { padding: 12px; }
+    .record dd { font-size: 1.35rem; }
+    details.row > summary { grid-template-columns: 40px 1fr 14px; }
+    details.row > summary .date { grid-column: 2; grid-row: 2; text-align: left; }
     .teams { grid-template-columns: 1fr; }
     .countdown { grid-template-columns: repeat(4, 1fr); width: 100%; }
   }
@@ -235,13 +323,23 @@
 <header>
   <div class="wrap">
     <div class="title">
-      <h1><span>F1</span> 2026</h1>
-      <p id="status"></p>
+      <div class="title-main">
+        <h1><span>F1</span> 2026</h1>
+        <p id="status"></p>
+      </div>
+      <button class="eye" id="spoiler" aria-pressed="false" title="Spoiler-free mode: hide results of races you have not watched yet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>
+          <path class="slash" d="M3 3l18 18" style="display:none"/>
+        </svg>
+        <span class="eye-label">Spoiler-free</span>
+      </button>
     </div>
     <nav id="tabs">
       <button data-view="highlights" class="active">Highlights</button>
       <button data-view="calendar">Calendar</button>
-      <button data-view="teams">Teams &amp; Drivers</button>
+      <button data-view="teams">Standings</button>
+      <button data-view="stats">Stats</button>
     </nav>
   </div>
 </header>
@@ -260,22 +358,42 @@
   </section>
 
   <section id="calendar" class="view">
-    <h2>Upcoming Races</h2>
+    <div class="cal-head">
+      <h2>Upcoming Races</h2>
+      <a class="btn ghost" href="calendar.ics" download="f1-2026.ics">＋ Add to calendar</a>
+    </div>
     <div id="next"></div>
     <div class="list" id="cal-list"></div>
   </section>
 
   <section id="teams" class="view">
-    <h2>Constructors' Championship</h2>
+    <h2>Constructors' Championship<span class="asof" data-asof></span></h2>
     <div class="teams" id="team-grid"></div>
 
-    <h2>Drivers' Championship</h2>
+    <h2>Drivers' Championship<span class="asof" data-asof></span></h2>
     <div class="tbl-wrap">
       <table>
         <thead><tr><th class="num">#</th><th>Driver</th><th>Nat.</th><th>Team</th><th class="num">Pts</th></tr></thead>
         <tbody id="drv-body"></tbody>
       </table>
     </div>
+  </section>
+
+  <section id="stats" class="view">
+    <div class="stats-head">
+      <h2>Championship Battle<span class="asof" data-asof></span></h2>
+      <div class="seg" role="tablist" aria-label="Championship">
+        <button role="tab" data-chart="drivers" aria-selected="true">Drivers</button>
+        <button role="tab" data-chart="teams" aria-selected="false">Constructors</button>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="legend" id="legend"></div>
+      <div id="chart"></div>
+    </div>
+
+    <h2>Season Records<span class="asof" data-asof></span></h2>
+    <dl class="records" id="records"></dl>
   </section>
 
 </main>
@@ -302,13 +420,14 @@ const RACE_LENGTH_MS = 3 * 3600000; // a race counts as finished 3 hours after t
 const WATCHED_KEY = "f1-2026-watched";
 // All dates and times are shown in UTC (UTC+0).
 const UTC_TIME = new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", weekday: "long", hour: "2-digit", minute: "2-digit" });
+const SESSION_TIME = new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 
 const teamOf = key => TEAMS.find(t => t.key === key) || { name: key };
 const teamColor = key => TEAM_COLORS[key] || "#888";
 
 function fmtDate(iso) { const d = new Date(iso); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; }
 function weekend(r) {
-  const a = new Date(r.fp1 || r.start), b = new Date(r.start);
+  const a = new Date(r.sessions?.[0]?.[1] || r.start), b = new Date(r.start);
   return a.getUTCMonth() === b.getUTCMonth()
     ? `${a.getUTCDate()}–${b.getUTCDate()} ${MONTHS[b.getUTCMonth()]}`
     : `${a.getUTCDate()} ${MONTHS[a.getUTCMonth()]} – ${b.getUTCDate()} ${MONTHS[b.getUTCMonth()]}`;
@@ -331,6 +450,58 @@ function saveWatched() {
   try { localStorage.setItem(WATCHED_KEY, JSON.stringify([...watched])); } catch {}
 }
 
+/* ============ SPOILER-FREE MODE ============ */
+
+const SPOILER_KEY = "f1-2026-spoiler-free";
+let spoilerFree = (() => { try { return localStorage.getItem(SPOILER_KEY) === "1"; } catch { return false; } })();
+const revealedOnce = new Set(); // races whose results were shown anyway during this visit
+const finished = () => RACES.filter(r => r.results);
+
+// A race's own results are visible unless spoiler-free mode is on and it hasn't been watched.
+function revealed(r) { return !spoilerFree || watched.has(r.n) || revealedOnce.has(r.n); }
+
+// Standings, chart and records run up to the last round before the first unwatched race,
+// so a skipped race can never leak through the totals.
+function cutoff() {
+  if (!spoilerFree) return finished().at(-1)?.n ?? 0;
+  let last = 0;
+  for (const r of finished()) { if (!watched.has(r.n)) break; last = r.n; }
+  return last;
+}
+const rewound = () => spoilerFree && cutoff() < (finished().at(-1)?.n ?? 0);
+
+// Points after a given round from race + sprint results; ties are split by countback on Grand Prix finishes.
+function standingsAfter(cut) {
+  const drivers = new Map(DRIVERS.map(d => [d.id, { ...d, pts: 0, fin: [] }]));
+  const teams = new Map(TEAMS.map(t => [t.key, { ...t, pts: 0, fin: [] }]));
+  for (const r of finished()) {
+    if (r.n > cut) break;
+    for (const x of [...r.results, ...(r.sprintResults || [])]) {
+      if (drivers.has(x.id)) drivers.get(x.id).pts += x.pts;
+      if (teams.has(x.team)) teams.get(x.team).pts += x.pts;
+    }
+    for (const x of r.results) {
+      const p = Number(x.pos);
+      if (p) { drivers.get(x.id)?.fin.push(p); teams.get(x.team)?.fin.push(p); }
+    }
+  }
+  const countback = (a, b) => {
+    for (let p = 1; p <= 30; p++) {
+      const diff = b.fin.filter(f => f === p).length - a.fin.filter(f => f === p).length;
+      if (diff) return diff;
+    }
+    return 0;
+  };
+  const sort = list => list.sort((a, b) => b.pts - a.pts || countback(a, b));
+  return { drivers: sort([...drivers.values()]), teams: sort([...teams.values()]) };
+}
+const currentStandings = () => rewound() ? standingsAfter(cutoff()) : { drivers: DRIVERS, teams: TEAMS };
+
+function asofLabel() {
+  if (!rewound()) return "";
+  return cutoff() ? `after Round ${cutoff()}` : "before Round 1";
+}
+
 /* ============ HIGHLIGHTS ============ */
 
 function renderHighlights() {
@@ -342,11 +513,12 @@ function renderHighlights() {
     const thumb = r.yt
       ? `<img src="https://img.youtube.com/vi/${r.yt}/hqdefault.jpg" alt="${esc(r.gp)} highlights" loading="lazy">`
       : `<div class="noimg">${esc(r.gp)}</div>`;
-    const result = r.winner
-      ? `<div class="win"><span class="dot" style="background:${teamColor(r.team)}"></span>Winner: <b>${esc(r.winner)}</b></div>`
-      : "";
+    const shown = revealed(r);
+    const result = !r.winner ? ""
+      : shown ? `<div class="win"><span class="dot" style="background:${teamColor(r.team)}"></span>Winner: <b>${esc(r.winner)}</b></div>`
+      : `<div class="win muted">Result hidden</div>`;
     return `
-      <div class="card${done ? " watched" : ""}${r === upNext ? " up-next" : ""}">
+      <div class="card${done ? " watched" : ""}${r === upNext ? " up-next" : ""}${shown ? "" : " hidden-result"}">
         <a class="thumb" href="${videoUrl(r)}" target="_blank" rel="noopener" data-n="${r.n}">
           ${thumb}
           <div class="play"><i></i></div>
@@ -387,7 +559,7 @@ document.addEventListener("click", e => {
   if (link) {
     watched.add(Number(link.dataset.n));
     saveWatched();
-    setTimeout(renderHighlights, 0); // re-render after the link has opened
+    setTimeout(refresh, 0); // re-render after the link has opened
     return;
   }
   const res = e.target.closest("button[data-results]");
@@ -397,7 +569,7 @@ document.addEventListener("click", e => {
     const n = Number(btn.dataset.toggle);
     watched.has(n) ? watched.delete(n) : watched.add(n);
     saveWatched();
-    renderHighlights();
+    refresh();
   }
 });
 
@@ -405,7 +577,7 @@ document.getElementById("reset").addEventListener("click", () => {
   if (!confirm("Clear all watched marks?")) return;
   watched.clear();
   saveWatched();
-  renderHighlights();
+  refresh();
 });
 
 /* ============ CALENDAR ============ */
@@ -431,14 +603,28 @@ function renderCalendar() {
       <div id="countdown"></div>
     </div>`;
   list.innerHTML = future.map(r => `
-    <div class="row">
-      <div class="n">${r.n}</div>
-      <div>
-        <h3>${esc(r.gp)}${r.sprint ? '<span class="tag">SPRINT</span>' : ""}</h3>
-        <div class="meta">${esc(r.circuit)} · ${weekend(r)}</div>
+    <details class="row">
+      <summary>
+        <div class="n">${r.n}</div>
+        <div>
+          <h3>${esc(r.gp)}${r.sprint ? '<span class="tag">SPRINT</span>' : ""}</h3>
+          <div class="meta">${esc(r.circuit)} · ${weekend(r)}</div>
+        </div>
+        <div class="date">${fmtDate(r.start)}<span class="t">${raceTime(r)}</span></div>
+      </summary>
+      <div class="cal-more">
+        <div>
+          <h4>Sessions (UTC)</h4>
+          <ul class="sessions">${(r.sessions || []).map(([label, t]) =>
+            `<li${label === "Race" ? ' class="race"' : ""}><span>${esc(label)}</span><span>${SESSION_TIME.format(new Date(t))}</span></li>`).join("")}</ul>
+        </div>
+        ${r.track ? `<div>
+          <h4>Circuit</h4>
+          ${r.track.map ? `<img class="track-map" src="${esc(r.track.map)}" alt="${esc(r.circuit)} track map" loading="lazy" onerror="this.remove()">` : ""}
+          <dl class="track-facts">${r.track.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+        </div>` : ""}
       </div>
-      <div class="date">${fmtDate(r.start)}<span class="t">${raceTime(r)}</span></div>
-    </div>`).join("");
+    </details>`).join("");
   tick();
 }
 
@@ -453,11 +639,14 @@ function tick() {
     `<div><b>${String(v).padStart(2, "0")}</b><span>${["Days", "Hours", "Mins", "Secs"][i]}</span></div>`).join("")}</div>`;
 }
 
-/* ============ TEAMS & DRIVERS ============ */
+/* ============ STANDINGS ============ */
 
-function renderTeams() {
-  document.getElementById("team-grid").innerHTML = TEAMS.map((t, i) => {
-    const roster = DRIVERS.filter(d => d.team === t.key && d.roster !== false);
+function renderStandings() {
+  const st = currentStandings();
+  const pts = new Map(st.drivers.map(d => [d.id, d.pts]));
+  document.getElementById("team-grid").innerHTML = st.teams.map((t, i) => {
+    const roster = DRIVERS.filter(d => d.team === t.key && d.roster !== false)
+      .map(d => ({ ...d, pts: pts.get(d.id) ?? 0 })).sort((a, b) => b.pts - a.pts);
     return `
       <div class="team" style="border-left-color:${teamColor(t.key)}">
         <div class="head">
@@ -470,7 +659,7 @@ function renderTeams() {
       </div>`;
   }).join("");
 
-  document.getElementById("drv-body").innerHTML = DRIVERS.map((d, i) => `
+  document.getElementById("drv-body").innerHTML = st.drivers.map((d, i) => `
     <tr>
       <td class="num">${i + 1}</td>
       <td><b>${driverLink(d)}</b></td>
@@ -505,7 +694,8 @@ function openDriver(id) {
     dob && ["Date of birth", `${dob.d} ${MONTHS[dob.m - 1]} ${dob.y} (age ${age(dob)})`],
     p.birthplace && ["Place of birth", p.birthplace]
   ].filter(Boolean);
-  const season = p.season?.length ? p.season : [["Season Position", ordinal(DRIVERS.indexOf(d) + 1)], ["Season Points", String(d.pts)]];
+  const season = rewound() ? seasonStatsAfter(d.id, cutoff())
+    : p.season?.length ? p.season : [["Season Position", ordinal(DRIVERS.indexOf(d) + 1)], ["Season Points", String(d.pts)]];
   const initials = d.name.split(" ").map(w => w[0]).join("");
 
   dialog.innerHTML = `
@@ -521,13 +711,36 @@ function openDriver(id) {
         <div class="dp-team"><span class="dot" style="background:${teamColor(d.team)}"></span>${esc(team.name)}</div>
         <dl class="dp-facts">${facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
         ${team.car ? `<h4>2026 Car</h4><img class="dp-car" src="${esc(team.car)}" alt="${esc(team.name)} 2026 car" onerror="this.previousElementSibling.remove(); this.remove()">` : ""}
-        <h4>2026 Season</h4>
+        <h4>2026 Season${rewound() ? ` · ${asofLabel()}` : ""}</h4>
         ${statGrid(season)}
-        ${p.career?.length ? `<h4>Career</h4>${statGrid(p.career)}` : ""}
+        ${p.career?.length && !rewound() ? `<h4>Career</h4>${statGrid(p.career)}` : ""}
         ${p.url ? `<a class="btn dp-link" href="${esc(p.url)}" target="_blank" rel="noopener">Full profile on formula1.com ↗</a>` : ""}
       </div>
     </div>`;
   showDialog("dp-name");
+}
+
+// Season stats computed from our own results, used when spoiler-free mode rewinds the season.
+function seasonStatsAfter(id, cut) {
+  const st = standingsAfter(cut);
+  const pos = st.drivers.findIndex(d => d.id === id) + 1;
+  const n = { races: 0, wins: 0, podiums: 0, poles: 0, fastest: 0, dnfs: 0, sprint: 0 };
+  for (const r of finished()) {
+    if (r.n > cut) break;
+    const x = r.results.find(y => y.id === id);
+    if (x) {
+      const p = Number(x.pos);
+      n.races++; if (p === 1) n.wins++; if (p >= 1 && p <= 3) n.podiums++;
+      if (x.fastestLap) n.fastest++; if (x.time === "DNF") n.dnfs++;
+    }
+    if (r.qualifying?.find(y => y.id === id)?.pos === "1") n.poles++;
+    n.sprint += r.sprintResults?.find(y => y.id === id)?.pts || 0;
+  }
+  return [
+    ["Season Position", pos ? ordinal(pos) : "—"], ["Season Points", st.drivers[pos - 1]?.pts ?? 0],
+    ["Grand Prix Races", n.races], ["Grand Prix Wins", n.wins], ["Grand Prix Podiums", n.podiums],
+    ["Grand Prix Poles", n.poles], ["Fastest Laps", n.fastest], ["DNFs", n.dnfs], ["Sprint Points", n.sprint]
+  ].map(([k, v]) => [k, String(v)]);
 }
 
 function showDialog(labelId) {
@@ -538,11 +751,46 @@ function showDialog(labelId) {
 
 /* ============ RACE RESULTS ============ */
 
-function openResults(n) {
+const RESULT_TABS = [["race", "Race", "results"], ["sprint", "Sprint", "sprintResults"], ["quali", "Qualifying", "qualifying"]];
+
+function openResults(n, tab = "race") {
   const r = RACES.find(x => x.n === n);
   if (!r?.results) return;
+  const tabs = RESULT_TABS.filter(([, , key]) => r[key]?.length);
+  const [, , key] = tabs.find(([id]) => id === tab) || tabs[0];
   const number = id => DRIVERS.find(d => d.id === id)?.number || "";
   const name = x => DRIVERS.some(d => d.id === x.id) ? driverLink(x) : esc(x.name);
+  const driverCells = x => `
+    <td class="num opt">${esc(number(x.id))}</td>
+    <td><span class="dot" style="background:${teamColor(x.team)};margin-right:8px"></span>${name(x)}</td>
+    <td class="opt">${esc(teamOf(x.team).name)}</td>`;
+
+  const body = !revealed(r) ? `
+      <div class="gate">
+        <p>You haven't watched this race yet, so its results are hidden.</p>
+        <button class="btn" data-reveal="${r.n}">Show results anyway</button>
+      </div>`
+    : key === "qualifying" ? `
+      <div class="tbl-wrap"><table>
+        <thead><tr><th class="num">Pos.</th><th class="num opt">No.</th><th>Driver</th><th class="opt">Team</th><th>Q1</th><th>Q2</th><th>Q3</th></tr></thead>
+        <tbody>${r.qualifying.map(x => `
+          <tr><td class="num">${esc(x.pos)}</td>${driverCells(x)}<td>${esc(x.q1 || "")}</td><td>${esc(x.q2 || "")}</td><td>${esc(x.q3 || "")}</td></tr>`).join("")}
+        </tbody>
+      </table></div>`
+    : `
+      <div class="tbl-wrap"><table>
+        <thead><tr><th class="num">Pos.</th><th class="num opt">No.</th><th>Driver</th><th class="opt">Team</th><th class="num opt">Grid</th><th class="num opt">Laps</th><th>Time / Retired</th><th class="num">Pts.</th></tr></thead>
+        <tbody>${r[key].map(x => `
+          <tr>
+            <td class="num">${esc(x.pos)}</td>${driverCells(x)}
+            <td class="num opt">${x.grid ?? (x.pos === "DNS" ? "—" : "PL")}</td>
+            <td class="num opt">${x.laps}</td>
+            <td>${esc(x.time)}${x.fastestLap ? '<span class="fl" title="Fastest lap">FL</span>' : ""}</td>
+            <td class="num"><b>${x.pts}</b></td>
+          </tr>`).join("")}
+        </tbody>
+      </table></div>`;
+
   dialog.innerHTML = `
     <button class="dp-close" aria-label="Close">×</button>
     <div class="rr">
@@ -551,23 +799,9 @@ function openResults(n) {
         <h3 id="rr-title">${esc(r.gp)}</h3>
         ${r.yt ? `<a class="btn" href="${videoUrl(r)}" target="_blank" rel="noopener" data-n="${r.n}">▶ Watch highlights</a>` : ""}
       </div>
-      <div class="tbl-wrap">
-        <table>
-          <thead><tr><th class="num">Pos.</th><th class="num opt">No.</th><th>Driver</th><th class="opt">Team</th><th class="num opt">Grid</th><th class="num opt">Laps</th><th>Time / Retired</th><th class="num">Pts.</th></tr></thead>
-          <tbody>${r.results.map(x => `
-            <tr>
-              <td class="num">${esc(x.pos)}</td>
-              <td class="num opt">${esc(number(x.id))}</td>
-              <td><span class="dot" style="background:${teamColor(x.team)};margin-right:8px"></span>${name(x)}</td>
-              <td class="opt">${esc(teamOf(x.team).name)}</td>
-              <td class="num opt">${x.grid ?? (x.pos === "DNS" ? "—" : "PL")}</td>
-              <td class="num opt">${x.laps}</td>
-              <td>${esc(x.time)}${x.fastestLap ? '<span class="fl" title="Fastest lap">FL</span>' : ""}</td>
-              <td class="num"><b>${x.pts}</b></td>
-            </tr>`).join("")}
-          </tbody>
-        </table>
-      </div>
+      ${revealed(r) && tabs.length > 1 ? `<div class="seg" role="tablist">${tabs.map(([id, label, k]) =>
+        `<button role="tab" data-rtab="${id}" data-round="${r.n}" aria-selected="${k === key}">${label}</button>`).join("")}</div>` : ""}
+      ${body}
     </div>`;
   showDialog("rr-title");
 }
@@ -580,8 +814,177 @@ document.getElementById("teams").addEventListener("click", e => {
 dialog.addEventListener("click", e => {
   if (e.target === dialog || e.target.closest(".dp-close")) return dialog.close();
   const b = e.target.closest("button[data-driver]");
-  if (b) openDriver(b.dataset.driver);
+  if (b) return openDriver(b.dataset.driver);
+  const t = e.target.closest("button[data-rtab]");
+  if (t) return openResults(Number(t.dataset.round), t.dataset.rtab);
+  const reveal = e.target.closest("button[data-reveal]");
+  if (reveal) {
+    revealedOnce.add(Number(reveal.dataset.reveal));
+    openResults(Number(reveal.dataset.reveal));
+    renderHighlights();
+  }
 });
+
+/* ============ STATS ============ */
+
+let chartMode = "drivers";
+const HIGHLIGHTED = 4; // more coloured lines than this stop being distinguishable; the rest stay grey
+const svgEl = (tag, attrs) => `<${tag} ${Object.entries(attrs).map(([k, v]) => `${k}="${v}"`).join(" ")}/>`;
+
+// Cumulative points per round (race + sprint) for every driver or team, up to the cutoff.
+function championshipSeries(cut) {
+  const rounds = finished().filter(r => r.n <= cut);
+  const drivers = chartMode === "drivers";
+  const series = (drivers ? DRIVERS.map(d => ({ id: d.id, name: d.name, team: d.team }))
+                          : TEAMS.map(t => ({ id: t.key, name: t.name, team: t.key }))).map(s => ({ ...s, values: [] }));
+  const total = new Map();
+  for (const r of rounds) {
+    for (const x of [...r.results, ...(r.sprintResults || [])]) {
+      const id = drivers ? x.id : x.team;
+      total.set(id, (total.get(id) || 0) + x.pts);
+    }
+    for (const s of series) s.values.push(total.get(s.id) || 0);
+  }
+  series.sort((a, b) => (b.values.at(-1) || 0) - (a.values.at(-1) || 0));
+  // Top lines take their team colour; a teammate of an already highlighted line is drawn dashed.
+  const seenTeams = new Set();
+  series.forEach((s, i) => {
+    s.highlight = i < HIGHLIGHTED;
+    s.dashed = s.highlight && seenTeams.has(s.team);
+    if (s.highlight) seenTeams.add(s.team);
+  });
+  return { rounds, series };
+}
+
+const niceStep = max => [5, 10, 20, 25, 50, 100, 200, 250, 500].find(st => max / st <= 5) || 1000;
+const lineKey = s => `<svg viewBox="0 0 22 8" aria-hidden="true"><line x1="1" y1="4" x2="21" y2="4" stroke="${s.highlight ? teamColor(s.team) : "#4a505c"}" stroke-width="2" stroke-linecap="round"${s.dashed ? ' stroke-dasharray="5 4"' : ""}/></svg>`;
+
+function renderChart() {
+  const box = document.getElementById("chart");
+  if (!box.offsetWidth) return; // tab hidden: rendered again when shown
+  const { rounds, series } = championshipSeries(cutoff());
+  const top = series.filter(s => s.highlight);
+  document.getElementById("legend").innerHTML = rounds.length
+    ? top.map(s => `<span>${lineKey(s)}${esc(s.name)}</span>`).join("") + `<span>${lineKey({})}Others</span>`
+    : "";
+  if (!rounds.length) { box.innerHTML = `<p class="sub">No races watched yet.</p>`; return; }
+
+  const W = box.offsetWidth, narrow = W < 560;
+  const H = narrow ? 260 : 340;
+  const m = { l: 40, r: narrow ? 92 : 128, t: 12, b: 28 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const step = niceStep(Math.max(1, ...series.map(s => s.values.at(-1))));
+  const yMax = Math.ceil(Math.max(1, ...series.map(s => s.values.at(-1))) / step) * step;
+  const x = i => m.l + (rounds.length > 1 ? i * iw / (rounds.length - 1) : iw / 2);
+  const y = v => m.t + ih - v / yMax * ih;
+  const path = s => s.values.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+
+  let out = "";
+  for (let v = 0; v <= yMax; v += step) {
+    out += svgEl("line", { x1: m.l, x2: m.l + iw, y1: y(v), y2: y(v), stroke: "#2a2e38", "stroke-width": 1 });
+    out += `<text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  }
+  const every = Math.ceil(rounds.length / Math.floor(iw / 34));
+  rounds.forEach((r, i) => { if (i % every === 0 || i === rounds.length - 1) out += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">R${r.n}</text>`; });
+  for (const s of series.filter(s => !s.highlight)) out += svgEl("path", { d: path(s), fill: "none", stroke: "#3a3f4b", "stroke-width": 1.25, "stroke-linejoin": "round" });
+  for (const s of [...top].reverse()) {
+    out += svgEl("path", { d: path(s), fill: "none", stroke: teamColor(s.team), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", ...(s.dashed ? { "stroke-dasharray": "6 4" } : {}) });
+    out += svgEl("circle", { cx: x(rounds.length - 1), cy: y(s.values.at(-1)), r: 4, fill: teamColor(s.team), stroke: "#15171d", "stroke-width": 2 });
+  }
+  // End labels: keep them at least 15px apart; a moved label gets a leader line back to its line end.
+  const labels = top.map(s => ({ s, y0: y(s.values.at(-1)), y: y(s.values.at(-1)) })).sort((a, b) => a.y0 - b.y0);
+  labels.forEach((l, i) => { if (i && l.y < labels[i - 1].y + 15) l.y = labels[i - 1].y + 15; });
+  const xe = x(rounds.length - 1);
+  for (const l of labels) {
+    if (Math.abs(l.y - l.y0) > 2) out += svgEl("line", { x1: xe + 6, y1: l.y0, x2: xe + 12, y2: l.y, stroke: "#4a505c", "stroke-width": 1 });
+    const short = narrow ? l.s.name.split(" ").at(-1) : l.s.name;
+    out += `<text class="end" x="${xe + 14}" y="${l.y + 4}">${esc(short)} · ${l.s.values.at(-1)}</text>`;
+  }
+  out += `<g id="cross" style="display:none">${svgEl("line", { id: "cross-line", x1: 0, x2: 0, y1: m.t, y2: m.t + ih, stroke: "#9aa0ad", "stroke-width": 1 })}</g>`;
+
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" tabindex="0" role="img"
+    aria-label="Championship points after each round. Use left and right arrow keys to read values.">${out}</svg>`;
+
+  // Crosshair + tooltip: snaps to the nearest round and lists the leaders at that point.
+  const svg = box.querySelector("svg"), cross = svg.querySelector("#cross"), card = box.closest(".chart-card");
+  let tip = card.querySelector(".tip");
+  if (!tip) { tip = document.createElement("div"); tip.className = "tip"; card.appendChild(tip); }
+  tip.style.display = "none";
+  let idx = rounds.length - 1;
+  const show = i => {
+    idx = Math.max(0, Math.min(rounds.length - 1, i));
+    const cx = x(idx);
+    cross.style.display = "";
+    cross.querySelector("line").setAttribute("x1", cx); cross.querySelector("line").setAttribute("x2", cx);
+    const r = rounds[idx];
+    const rows = [...series].sort((a, b) => b.values[idx] - a.values[idx]).slice(0, 8);
+    tip.innerHTML = `<div class="t-head">Round ${r.n} · ${esc(r.gp.replace(" Grand Prix", " GP"))}</div>` +
+      rows.map(s => `<div class="t-row">${lineKey(s)}<b>${s.values[idx]}</b><span>${esc(s.name)}</span></div>`).join("");
+    tip.style.display = "";
+    const scale = svg.getBoundingClientRect().width / W;
+    const left = box.offsetLeft + cx * scale;
+    tip.style.top = `${box.offsetTop + 8}px`;
+    tip.style.left = `${left + tip.offsetWidth + 16 > card.clientWidth ? left - tip.offsetWidth - 12 : left + 12}px`;
+  };
+  const hide = () => { cross.style.display = "none"; tip.style.display = "none"; };
+  svg.addEventListener("pointermove", e => {
+    const px = (e.clientX - svg.getBoundingClientRect().left) / (svg.getBoundingClientRect().width / W);
+    show(rounds.length > 1 ? Math.round((px - m.l) / (iw / (rounds.length - 1))) : 0);
+  });
+  svg.addEventListener("pointerleave", hide);
+  svg.addEventListener("focus", () => show(idx));
+  svg.addEventListener("blur", hide);
+  svg.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") { e.preventDefault(); show(idx + (e.key === "ArrowRight" ? 1 : -1)); }
+  });
+}
+
+// Season records from our own results, up to the cutoff.
+function renderRecords() {
+  const rounds = finished().filter(r => r.n <= cutoff());
+  const el = document.getElementById("records");
+  if (!rounds.length) { el.innerHTML = ""; return; }
+  const nameOf = id => DRIVERS.find(d => d.id === id)?.name || rounds.flatMap(r => r.results).find(x => x.id === id)?.name || id;
+  const shortGp = r => r.gp.replace(" Grand Prix", " GP");
+  const tally = (pick, key = "results") => {
+    const m = new Map();
+    for (const r of rounds) for (const x of r[key] || []) if (pick(x)) m.set(x.id, (m.get(x.id) || 0) + 1);
+    return m;
+  };
+  const leader = m => {
+    const best = Math.max(0, ...m.values());
+    if (!best) return { value: 0, who: "—" };
+    const ids = [...m].filter(([, v]) => v === best).map(([id]) => nameOf(id));
+    return { value: best, who: ids.length > 2 ? `${ids.slice(0, 2).join(", ")} +${ids.length - 2}` : ids.join(", ") };
+  };
+  let climb = { gain: 0, who: "—" }, weekend = { pts: 0, who: "—" };
+  for (const r of rounds) {
+    for (const x of r.results) {
+      const gain = Number(x.pos) && x.grid ? x.grid - Number(x.pos) : 0;
+      if (gain > climb.gain) climb = { gain, who: `${x.name} · ${shortGp(r)} (P${x.grid} → P${x.pos})` };
+    }
+    const pts = new Map();
+    for (const x of [...r.results, ...(r.sprintResults || [])]) pts.set(x.id, (pts.get(x.id) || 0) + x.pts);
+    for (const [id, p] of pts) if (p > weekend.pts) weekend = { pts: p, who: `${nameOf(id)} · ${shortGp(r)}` };
+  }
+  const items = [
+    ["Most wins", leader(tally(x => x.pos === "1"))],
+    ["Most pole positions", leader(tally(x => x.pos === "1", "qualifying"))],
+    ["Most podiums", leader(tally(x => Number(x.pos) >= 1 && Number(x.pos) <= 3))],
+    ["Most fastest laps", leader(tally(x => x.fastestLap))],
+    ["Different winners", { value: new Set(rounds.map(r => r.results[0].id)).size, who: `in ${rounds.length} race${rounds.length > 1 ? "s" : ""}` }],
+    ["Biggest climb", { value: climb.gain ? `+${climb.gain}` : 0, who: climb.who }],
+    ["Best weekend haul", { value: weekend.pts ? `${weekend.pts} pts` : 0, who: weekend.who }],
+    ["Most DNFs", leader(tally(x => x.time === "DNF"))]
+  ];
+  el.innerHTML = items.map(([label, r]) =>
+    `<div class="record"><dt>${label}</dt><dd>${esc(r.value)}</dd><dd class="who">${esc(r.who)}</dd></div>`).join("");
+}
+
+function renderStats() {
+  renderChart();
+  renderRecords();
+}
 
 /* ============ GENERAL ============ */
 
@@ -590,21 +993,59 @@ function renderStatus() {
   document.getElementById("status").textContent = `${done}/${RACES.length} rounds completed`;
 }
 
+// Everything that depends on watched marks or spoiler-free mode.
+function refresh() {
+  renderHighlights();
+  renderStandings();
+  renderStats();
+  document.querySelectorAll("[data-asof]").forEach(el => { el.textContent = asofLabel(); });
+}
+
 function renderAll() {
   renderStatus();
-  renderHighlights();
   renderCalendar();
+  refresh();
 }
+
+function setSpoilerFree(on) {
+  spoilerFree = on;
+  try { localStorage.setItem(SPOILER_KEY, on ? "1" : "0"); } catch {}
+  const btn = document.getElementById("spoiler");
+  btn.setAttribute("aria-pressed", String(on));
+  btn.querySelector(".slash").style.display = on ? "" : "none";
+  refresh();
+}
+document.getElementById("spoiler").addEventListener("click", () => setSpoilerFree(!spoilerFree));
 
 document.getElementById("tabs").addEventListener("click", e => {
   const b = e.target.closest("button[data-view]");
   if (!b) return;
   document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("active", x === b));
   document.querySelectorAll("section.view").forEach(s => s.classList.toggle("active", s.id === b.dataset.view));
+  if (b.dataset.view === "stats") renderChart(); // needs the section visible to measure its width
 });
 
-renderAll();
-renderTeams();
+document.querySelector("#stats .seg").addEventListener("click", e => {
+  const b = e.target.closest("button[data-chart]");
+  if (!b) return;
+  chartMode = b.dataset.chart;
+  document.querySelectorAll("#stats .seg button").forEach(x => x.setAttribute("aria-selected", String(x === b)));
+  renderChart();
+});
+
+// Redraw the chart whenever its width changes (window resize, or the tab becoming visible).
+let chartWidth = 0, resizeTimer;
+new ResizeObserver(([entry]) => {
+  const w = Math.round(entry.contentRect.width);
+  if (!w || w === chartWidth) return;
+  chartWidth = w;
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(renderChart, 120);
+}).observe(document.getElementById("chart"));
+
+setSpoilerFree(spoilerFree); // applies the saved mode and renders the spoiler-dependent views
+renderStatus();
+renderCalendar();
 
 // Countdown ticks every second; when a race finishes, all views re-render.
 let pastCount = RACES.filter(isPast).length;
@@ -612,6 +1053,11 @@ setInterval(() => {
   const now = RACES.filter(isPast).length;
   if (now !== pastCount) { pastCount = now; renderAll(); } else tick();
 }, 1000);
+
+// Installable app: works offline with the last loaded data.
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+}
 </script>
 </body>
 </html>

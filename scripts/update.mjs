@@ -137,18 +137,57 @@ async function fetchCars(teams) {
   return new Map(teams.filter(t => cars.has(norm(t.name))).map(t => [t.key, cars.get(norm(t.name))]));
 }
 
-// Jolpica pages at 100 rows; fetch every page of a list endpoint.
-async function getAllRaces(path) {
+// Jolpica pages at 100 rows; fetch every page of a list endpoint and return round → rows.
+async function getAllRaces(path, key) {
   const races = new Map();
   for (let offset = 0, total = 1; offset < total; offset += 100) {
     const page = (await get(`${API}${path}?limit=100&offset=${offset}`)).MRData;
     total = Number(page.total);
-    for (const r of page.RaceTable.Races) {
-      const prev = races.get(r.round);
-      races.set(r.round, prev ? { ...prev, Results: [...prev.Results, ...r.Results] } : r); // a race can span two pages
-    }
+    for (const r of page.RaceTable.Races) races.set(r.round, [...(races.get(r.round) || []), ...r[key]]); // a race can span two pages
   }
   return races;
+}
+
+const driverName = d => DRIVER_NAMES[d.driverId] || `${d.givenName} ${d.familyName}`;
+
+function qualifying(apiRows) {
+  return apiRows.map(x => {
+    const row = { pos: x.position, id: x.Driver.driverId, name: driverName(x.Driver), team: teamOf(x.Constructor.constructorId).key };
+    for (const q of ["Q1", "Q2", "Q3"]) if (x[q]) row[q.toLowerCase()] = x[q];
+    return row;
+  });
+}
+
+// Weekend sessions in time order, as [label, ISO time] pairs.
+const SESSIONS = [
+  ["FirstPractice", "Practice 1"], ["SecondPractice", "Practice 2"], ["ThirdPractice", "Practice 3"],
+  ["SprintQualifying", "Sprint Qualifying"], ["Sprint", "Sprint"], ["Qualifying", "Qualifying"]
+];
+const sessionsOf = r => [
+  ...SESSIONS.filter(([k]) => r[k]).map(([k, label]) => [label, iso(r[k].date, r[k].time)]),
+  ["Race", iso(r.date, r.time)]
+].sort((a, b) => a[1].localeCompare(b[1]));
+
+// formula1.com race page slug for each API race name.
+const RACE_SLUGS = {
+  "Australian Grand Prix": "australia", "Chinese Grand Prix": "china", "Japanese Grand Prix": "japan",
+  "Miami Grand Prix": "miami", "Canadian Grand Prix": "canada", "Monaco Grand Prix": "monaco",
+  "Barcelona Grand Prix": "barcelona-catalunya", "Austrian Grand Prix": "austria", "British Grand Prix": "great-britain",
+  "Belgian Grand Prix": "belgium", "Hungarian Grand Prix": "hungary", "Dutch Grand Prix": "netherlands",
+  "Italian Grand Prix": "italy", "Spanish Grand Prix": "spain", "Azerbaijan Grand Prix": "azerbaijan",
+  "Bahrain Grand Prix in Malaysia": "bahrain", "Singapore Grand Prix": "singapore", "United States Grand Prix": "united-states",
+  "Mexico City Grand Prix": "mexico", "Brazilian Grand Prix": "brazil", "Las Vegas Grand Prix": "las-vegas",
+  "Qatar Grand Prix": "qatar", "Abu Dhabi Grand Prix": "united-arab-emirates"
+};
+
+// Circuit facts and track map from a formula1.com race page. Returns null if nothing parses.
+function parseTrack(html, url) {
+  const facts = [...html.matchAll(/<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>\s*(?:<span[^>]*>([\s\S]*?)<\/span>)?/g)]
+    .map(m => [htmlText(m[1]), [htmlText(m[2]), htmlText(m[3] || "")].filter(Boolean).join(" · ")])
+    .map(([k, v]) => [k === "Fastest lap time" ? "Lap record" : k, v]);
+  if (!facts.length) return null;
+  const map = html.match(/https:\/\/media\.formula1\.com\/image\/upload\/[^"'\s]*?\/common\/f1\/\d{4}\/track\/\d{4}track[a-z0-9]+detailed\.webp/)?.[0] || null;
+  return { url, map, facts };
 }
 
 // Shown the way formula1.com shows them in race classifications.
@@ -166,7 +205,7 @@ function classification(apiResults) {
     const row = {
       pos: POSITION_CODES[x.positionText] || x.positionText,
       id: x.Driver.driverId,
-      name: DRIVER_NAMES[x.Driver.driverId] || `${x.Driver.givenName} ${x.Driver.familyName}`,
+      name: driverName(x.Driver),
       team: teamOf(x.Constructor.constructorId).key,
       grid: Number(x.grid) || null, // 0 = pit lane start
       laps,
@@ -176,6 +215,43 @@ function classification(apiResults) {
     if (x.FastestLap?.rank === "1") row.fastestLap = true;
     return row;
   });
+}
+
+// Track info for the given rounds; rounds whose page fails are simply left out (callers keep the old value).
+async function fetchTracks(apiRaces, rounds) {
+  const tracks = new Map();
+  for (const r of apiRaces) {
+    const n = Number(r.round), slug = RACE_SLUGS[r.raceName];
+    if (!rounds.has(n) || !slug) continue;
+    try {
+      const url = `${F1_SITE}/en/racing/${SEASON}/${slug}`;
+      const track = parseTrack(await get(url, "text"), url);
+      if (!track) throw new Error("page structure not recognised");
+      tracks.set(n, track);
+    } catch (err) {
+      console.warn(`Track info for round ${n} not updated: ${err.message}`);
+    }
+    await new Promise(res => setTimeout(res, 500));
+  }
+  return tracks;
+}
+
+// All weekend sessions as an iCalendar feed (times in UTC).
+const SESSION_MINUTES = { "Sprint Qualifying": 44, Race: 120 };
+function icsCalendar(races) {
+  const esc = t => t.replace(/[\\,;]/g, m => "\\" + m);
+  const stamp = t => t.replace(/[-:]/g, "").replace(/\.\d+/, "");
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", `PRODID:-//F1 ${SEASON} Season Hub//EN`, "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    `X-WR-CALNAME:F1 ${SEASON}`, "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H"];
+  for (const r of races) for (const [label, start] of r.sessions) {
+    const end = new Date(new Date(start).getTime() + (SESSION_MINUTES[label] || 60) * 60000).toISOString();
+    lines.push("BEGIN:VEVENT",
+      `UID:${SEASON}-r${r.n}-${label.toLowerCase().replace(/\s+/g, "-")}@f1-${SEASON}-season-hub`,
+      `DTSTAMP:${stamp(start)}`, `DTSTART:${stamp(start)}`, `DTEND:${stamp(end)}`,
+      `SUMMARY:${esc(`F1 · ${r.gp} · ${label}`)}`, `LOCATION:${esc(r.circuit)}`, "END:VEVENT");
+  }
+  lines.push("END:VCALENDAR");
+  return lines.join("\r\n") + "\r\n";
 }
 
 async function isOfficialVideo(id) {
@@ -192,9 +268,11 @@ async function isOfficialVideo(id) {
 const existing = await readExisting();
 const knownVideo = new Map(existing.races.filter(r => r.yt).map(r => [r.n, r.yt]));
 
-const [schedule, raceResults, lastRace, driverSt, teamSt, feed] = await Promise.all([
+const [schedule, raceResults, sprintResults, qualiResults, lastRace, driverSt, teamSt, feed] = await Promise.all([
   get(`${API}/`),
-  getAllRaces("/results/"),
+  getAllRaces("/results/", "Results"),
+  getAllRaces("/sprint/", "SprintResults"),
+  getAllRaces("/qualifying/", "QualifyingResults"),
   get(`${API}/last/results/?limit=100`),
   get(`${API}/driverstandings/`),
   get(`${API}/constructorstandings/`),
@@ -229,16 +307,18 @@ const races = apiRaces.map(r => {
     gp: RACE_NAMES[r.raceName] || r.raceName,
     circuit: circuitName.includes(Location.locality) ? circuitName : `${circuitName}, ${Location.locality}`,
     start,
-    fp1: r.FirstPractice ? iso(r.FirstPractice.date, r.FirstPractice.time) : null,
+    sessions: sessionsOf(r),
     sprint: Boolean(r.Sprint)
   };
 
-  const apiResults = raceResults.get(r.round)?.Results;
+  const apiResults = raceResults.get(r.round);
   if (apiResults?.length) {
     race.results = classification(apiResults);
     race.winner = race.results[0].name;
     race.team = race.results[0].team;
   }
+  if (sprintResults.get(r.round)?.length) race.sprintResults = classification(sprintResults.get(r.round));
+  if (qualiResults.get(r.round)?.length) race.qualifying = qualifying(qualiResults.get(r.round));
 
   let yt = knownVideo.get(n);
   if (!yt) {
@@ -274,7 +354,7 @@ const drivers = dList.DriverStandings.map(x => {
   const teamId = lastTeam.get(id) || x.Constructors.at(-1).constructorId;
   const d = {
     id,
-    name: DRIVER_NAMES[id] || `${x.Driver.givenName} ${x.Driver.familyName}`,
+    name: driverName(x.Driver),
     number: x.Driver.permanentNumber || null,
     nat: NATIONALITY[x.Driver.nationality] || x.Driver.nationality.slice(0, 3).toUpperCase(),
     nationality: x.Driver.nationality,
@@ -298,7 +378,17 @@ const previousCars = new Map((existing.teams || []).filter(t => t.car).map(t => 
 let profilesRound = existing.profilesRound ?? null;
 let profiles = new Map([...previousDrivers].filter(([, d]) => d.profile).map(([id, d]) => [id, d.profile]));
 let cars = previousCars;
-if (profilesRound !== standingsRound || drivers.some(d => !previousDrivers.has(d.id)) || teams.some(t => !previousCars.has(t.key))) {
+const previousTracks = new Map((existing.races || []).filter(r => r.track).map(r => [r.n, r.track]));
+const refreshF1 = profilesRound !== standingsRound || drivers.some(d => !previousDrivers.has(d.id)) || teams.some(t => !previousCars.has(t.key));
+
+// Track pages: fetch any that are missing, and after each race re-read the latest one (its lap record may change).
+const lastDone = Math.max(0, ...races.filter(r => r.results).map(r => r.n));
+const trackRounds = new Set(races.filter(r => !previousTracks.has(r.n)).map(r => r.n));
+if (refreshF1 && lastDone) trackRounds.add(lastDone);
+const tracks = new Map([...previousTracks, ...(trackRounds.size ? await fetchTracks(apiRaces, trackRounds) : [])]);
+for (const r of races) if (tracks.has(r.n)) r.track = tracks.get(r.n);
+
+if (refreshF1) {
   let ok = true;
   try {
     profiles = await fetchProfiles(drivers, previousDrivers);
@@ -323,6 +413,13 @@ const data = { season: SEASON, standingsRound, profilesRound, races, teams, driv
 // Pretty-print, but keep flat arrays/objects (result rows, stat pairs) on one line each.
 const json = JSON.stringify(data, null, 2).replace(/[\[{]\n[^\[\]{}]*?\n\s*[\]}]/g, m => m.replace(/\n\s*/g, " "));
 const out = `// Generated automatically by scripts/update.mjs — do not edit by hand.\nwindow.F1DATA = ${json};\n`;
+
+const CALENDAR_FILE = new URL("../calendar.ics", import.meta.url);
+const ics = icsCalendar(races);
+if (await readFile(CALENDAR_FILE, "utf8").catch(() => "") !== ics) {
+  await writeFile(CALENDAR_FILE, ics);
+  console.log("calendar.ics updated.");
+}
 
 const before = await readFile(DATA_FILE, "utf8").catch(() => "");
 if (before === out) {
