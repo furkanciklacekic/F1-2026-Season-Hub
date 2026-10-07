@@ -1,0 +1,74 @@
+name: Update data and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */3 * * *" # every 3 hours (UTC)
+  workflow_dispatch:
+    inputs:
+      round:
+        description: "Round number for adding a video manually (e.g. 17) — optional"
+        required: false
+      video_id:
+        description: "Official FORMULA 1 'Race Highlights' video ID (11 characters) — optional"
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Update data
+        run: node scripts/update.mjs
+        env:
+          MANUAL_ROUND: ${{ inputs.round }}
+          MANUAL_VIDEO: ${{ inputs.video_id }}
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data.js; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data.js
+            git commit -m "Update data"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # On scheduled runs, only deploy when the data changed.
+      - name: Prepare site folder
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: mkdir _site && cp index.html data.js _site/
+
+      - uses: actions/configure-pages@v5
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+
+      - uses: actions/upload-pages-artifact@v4
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'

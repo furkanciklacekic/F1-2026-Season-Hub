@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F1 2026 Season Hub</title>
+<style>
+  :root {
+    --bg: #0b0c10;
+    --panel: #15171d;
+    --panel-2: #1d2027;
+    --line: #2a2e38;
+    --text: #f4f5f8;
+    --muted: #9aa0ad;
+    --red: #e10600;
+    --green: #36d67b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background:
+      radial-gradient(circle at 90% -10%, rgba(225,6,0,.14), transparent 32%),
+      var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    line-height: 1.45;
+    min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; }
+  header {
+    position: sticky; top: 0; z-index: 20;
+    border-bottom: 3px solid var(--red);
+    background: rgba(11,12,16,.9);
+    backdrop-filter: blur(12px);
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .title { padding: 18px 0 12px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .title h1 { font-size: 1.8rem; letter-spacing: .5px; }
+  .title h1 span { color: var(--red); }
+  .title p { color: var(--muted); font-size: .92rem; }
+  nav { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 12px; }
+  nav button {
+    background: var(--panel); color: var(--muted); border: 1px solid var(--line);
+    padding: 9px 18px; border-radius: 8px; cursor: pointer; font-size: .95rem; font-weight: 600;
+  }
+  nav button:hover { color: var(--text); }
+  nav button.active { background: var(--red); border-color: var(--red); color: #fff; }
+  main { padding: 26px 0 60px; }
+  section.view { display: none; }
+  section.view.active { display: block; }
+  h2 { font-size: 1.3rem; margin-bottom: 16px; }
+  .sub { color: var(--muted); font-size: .9rem; margin-bottom: 18px; }
+
+  /* Next race box (Calendar) */
+  .next {
+    background: linear-gradient(120deg, #2a0a09, var(--panel)); border: 1px solid var(--red);
+    border-radius: 14px; padding: 20px 22px; margin-bottom: 22px;
+    display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap;
+  }
+  .next small { color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-size: .74rem; }
+  .next h3 { font-size: 1.6rem; margin: 2px 0; }
+  .next .meta { color: var(--muted); font-size: .9rem; }
+  .next .time { margin-top: 8px; font-size: .92rem; color: #ffd8db; }
+  .countdown { display: grid; grid-template-columns: repeat(4, 64px); gap: 8px; }
+  .countdown div { background: #0a0b0e; border: 1px solid var(--line); border-radius: 10px; text-align: center; padding: 8px 4px; }
+  .countdown b { display: block; font-size: 1.5rem; line-height: 1.1; }
+  .countdown span { font-size: .66rem; color: var(--muted); text-transform: uppercase; font-weight: 700; }
+  .live { font-size: 1.3rem; font-weight: 800; color: var(--red); }
+
+  /* Highlights */
+  .hl-bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+  .progress { flex: 1; min-width: 180px; height: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
+  .progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--red), #ff6a73); transition: width .3s; }
+  .hl-count { color: var(--muted); font-size: .9rem; font-weight: 600; white-space: nowrap; }
+  .btn {
+    display: inline-block; background: var(--red); color: #fff; border: 0; border-radius: 9px;
+    padding: 9px 16px; font-weight: 700; cursor: pointer; font-size: .9rem; white-space: nowrap;
+  }
+  .btn:hover { background: #ff2a24; }
+  .btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+  .btn.ghost:hover { color: var(--text); background: var(--panel); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column; transition: transform .15s, border-color .15s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--red); }
+  .card.up-next { outline: 2px solid var(--red); outline-offset: 2px; }
+  .card.watched .thumb img { opacity: .5; }
+  .thumb { position: relative; aspect-ratio: 16 / 9; background: #000; display: block; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .2s; }
+  .thumb .noimg {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    background: repeating-linear-gradient(45deg, #1a1a20, #1a1a20 12px, #202028 12px, #202028 24px);
+    color: var(--muted); font-size: .85rem; text-align: center; padding: 10px;
+  }
+  .play {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.55));
+  }
+  .play i {
+    width: 54px; height: 54px; border-radius: 50%; background: rgba(225,6,0,.92);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .play i::after {
+    content: ""; border-left: 16px solid #fff; border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; margin-left: 4px;
+  }
+  .rnd {
+    position: absolute; top: 8px; left: 8px; background: rgba(0,0,0,.75); padding: 2px 9px;
+    border-radius: 5px; font-size: .78rem; font-weight: 700;
+  }
+  .badge {
+    position: absolute; top: 8px; right: 8px; background: #ffd400; color: #111; padding: 2px 8px;
+    border-radius: 5px; font-size: .72rem; font-weight: 800; letter-spacing: .5px;
+  }
+  .seen {
+    position: absolute; bottom: 8px; left: 8px; background: rgba(54,214,123,.9); color: #062; padding: 2px 9px;
+    border-radius: 5px; font-size: .74rem; font-weight: 800;
+  }
+  .info { padding: 12px 14px 14px; display: flex; flex-direction: column; flex: 1; }
+  .info h3 { font-size: 1.02rem; margin-bottom: 2px; }
+  .info .meta { color: var(--muted); font-size: .83rem; }
+  .info .win { margin-top: 8px; font-size: .86rem; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; display: inline-block; }
+  .watch-btn {
+    margin-top: 12px; width: 100%; border: 1px solid var(--line); border-radius: 9px; padding: 8px;
+    background: #101217; color: var(--muted); font-weight: 700; cursor: pointer; font-size: .85rem;
+  }
+  .watch-btn:hover { color: var(--text); }
+  .watch-btn.done { border-color: rgba(54,214,123,.35); background: rgba(54,214,123,.1); color: #8af0b5; }
+
+  /* Calendar */
+  .list { display: grid; gap: 10px; }
+  .row {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px;
+    display: grid; grid-template-columns: 54px 1fr auto; gap: 14px; align-items: center;
+  }
+  .row .n { font-size: 1.4rem; font-weight: 800; color: var(--red); }
+  .row h3 { font-size: 1.05rem; }
+  .row .meta { color: var(--muted); font-size: .85rem; }
+  .row .date { text-align: right; font-weight: 700; white-space: nowrap; }
+  .row .date small { display: block; color: var(--muted); font-weight: 400; }
+  .row .date .t { display: block; color: #ffd8db; font-weight: 600; font-size: .88rem; }
+  .tag {
+    display: inline-block; background: #ffd400; color: #111; font-size: .68rem; font-weight: 800;
+    padding: 1px 7px; border-radius: 4px; margin-left: 8px; vertical-align: middle;
+  }
+
+  /* Teams & Drivers */
+  .teams { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; margin-bottom: 34px; }
+  .team { background: var(--panel); border: 1px solid var(--line); border-left-width: 6px; border-radius: 10px; padding: 14px 16px; }
+  .team .head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .team .pos { font-size: 1.5rem; font-weight: 800; width: 34px; color: var(--muted); }
+  .team .head h3 { flex: 1; font-size: 1.1rem; }
+  .team .pts { font-weight: 800; font-size: 1.2rem; }
+  .team .pts small { color: var(--muted); font-weight: 400; font-size: .75rem; }
+  .drv { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid var(--line); font-size: .93rem; }
+  .drv span:first-child { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 10px; overflow: hidden; }
+  th, td { padding: 10px 14px; text-align: left; font-size: .92rem; }
+  thead th { background: var(--panel-2); color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .6px; }
+  tbody tr { border-top: 1px solid var(--line); }
+  td.num, th.num { text-align: right; }
+  .tbl-wrap { overflow-x: auto; }
+
+  @media (max-width: 560px) {
+    .title h1 { font-size: 1.5rem; }
+    .row { grid-template-columns: 40px 1fr; }
+    .row .date { grid-column: 2; text-align: left; }
+    .teams { grid-template-columns: 1fr; }
+    .countdown { grid-template-columns: repeat(4, 1fr); width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="title">
+      <h1><span>F1</span> 2026</h1>
+      <p id="status"></p>
+    </div>
+    <nav id="tabs">
+      <button data-view="highlights" class="active">Highlights</button>
+      <button data-view="calendar">Calendar</button>
+      <button data-view="teams">Teams &amp; Drivers</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="highlights" class="view active">
+    <h2>Race Highlights</h2>
+    <div class="hl-bar">
+      <a class="btn" id="continue" target="_blank" rel="noopener">▶ Watch next</a>
+      <div class="progress"><span id="progress-bar"></span></div>
+      <span class="hl-count" id="progress-label"></span>
+      <button class="btn ghost" id="reset">Reset</button>
+    </div>
+    <div class="grid" id="hl-grid"></div>
+  </section>
+
+  <section id="calendar" class="view">
+    <h2>Upcoming Races</h2>
+    <div id="next"></div>
+    <div class="list" id="cal-list"></div>
+  </section>
+
+  <section id="teams" class="view">
+    <h2>Constructors' Championship</h2>
+    <div class="teams" id="team-grid"></div>
+
+    <h2>Drivers' Championship</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th class="num">#</th><th>Driver</th><th>Nat.</th><th>Team</th><th class="num">Pts</th></tr></thead>
+        <tbody id="drv-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<script src="data.js"></script>
+<script>
+/* ============ DATA ============ */
+
+// data.js is generated automatically by scripts/update.mjs via GitHub Actions.
+const { races: RACES, teams: TEAMS, drivers: DRIVERS } = window.F1DATA;
+
+const TEAM_COLORS = {
+  mercedes: "#27F4D2", ferrari: "#E8002D", mclaren: "#FF8000", redbull: "#3671C6",
+  racingbulls: "#6692FF", alpine: "#FF87BC", haas: "#B6BABD", audi: "#F50537",
+  williams: "#64C4FF", astonmartin: "#229971", cadillac: "#D4AF37"
+};
+
+/* ============ HELPERS ============ */
+
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const RACE_LENGTH_MS = 3 * 3600000; // a race counts as finished 3 hours after the start
+const WATCHED_KEY = "f1-2026-watched";
+// All dates and times are shown in UTC (UTC+0).
+const UTC_TIME = new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", weekday: "long", hour: "2-digit", minute: "2-digit" });
+
+const teamOf = key => TEAMS.find(t => t.key === key) || { name: key };
+const teamColor = key => TEAM_COLORS[key] || "#888";
+
+function fmtDate(iso) { const d = new Date(iso); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; }
+function weekend(r) {
+  const a = new Date(r.fp1 || r.start), b = new Date(r.start);
+  return a.getUTCMonth() === b.getUTCMonth()
+    ? `${a.getUTCDate()}–${b.getUTCDate()} ${MONTHS[b.getUTCMonth()]}`
+    : `${a.getUTCDate()} ${MONTHS[a.getUTCMonth()]} – ${b.getUTCDate()} ${MONTHS[b.getUTCMonth()]}`;
+}
+function raceTime(r) { return `${UTC_TIME.format(new Date(r.start))} UTC`; }
+function isPast(r) { return Date.now() > new Date(r.start).getTime() + RACE_LENGTH_MS; }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c])); }
+function videoUrl(r) {
+  if (r.yt) return `https://www.youtube.com/watch?v=${r.yt}`;
+  const q = encodeURIComponent(`Race Highlights 2026 ${r.gp.replace(/\s*\(.*\)/, "")}`);
+  return `https://www.youtube.com/@Formula1/search?query=${q}`;
+}
+
+// If storage is unavailable (e.g. private mode), watched marks only last for this session.
+function loadWatched() {
+  try { return new Set(JSON.parse(localStorage.getItem(WATCHED_KEY) || "[]")); } catch { return new Set(); }
+}
+let watched = loadWatched();
+function saveWatched() {
+  try { localStorage.setItem(WATCHED_KEY, JSON.stringify([...watched])); } catch {}
+}
+
+/* ============ HIGHLIGHTS ============ */
+
+function renderHighlights() {
+  const past = RACES.filter(isPast);
+  const upNext = past.find(r => r.yt && !watched.has(r.n));
+
+  document.getElementById("hl-grid").innerHTML = past.map(r => {
+    const done = watched.has(r.n);
+    const thumb = r.yt
+      ? `<img src="https://img.youtube.com/vi/${r.yt}/hqdefault.jpg" alt="${esc(r.gp)} highlights" loading="lazy">`
+      : `<div class="noimg">${esc(r.gp)}</div>`;
+    const result = r.winner
+      ? `<div class="win"><span class="dot" style="background:${teamColor(r.team)}"></span>Winner: <b>${esc(r.winner)}</b></div>`
+      : "";
+    return `
+      <div class="card${done ? " watched" : ""}${r === upNext ? " up-next" : ""}">
+        <a class="thumb" href="${videoUrl(r)}" target="_blank" rel="noopener" data-n="${r.n}">
+          ${thumb}
+          <div class="play"><i></i></div>
+          <span class="rnd">ROUND ${r.n}</span>
+          ${r.sprint ? '<span class="badge">SPRINT</span>' : ""}
+          ${done ? '<span class="seen">✓ Watched</span>' : ""}
+        </a>
+        <div class="info">
+          <h3>${esc(r.gp)}</h3>
+          <div class="meta">${fmtDate(r.start)} · ${esc(r.circuit)}</div>
+          ${result}
+          <button class="watch-btn${done ? " done" : ""}" data-toggle="${r.n}">${done ? "✓ Watched" : "○ Mark as watched"}</button>
+        </div>
+      </div>`;
+  }).join("");
+
+  const count = past.filter(r => watched.has(r.n)).length;
+  document.getElementById("progress-label").textContent = `${count} / ${past.length} watched`;
+  document.getElementById("progress-bar").style.width = past.length ? `${count / past.length * 100}%` : "0";
+
+  const cont = document.getElementById("continue");
+  if (upNext) {
+    cont.style.display = "";
+    cont.href = videoUrl(upNext);
+    cont.dataset.n = upNext.n;
+    cont.textContent = `▶ Watch next: Round ${upNext.n} · ${upNext.gp}`;
+  } else {
+    cont.style.display = "none";
+  }
+}
+
+// Opening a video marks it as watched; the button can undo it.
+document.getElementById("highlights").addEventListener("click", e => {
+  const link = e.target.closest("a[data-n]");
+  if (link) {
+    watched.add(Number(link.dataset.n));
+    saveWatched();
+    setTimeout(renderHighlights, 0); // re-render after the link has opened
+    return;
+  }
+  const btn = e.target.closest("button[data-toggle]");
+  if (btn) {
+    const n = Number(btn.dataset.toggle);
+    watched.has(n) ? watched.delete(n) : watched.add(n);
+    saveWatched();
+    renderHighlights();
+  }
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Clear all watched marks?")) return;
+  watched.clear();
+  saveWatched();
+  renderHighlights();
+});
+
+/* ============ CALENDAR ============ */
+
+function renderCalendar() {
+  const future = RACES.filter(r => !isPast(r));
+  const box = document.getElementById("next");
+  const list = document.getElementById("cal-list");
+  if (!future.length) {
+    box.innerHTML = "";
+    list.innerHTML = `<p class="sub">The 2026 season is complete.</p>`;
+    return;
+  }
+  const nx = future[0];
+  box.innerHTML = `
+    <div class="next">
+      <div>
+        <small>Next race · Round ${nx.n}</small>
+        <h3>${esc(nx.gp)}${nx.sprint ? '<span class="tag">SPRINT</span>' : ""}</h3>
+        <div class="meta">${esc(nx.circuit)} · Weekend: ${weekend(nx)}</div>
+        <div class="time">Race: <b>${fmtDate(nx.start)}, ${raceTime(nx)}</b></div>
+      </div>
+      <div id="countdown"></div>
+    </div>`;
+  list.innerHTML = future.map(r => `
+    <div class="row">
+      <div class="n">${r.n}</div>
+      <div>
+        <h3>${esc(r.gp)}${r.sprint ? '<span class="tag">SPRINT</span>' : ""}</h3>
+        <div class="meta">${esc(r.circuit)} · ${weekend(r)}</div>
+      </div>
+      <div class="date">${fmtDate(r.start)}<span class="t">${raceTime(r)}</span></div>
+    </div>`).join("");
+  tick();
+}
+
+function tick() {
+  const nx = RACES.find(r => !isPast(r));
+  const el = document.getElementById("countdown");
+  if (!nx || !el) return;
+  let diff = new Date(nx.start).getTime() - Date.now();
+  if (diff <= 0) { el.innerHTML = `<div class="live">● Race in progress</div>`; return; }
+  const parts = [86400000, 3600000, 60000, 1000].map(u => { const v = Math.floor(diff / u); diff %= u; return v; });
+  el.innerHTML = `<div class="countdown">${parts.map((v, i) =>
+    `<div><b>${String(v).padStart(2, "0")}</b><span>${["Days", "Hours", "Mins", "Secs"][i]}</span></div>`).join("")}</div>`;
+}
+
+/* ============ TEAMS & DRIVERS ============ */
+
+function renderTeams() {
+  document.getElementById("team-grid").innerHTML = TEAMS.map((t, i) => {
+    const roster = DRIVERS.filter(d => d.team === t.key && d.roster !== false);
+    return `
+      <div class="team" style="border-left-color:${teamColor(t.key)}">
+        <div class="head">
+          <div class="pos">${i + 1}</div>
+          <h3>${esc(t.name)}</h3>
+          <div class="pts">${t.pts} <small>pts</small></div>
+        </div>
+        ${roster.map(d => `<div class="drv"><span>${esc(d.name)} <small>(${d.nat})</small></span><b>${d.pts}</b></div>`).join("")}
+      </div>`;
+  }).join("");
+
+  document.getElementById("drv-body").innerHTML = DRIVERS.map((d, i) => `
+    <tr>
+      <td class="num">${i + 1}</td>
+      <td><b>${esc(d.name)}</b></td>
+      <td>${d.nat}</td>
+      <td><span class="dot" style="background:${teamColor(d.team)};margin-right:8px"></span>${esc(teamOf(d.team).name)}</td>
+      <td class="num"><b>${d.pts}</b></td>
+    </tr>`).join("");
+}
+
+/* ============ GENERAL ============ */
+
+function renderStatus() {
+  const done = RACES.filter(isPast).length;
+  document.getElementById("status").textContent = `${done}/${RACES.length} rounds completed`;
+}
+
+function renderAll() {
+  renderStatus();
+  renderHighlights();
+  renderCalendar();
+}
+
+document.getElementById("tabs").addEventListener("click", e => {
+  const b = e.target.closest("button[data-view]");
+  if (!b) return;
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("active", x === b));
+  document.querySelectorAll("section.view").forEach(s => s.classList.toggle("active", s.id === b.dataset.view));
+});
+
+renderAll();
+renderTeams();
+
+// Countdown ticks every second; when a race finishes, all views re-render.
+let pastCount = RACES.filter(isPast).length;
+setInterval(() => {
+  const now = RACES.filter(isPast).length;
+  if (now !== pastCount) { pastCount = now; renderAll(); } else tick();
+}, 1000);
+</script>
+</body>
+</html>
