@@ -1448,6 +1448,32 @@ window.F1DATA = {
         [ "Race", "2026-10-25T20:00:00Z" ]
       ],
       "sprint": false,
+      "results": [
+        { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "grid": 1, "laps": 56, "time": "1:35:16.650", "pts": 25 },
+        { "pos": "2", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 4, "laps": 56, "time": "+13.078s", "pts": 18, "fastestLap": true },
+        { "pos": "3", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "grid": 2, "laps": 56, "time": "+17.485s", "pts": 15 },
+        { "pos": "4", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "grid": 5, "laps": 56, "time": "+18.515s", "pts": 12 },
+        { "pos": "5", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 8, "laps": 56, "time": "+30.521s", "pts": 10 },
+        { "pos": "6", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 3, "laps": 56, "time": "+34.373s", "pts": 8 },
+        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 7, "laps": 56, "time": "+52.674s", "pts": 6 },
+        { "pos": "8", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 6, "laps": 56, "time": "+54.303s", "pts": 4 },
+        { "pos": "9", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 9, "laps": 56, "time": "+1:19.183s", "pts": 2 },
+        { "pos": "10", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 10, "laps": 56, "time": "+1:27.516s", "pts": 1 },
+        { "pos": "11", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 11, "laps": 56, "time": "+1:34.945s", "pts": 0 },
+        { "pos": "12", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 14, "laps": 55, "time": "+6.344s", "pts": 0 },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 21, "laps": 55, "time": "+14.197s", "pts": 0 },
+        { "pos": "14", "id": "ocon", "name": "Esteban Ocon", "team": "haas", "grid": 15, "laps": 55, "time": "+21.042s", "pts": 0 },
+        { "pos": "15", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "grid": 22, "laps": 55, "time": "+49.418s", "pts": 0 },
+        { "pos": "16", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "grid": 12, "laps": 55, "time": "+1:00.668s", "pts": 0 },
+        { "pos": "17", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 17, "laps": 55, "time": "+1:02.176s", "pts": 0 },
+        { "pos": "18", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 16, "laps": 55, "time": "+1:02.835s", "pts": 0 },
+        { "pos": "19", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 18, "laps": 55, "time": "+1:22.809s", "pts": 0 },
+        { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 19, "laps": 48, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 20, "laps": 35, "time": "DNF", "pts": 0 },
+        { "pos": "NC", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 13, "laps": 24, "time": "DNF", "pts": 0 }
+      ],
+      "winner": "Kimi Antonelli",
+      "team": "mercedes",
       "qualifying": [
         { "pos": "1", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:35.390", "q2": "1:34.278", "q3": "1:34.035" },
         { "pos": "2", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:35.215", "q2": "1:34.471", "q3": "1:34.214" },
@@ -1472,6 +1498,7 @@ window.F1DATA = {
         { "pos": "21", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:37.433" },
         { "pos": "22", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:37.523" }
       ],
+      "yt": "srLm23RUAH0",
       "track": {
         "url": "https://www.formula1.com/en/racing/2026/united-states",
         "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackaustindetailed.webp",
@@ -1611,12 +1638,12 @@ window.F1DATA = {
     }
   ],
   "teams": [
-    { "key": "mercedes", "name": "Mercedes", "pts": 578, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.webp" },
-    { "key": "ferrari", "name": "Ferrari", "pts": 444, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/ferrari/2026ferraricarright.webp" },
-    { "key": "mclaren", "name": "McLaren", "pts": 339, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp" },
-    { "key": "redbull", "name": "Red Bull Racing", "pts": 332, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp" },
-    { "key": "racingbulls", "name": "Racing Bulls", "pts": 100, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp" },
-    { "key": "alpine", "name": "Alpine", "pts": 68, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.webp" },
+    { "key": "mercedes", "name": "Mercedes", "pts": 607, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.webp" },
+    { "key": "ferrari", "name": "Ferrari", "pts": 474, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/ferrari/2026ferraricarright.webp" },
+    { "key": "redbull", "name": "Red Bull Racing", "pts": 355, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp" },
+    { "key": "mclaren", "name": "McLaren", "pts": 355, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp" },
+    { "key": "racingbulls", "name": "Racing Bulls", "pts": 102, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp" },
+    { "key": "alpine", "name": "Alpine", "pts": 69, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.webp" },
     { "key": "haas", "name": "Haas F1 Team", "pts": 30, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.webp" },
     { "key": "audi", "name": "Audi", "pts": 23, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/audi/2026audicarright.webp" },
     { "key": "williams", "name": "Williams", "pts": 12, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/williams/2026williamscarright.webp" },
@@ -1631,7 +1658,7 @@ window.F1DATA = {
       "nat": "ITA",
       "nationality": "Italian",
       "team": "mercedes",
-      "pts": 340,
+      "pts": 365,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/kimi-antonelli",
         "season": [
@@ -1675,7 +1702,7 @@ window.F1DATA = {
       "nat": "GBR",
       "nationality": "British",
       "team": "mercedes",
-      "pts": 238,
+      "pts": 242,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/george-russell",
         "season": [
@@ -1719,7 +1746,7 @@ window.F1DATA = {
       "nat": "GBR",
       "nationality": "British",
       "team": "ferrari",
-      "pts": 229,
+      "pts": 241,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/lewis-hamilton",
         "season": [
@@ -1763,7 +1790,7 @@ window.F1DATA = {
       "nat": "NED",
       "nationality": "Dutch",
       "team": "redbull",
-      "pts": 221,
+      "pts": 236,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/max-verstappen",
         "season": [
@@ -1807,7 +1834,7 @@ window.F1DATA = {
       "nat": "MON",
       "nationality": "Monegasque",
       "team": "ferrari",
-      "pts": 215,
+      "pts": 233,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/charles-leclerc",
         "season": [
@@ -1851,7 +1878,7 @@ window.F1DATA = {
       "nat": "GBR",
       "nationality": "British",
       "team": "mclaren",
-      "pts": 201,
+      "pts": 211,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/lando-norris",
         "season": [
@@ -1895,7 +1922,7 @@ window.F1DATA = {
       "nat": "AUS",
       "nationality": "Australian",
       "team": "mclaren",
-      "pts": 138,
+      "pts": 144,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/oscar-piastri",
         "season": [
@@ -1939,7 +1966,7 @@ window.F1DATA = {
       "nat": "FRA",
       "nationality": "French",
       "team": "redbull",
-      "pts": 97,
+      "pts": 105,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/isack-hadjar",
         "season": [
@@ -1983,7 +2010,7 @@ window.F1DATA = {
       "nat": "NZL",
       "nationality": "New Zealander",
       "team": "racingbulls",
-      "pts": 75,
+      "pts": 77,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/liam-lawson",
         "season": [
@@ -2027,7 +2054,7 @@ window.F1DATA = {
       "nat": "FRA",
       "nationality": "French",
       "team": "alpine",
-      "pts": 41,
+      "pts": 42,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/pierre-gasly",
         "season": [
