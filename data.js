@@ -1,8 +1,8 @@
 // Generated automatically by scripts/update.mjs — do not edit by hand.
 window.F1DATA = {
   "season": 2026,
-  "standingsRound": 18,
-  "profilesRound": 18,
+  "standingsRound": 19,
+  "profilesRound": 19,
   "races": [
     {
       "n": 1,
@@ -1507,7 +1507,7 @@ window.F1DATA = {
           [ "First Grand Prix", "2012" ],
           [ "Number of Laps", "56" ],
           [ "Lap record", "1:36.169 · Charles Leclerc (2019)" ],
-          [ "Race Distance", "308.405km" ]
+          [ "Race Distance", "308.432km" ]
         ]
       }
     },
@@ -1524,6 +1524,30 @@ window.F1DATA = {
         [ "Race", "2026-11-01T20:00:00Z" ]
       ],
       "sprint": false,
+      "qualifying": [
+        { "pos": "1", "id": "hamilton", "name": "Lewis Hamilton", "team": "ferrari", "q1": "1:17.341", "q2": "1:16.953", "q3": "1:16.514" },
+        { "pos": "2", "id": "russell", "name": "George Russell", "team": "mercedes", "q1": "1:17.659", "q2": "1:17.027", "q3": "1:16.523" },
+        { "pos": "3", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "q1": "1:17.506", "q2": "1:16.944", "q3": "1:16.633" },
+        { "pos": "4", "id": "max_verstappen", "name": "Max Verstappen", "team": "redbull", "q1": "1:17.942", "q2": "1:16.876", "q3": "1:16.692" },
+        { "pos": "5", "id": "antonelli", "name": "Kimi Antonelli", "team": "mercedes", "q1": "1:17.918", "q2": "1:17.133", "q3": "1:16.707" },
+        { "pos": "6", "id": "norris", "name": "Lando Norris", "team": "mclaren", "q1": "1:17.733", "q2": "1:16.728", "q3": "1:16.824" },
+        { "pos": "7", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "q1": "1:17.385", "q2": "1:17.047", "q3": "1:16.900" },
+        { "pos": "12", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:17.659", "q2": "1:17.646" },
+        { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:17.727", "q2": "1:17.680" },
+        { "pos": "8", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:18.210", "q2": "1:17.135", "q3": "1:17.117" },
+        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q2": "1:17.207", "q3": "1:17.029" },
+        { "pos": "9", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:18.194", "q2": "1:17.278", "q3": "1:17.153" },
+        { "pos": "10", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:17.868", "q2": "1:17.306" },
+        { "pos": "11", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:18.517", "q2": "1:17.640" },
+        { "pos": "14", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "q1": "1:18.083", "q2": "1:18.083" },
+        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "q1": "1:18.521", "q2": "1:18.885" },
+        { "pos": "16", "id": "albon", "name": "Alexander Albon", "team": "williams", "q1": "1:18.630" },
+        { "pos": "17", "id": "alonso", "name": "Fernando Alonso", "team": "astonmartin", "q1": "1:18.908" },
+        { "pos": "18", "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "team": "haas", "q1": "1:18.958" },
+        { "pos": "19", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:19.072" },
+        { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:19.105" },
+        { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:19.852" }
+      ],
       "track": {
         "url": "https://www.formula1.com/en/racing/2026/mexico",
         "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp",
@@ -1663,13 +1687,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/kimi-antonelli",
         "season": [
           [ "Season Position", "1st" ],
-          [ "Season Points", "340" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "309" ],
-          [ "Grand Prix Wins", "8" ],
-          [ "Grand Prix Podiums", "14" ],
+          [ "Season Points", "365" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "334" ],
+          [ "Grand Prix Wins", "9" ],
+          [ "Grand Prix Podiums", "15" ],
           [ "Grand Prix Poles", "7" ],
-          [ "Grand Prix Top 10s", "15" ],
+          [ "Grand Prix Top 10s", "16" ],
           [ "DHL Fastest Laps", "7" ],
           [ "DNFs", "1" ],
           [ "Sprint Races", "6" ],
@@ -1680,12 +1704,12 @@ window.F1DATA = {
           [ "Sprint Top 10s", "6" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "41" ],
-          [ "Career Points", "490" ],
-          [ "Highest Race Finish", "1 (x8)" ],
-          [ "Podiums", "17" ],
-          [ "Highest Grid Position", "1 (x6)" ],
-          [ "Pole Positions", "6" ],
+          [ "Grands Prix Entered", "42" ],
+          [ "Career Points", "515" ],
+          [ "Highest Race Finish", "1 (x9)" ],
+          [ "Podiums", "18" ],
+          [ "Highest Grid Position", "1 (x7)" ],
+          [ "Pole Positions", "7" ],
           [ "World Championships", "0" ],
           [ "DNFs", "5" ]
         ],
@@ -1707,13 +1731,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/george-russell",
         "season": [
           [ "Season Position", "2nd" ],
-          [ "Season Points", "238" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "204" ],
+          [ "Season Points", "242" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "208" ],
           [ "Grand Prix Wins", "3" ],
           [ "Grand Prix Podiums", "8" ],
           [ "Grand Prix Poles", "5" ],
-          [ "Grand Prix Top 10s", "13" ],
+          [ "Grand Prix Top 10s", "14" ],
           [ "DHL Fastest Laps", "2" ],
           [ "DNFs", "3" ],
           [ "Sprint Races", "6" ],
@@ -1724,8 +1748,8 @@ window.F1DATA = {
           [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "169" ],
-          [ "Career Points", "1271" ],
+          [ "Grands Prix Entered", "170" ],
+          [ "Career Points", "1275" ],
           [ "Highest Race Finish", "1 (x8)" ],
           [ "Podiums", "32" ],
           [ "Highest Grid Position", "1 (x13)" ],
@@ -1751,13 +1775,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/lewis-hamilton",
         "season": [
           [ "Season Position", "3rd" ],
-          [ "Season Points", "229" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "202" ],
+          [ "Season Points", "241" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "214" ],
           [ "Grand Prix Wins", "1" ],
           [ "Grand Prix Podiums", "6" ],
-          [ "Grand Prix Poles", "0" ],
-          [ "Grand Prix Top 10s", "16" ],
+          [ "Grand Prix Poles", "1" ],
+          [ "Grand Prix Top 10s", "17" ],
           [ "DHL Fastest Laps", "1" ],
           [ "DNFs", "1" ],
           [ "Sprint Races", "6" ],
@@ -1768,8 +1792,8 @@ window.F1DATA = {
           [ "Sprint Top 10s", "6" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "397" ],
-          [ "Career Points", "5247.5" ],
+          [ "Grands Prix Entered", "398" ],
+          [ "Career Points", "5259.5" ],
           [ "Highest Race Finish", "1 (x106)" ],
           [ "Podiums", "208" ],
           [ "Highest Grid Position", "1 (x104)" ],
@@ -1795,13 +1819,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/max-verstappen",
         "season": [
           [ "Season Position", "4th" ],
-          [ "Season Points", "221" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "201" ],
+          [ "Season Points", "236" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "216" ],
           [ "Grand Prix Wins", "2" ],
-          [ "Grand Prix Podiums", "9" ],
+          [ "Grand Prix Podiums", "10" ],
           [ "Grand Prix Poles", "2" ],
-          [ "Grand Prix Top 10s", "13" ],
+          [ "Grand Prix Top 10s", "14" ],
           [ "DHL Fastest Laps", "2" ],
           [ "DNFs", "4" ],
           [ "Sprint Races", "6" ],
@@ -1812,10 +1836,10 @@ window.F1DATA = {
           [ "Sprint Top 10s", "6" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "250" ],
-          [ "Career Points", "3665.5" ],
+          [ "Grands Prix Entered", "251" ],
+          [ "Career Points", "3680.5" ],
           [ "Highest Race Finish", "1 (x73)" ],
-          [ "Podiums", "136" ],
+          [ "Podiums", "137" ],
           [ "Highest Grid Position", "1 (x50)" ],
           [ "Pole Positions", "50" ],
           [ "World Championships", "4" ],
@@ -1839,14 +1863,14 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/charles-leclerc",
         "season": [
           [ "Season Position", "5th" ],
-          [ "Season Points", "215" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "181" ],
+          [ "Season Points", "233" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "199" ],
           [ "Grand Prix Wins", "1" ],
-          [ "Grand Prix Podiums", "5" ],
+          [ "Grand Prix Podiums", "6" ],
           [ "Grand Prix Poles", "0" ],
-          [ "Grand Prix Top 10s", "14" ],
-          [ "DHL Fastest Laps", "3" ],
+          [ "Grand Prix Top 10s", "15" ],
+          [ "DHL Fastest Laps", "4" ],
           [ "DNFs", "3" ],
           [ "Sprint Races", "6" ],
           [ "Sprint Points", "34" ],
@@ -1856,10 +1880,10 @@ window.F1DATA = {
           [ "Sprint Top 10s", "6" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "188" ],
-          [ "Career Points", "1887" ],
+          [ "Grands Prix Entered", "189" ],
+          [ "Career Points", "1905" ],
           [ "Highest Race Finish", "1 (x9)" ],
-          [ "Podiums", "55" ],
+          [ "Podiums", "56" ],
           [ "Highest Grid Position", "1 (x27)" ],
           [ "Pole Positions", "27" ],
           [ "World Championships", "0" ],
@@ -1883,13 +1907,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/lando-norris",
         "season": [
           [ "Season Position", "6th" ],
-          [ "Season Points", "201" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "168" ],
+          [ "Season Points", "211" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "178" ],
           [ "Grand Prix Wins", "2" ],
           [ "Grand Prix Podiums", "5" ],
           [ "Grand Prix Poles", "3" ],
-          [ "Grand Prix Top 10s", "13" ],
+          [ "Grand Prix Top 10s", "14" ],
           [ "DHL Fastest Laps", "2" ],
           [ "DNFs", "3" ],
           [ "Sprint Races", "6" ],
@@ -1900,8 +1924,8 @@ window.F1DATA = {
           [ "Sprint Top 10s", "6" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "168" ],
-          [ "Career Points", "1631" ],
+          [ "Grands Prix Entered", "169" ],
+          [ "Career Points", "1641" ],
           [ "Highest Race Finish", "1 (x13)" ],
           [ "Podiums", "49" ],
           [ "Highest Grid Position", "1 (x19)" ],
@@ -1927,13 +1951,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/oscar-piastri",
         "season": [
           [ "Season Position", "7th" ],
-          [ "Season Points", "138" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "117" ],
+          [ "Season Points", "144" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "123" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "2" ],
           [ "Grand Prix Poles", "0" ],
-          [ "Grand Prix Top 10s", "11" ],
+          [ "Grand Prix Top 10s", "12" ],
           [ "DHL Fastest Laps", "0" ],
           [ "DNFs", "1" ],
           [ "Sprint Races", "6" ],
@@ -1944,8 +1968,8 @@ window.F1DATA = {
           [ "Sprint Top 10s", "5" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "85" ],
-          [ "Career Points", "937" ],
+          [ "Grands Prix Entered", "86" ],
+          [ "Career Points", "943" ],
           [ "Highest Race Finish", "1 (x9)" ],
           [ "Podiums", "28" ],
           [ "Highest Grid Position", "1 (x6)" ],
@@ -1971,13 +1995,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/isack-hadjar",
         "season": [
           [ "Season Position", "8th" ],
-          [ "Season Points", "97" ],
-          [ "Grand Prix Races", "14" ],
-          [ "Grand Prix Points", "97" ],
+          [ "Season Points", "105" ],
+          [ "Grand Prix Races", "15" ],
+          [ "Grand Prix Points", "105" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "2" ],
           [ "Grand Prix Poles", "0" ],
-          [ "Grand Prix Top 10s", "11" ],
+          [ "Grand Prix Top 10s", "12" ],
           [ "DHL Fastest Laps", "0" ],
           [ "DNFs", "2" ],
           [ "Sprint Races", "5" ],
@@ -1988,11 +2012,11 @@ window.F1DATA = {
           [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "37" ],
-          [ "Career Points", "148" ],
+          [ "Grands Prix Entered", "38" ],
+          [ "Career Points", "156" ],
           [ "Highest Race Finish", "3 (x3)" ],
           [ "Podiums", "3" ],
-          [ "Highest Grid Position", "3 (x1)" ],
+          [ "Highest Grid Position", "3 (x2)" ],
           [ "Pole Positions", "0" ],
           [ "World Championships", "0" ],
           [ "DNFs", "5" ]
@@ -2015,13 +2039,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/liam-lawson",
         "season": [
           [ "Season Position", "9th" ],
-          [ "Season Points", "75" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "68" ],
+          [ "Season Points", "77" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "70" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
           [ "Grand Prix Poles", "0" ],
-          [ "Grand Prix Top 10s", "12" ],
+          [ "Grand Prix Top 10s", "13" ],
           [ "DHL Fastest Laps", "0" ],
           [ "DNFs", "1" ],
           [ "Sprint Races", "6" ],
@@ -2032,8 +2056,8 @@ window.F1DATA = {
           [ "Sprint Top 10s", "3" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "52" ],
-          [ "Career Points", "119" ],
+          [ "Grands Prix Entered", "53" ],
+          [ "Career Points", "121" ],
           [ "Highest Race Finish", "5 (x2)" ],
           [ "Podiums", "0" ],
           [ "Highest Grid Position", "3 (x1)" ],
@@ -2059,13 +2083,13 @@ window.F1DATA = {
         "url": "https://www.formula1.com/en/drivers/pierre-gasly",
         "season": [
           [ "Season Position", "10th" ],
-          [ "Season Points", "41" ],
-          [ "Grand Prix Races", "17" ],
-          [ "Grand Prix Points", "39" ],
+          [ "Season Points", "42" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "40" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
           [ "Grand Prix Poles", "1" ],
-          [ "Grand Prix Top 10s", "9" ],
+          [ "Grand Prix Top 10s", "10" ],
           [ "DHL Fastest Laps", "0" ],
           [ "DNFs", "2" ],
           [ "Sprint Races", "6" ],
@@ -2076,8 +2100,8 @@ window.F1DATA = {
           [ "Sprint Top 10s", "3" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "194" ],
-          [ "Career Points", "499" ],
+          [ "Grands Prix Entered", "195" ],
+          [ "Career Points", "500" ],
           [ "Highest Race Finish", "1 (x1)" ],
           [ "Podiums", "5" ],
           [ "Highest Grid Position", "1 (x1)" ],
@@ -2104,7 +2128,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "11th" ],
           [ "Season Points", "38" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "37" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2120,7 +2144,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "3" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "16" ],
+          [ "Grands Prix Entered", "17" ],
           [ "Career Points", "38" ],
           [ "Highest Race Finish", "6 (x1)" ],
           [ "Podiums", "0" ],
@@ -2148,14 +2172,14 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "12th" ],
           [ "Season Points", "27" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "27" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
           [ "Grand Prix Poles", "0" ],
           [ "Grand Prix Top 10s", "8" ],
           [ "DHL Fastest Laps", "0" ],
-          [ "DNFs", "2" ],
+          [ "DNFs", "3" ],
           [ "Sprint Races", "6" ],
           [ "Sprint Points", "0" ],
           [ "Sprint Wins", "0" ],
@@ -2164,14 +2188,14 @@ window.F1DATA = {
           [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "43" ],
+          [ "Grands Prix Entered", "44" ],
           [ "Career Points", "32" ],
           [ "Highest Race Finish", "6 (x1)" ],
           [ "Podiums", "0" ],
           [ "Highest Grid Position", "7 (x1)" ],
           [ "Pole Positions", "0" ],
           [ "World Championships", "0" ],
-          [ "DNFs", "7" ]
+          [ "DNFs", "8" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/alpine/fracol01/2026alpinefracol01right.webp",
         "country": "Argentina",
@@ -2192,14 +2216,14 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "13th" ],
           [ "Season Points", "23" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "19" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
           [ "Grand Prix Poles", "0" ],
           [ "Grand Prix Top 10s", "4" ],
           [ "DHL Fastest Laps", "0" ],
-          [ "DNFs", "4" ],
+          [ "DNFs", "5" ],
           [ "Sprint Races", "6" ],
           [ "Sprint Points", "4" ],
           [ "Sprint Wins", "0" ],
@@ -2208,14 +2232,14 @@ window.F1DATA = {
           [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "44" ],
+          [ "Grands Prix Entered", "45" ],
           [ "Career Points", "71" ],
           [ "Highest Race Finish", "4 (x1)" ],
           [ "Podiums", "0" ],
           [ "Highest Grid Position", "8 (x2)" ],
           [ "Pole Positions", "0" ],
           [ "World Championships", "0" ],
-          [ "DNFs", "7" ]
+          [ "DNFs", "8" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/haas/olibea01/2026haasolibea01right.webp",
         "country": "Great Britain",
@@ -2236,7 +2260,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "14th" ],
           [ "Season Points", "13" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "11" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2252,7 +2276,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "266" ],
+          [ "Grands Prix Entered", "267" ],
           [ "Career Points", "635" ],
           [ "Highest Race Finish", "3 (x1)" ],
           [ "Podiums", "1" ],
@@ -2280,7 +2304,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "15th" ],
           [ "Season Points", "10" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "10" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2296,7 +2320,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "40" ],
+          [ "Grands Prix Entered", "41" ],
           [ "Career Points", "29" ],
           [ "Highest Race Finish", "6 (x1)" ],
           [ "Podiums", "0" ],
@@ -2324,7 +2348,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "16th" ],
           [ "Season Points", "7" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "7" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2340,7 +2364,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "2" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "197" ],
+          [ "Grands Prix Entered", "198" ],
           [ "Career Points", "490" ],
           [ "Highest Race Finish", "1 (x1)" ],
           [ "Podiums", "4" ],
@@ -2368,7 +2392,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "17th" ],
           [ "Season Points", "7" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "7" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2384,7 +2408,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "444" ],
+          [ "Grands Prix Entered", "445" ],
           [ "Career Points", "2400" ],
           [ "Highest Race Finish", "1 (x32)" ],
           [ "Podiums", "106" ],
@@ -2412,7 +2436,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "18th" ],
           [ "Season Points", "7" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "7" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2428,7 +2452,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "1" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "246" ],
+          [ "Grands Prix Entered", "247" ],
           [ "Career Points", "1343.5" ],
           [ "Highest Race Finish", "1 (x4)" ],
           [ "Podiums", "29" ],
@@ -2456,7 +2480,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "19th" ],
           [ "Season Points", "5" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "5" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2472,7 +2496,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "144" ],
+          [ "Grands Prix Entered", "145" ],
           [ "Career Points", "318" ],
           [ "Highest Race Finish", "3 (x2)" ],
           [ "Podiums", "2" ],
@@ -2501,7 +2525,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "21st" ],
           [ "Season Points", "0" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "0" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2517,7 +2541,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "206" ],
+          [ "Grands Prix Entered", "207" ],
           [ "Career Points", "325" ],
           [ "Highest Race Finish", "3 (x3)" ],
           [ "Podiums", "3" ],
@@ -2545,14 +2569,14 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "22nd" ],
           [ "Season Points", "0" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "0" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
           [ "Grand Prix Poles", "0" ],
           [ "Grand Prix Top 10s", "0" ],
           [ "DHL Fastest Laps", "0" ],
-          [ "DNFs", "8" ],
+          [ "DNFs", "9" ],
           [ "Sprint Races", "6" ],
           [ "Sprint Points", "0" ],
           [ "Sprint Wins", "0" ],
@@ -2561,14 +2585,14 @@ window.F1DATA = {
           [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "263" ],
+          [ "Grands Prix Entered", "264" ],
           [ "Career Points", "1797" ],
           [ "Highest Race Finish", "1 (x10)" ],
           [ "Podiums", "67" ],
           [ "Highest Grid Position", "1 (x20)" ],
           [ "Pole Positions", "20" ],
           [ "World Championships", "0" ],
-          [ "DNFs", "38" ]
+          [ "DNFs", "39" ]
         ],
         "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/cadillac/valbot01/2026cadillacvalbot01right.webp",
         "country": "Finland",
@@ -2589,7 +2613,7 @@ window.F1DATA = {
         "season": [
           [ "Season Position", "23rd" ],
           [ "Season Points", "0" ],
-          [ "Grand Prix Races", "17" ],
+          [ "Grand Prix Races", "18" ],
           [ "Grand Prix Points", "0" ],
           [ "Grand Prix Wins", "0" ],
           [ "Grand Prix Podiums", "0" ],
@@ -2605,7 +2629,7 @@ window.F1DATA = {
           [ "Sprint Top 10s", "0" ]
         ],
         "career": [
-          [ "Grands Prix Entered", "298" ],
+          [ "Grands Prix Entered", "299" ],
           [ "Career Points", "1638" ],
           [ "Highest Race Finish", "1 (x6)" ],
           [ "Podiums", "39" ],
@@ -2619,6 +2643,7 @@ window.F1DATA = {
         "dob": "26/01/1990",
         "birthplace": "Guadalajara, Mexico"
       }
-    }
+    },
+    { "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "number": "50", "nat": "JPN", "nationality": "Japanese", "team": "haas", "pts": 0, "roster": false }
   ]
 };
