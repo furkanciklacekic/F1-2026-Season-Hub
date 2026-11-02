@@ -1531,17 +1531,17 @@ window.F1DATA = {
         { "pos": "4", "id": "leclerc", "name": "Charles Leclerc", "team": "ferrari", "grid": 3, "laps": 71, "time": "+10.707s", "pts": 12 },
         { "pos": "5", "id": "norris", "name": "Lando Norris", "team": "mclaren", "grid": 6, "laps": 71, "time": "+11.778s", "pts": 10 },
         { "pos": "6", "id": "russell", "name": "George Russell", "team": "mercedes", "grid": 2, "laps": 71, "time": "+12.263s", "pts": 8 },
-        { "pos": "7", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 12, "laps": 71, "time": "+19.475s", "pts": 6 },
-        { "pos": "8", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 11, "laps": 71, "time": "+20.204s", "pts": 4 },
-        { "pos": "9", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 22, "laps": 71, "time": "+20.899s", "pts": 2 },
-        { "pos": "10", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 9, "laps": 71, "time": "+21.483s", "pts": 1 },
-        { "pos": "11", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 13, "laps": 71, "time": "+22.041s", "pts": 0 },
-        { "pos": "12", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 7, "laps": 71, "time": "+22.503s", "pts": 0 },
-        { "pos": "13", "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "team": "haas", "grid": 18, "laps": 71, "time": "+25.373s", "pts": 0 },
-        { "pos": "14", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 16, "laps": 71, "time": "+27.562s", "pts": 0 },
-        { "pos": "15", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 15, "laps": 71, "time": "+28.638s", "pts": 0 },
-        { "pos": "16", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 10, "laps": 71, "time": "+29.977s", "pts": 0 },
-        { "pos": "17", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 71, "time": "+30.695s", "pts": 0 },
+        { "pos": "7", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "grid": 22, "laps": 71, "time": "+20.899s", "pts": 6 },
+        { "pos": "8", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "grid": 13, "laps": 71, "time": "+22.041s", "pts": 4 },
+        { "pos": "9", "id": "hadjar", "name": "Isack Hadjar", "team": "redbull", "grid": 7, "laps": 71, "time": "+22.503s", "pts": 2 },
+        { "pos": "10", "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "team": "haas", "grid": 18, "laps": 71, "time": "+25.373s", "pts": 1 },
+        { "pos": "11", "id": "albon", "name": "Alexander Albon", "team": "williams", "grid": 16, "laps": 71, "time": "+27.562s", "pts": 0 },
+        { "pos": "12", "id": "sainz", "name": "Carlos Sainz", "team": "williams", "grid": 15, "laps": 71, "time": "+28.638s", "pts": 0 },
+        { "pos": "13", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "grid": 12, "laps": 71, "time": "+29.475s", "pts": 0 },
+        { "pos": "14", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "grid": 10, "laps": 71, "time": "+29.977s", "pts": 0 },
+        { "pos": "15", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "grid": 11, "laps": 71, "time": "+30.204s", "pts": 0 },
+        { "pos": "16", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "grid": 20, "laps": 71, "time": "+30.695s", "pts": 0 },
+        { "pos": "17", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "grid": 9, "laps": 71, "time": "+51.483s", "pts": 0 },
         { "pos": "NC", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "grid": 8, "laps": 58, "time": "DNF", "pts": 0 },
         { "pos": "NC", "id": "bearman", "name": "Oliver Bearman", "team": "haas", "grid": 14, "laps": 47, "time": "DNF", "pts": 0 },
         { "pos": "NC", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "grid": 21, "laps": 42, "time": "DNF", "pts": 0 },
@@ -1691,12 +1691,12 @@ window.F1DATA = {
   "teams": [
     { "key": "mercedes", "name": "Mercedes", "pts": 630, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.webp" },
     { "key": "ferrari", "name": "Ferrari", "pts": 504, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/ferrari/2026ferraricarright.webp" },
-    { "key": "redbull", "name": "Red Bull Racing", "pts": 380, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp" },
-    { "key": "mclaren", "name": "McLaren", "pts": 371, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp" },
-    { "key": "racingbulls", "name": "Racing Bulls", "pts": 104, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp" },
-    { "key": "alpine", "name": "Alpine", "pts": 74, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.webp" },
-    { "key": "haas", "name": "Haas F1 Team", "pts": 30, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.webp" },
-    { "key": "audi", "name": "Audi", "pts": 23, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/audi/2026audicarright.webp" },
+    { "key": "redbull", "name": "Red Bull Racing", "pts": 382, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp" },
+    { "key": "mclaren", "name": "McLaren", "pts": 365, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp" },
+    { "key": "racingbulls", "name": "Racing Bulls", "pts": 108, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp" },
+    { "key": "alpine", "name": "Alpine", "pts": 69, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.webp" },
+    { "key": "haas", "name": "Haas F1 Team", "pts": 31, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.webp" },
+    { "key": "audi", "name": "Audi", "pts": 27, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/audi/2026audicarright.webp" },
     { "key": "williams", "name": "Williams", "pts": 12, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/williams/2026williamscarright.webp" },
     { "key": "astonmartin", "name": "Aston Martin", "pts": 7, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/astonmartin/2026astonmartincarright.webp" },
     { "key": "cadillac", "name": "Cadillac", "pts": 0, "car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/cadillac/2026cadillaccarright.webp" }
@@ -1973,7 +1973,7 @@ window.F1DATA = {
       "nat": "AUS",
       "nationality": "Australian",
       "team": "mclaren",
-      "pts": 150,
+      "pts": 144,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/oscar-piastri",
         "season": [
@@ -2017,7 +2017,7 @@ window.F1DATA = {
       "nat": "FRA",
       "nationality": "French",
       "team": "redbull",
-      "pts": 105,
+      "pts": 107,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/isack-hadjar",
         "season": [
@@ -2061,7 +2061,7 @@ window.F1DATA = {
       "nat": "NZL",
       "nationality": "New Zealander",
       "team": "racingbulls",
-      "pts": 79,
+      "pts": 83,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/liam-lawson",
         "season": [
@@ -2105,7 +2105,7 @@ window.F1DATA = {
       "nat": "FRA",
       "nationality": "French",
       "team": "alpine",
-      "pts": 43,
+      "pts": 42,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/pierre-gasly",
         "season": [
@@ -2193,7 +2193,7 @@ window.F1DATA = {
       "nat": "ARG",
       "nationality": "Argentine",
       "team": "alpine",
-      "pts": 31,
+      "pts": 27,
       "profile": {
         "url": "https://www.formula1.com/en/drivers/franco-colapinto",
         "season": [
@@ -2275,6 +2275,50 @@ window.F1DATA = {
       }
     },
     {
+      "id": "bortoleto",
+      "name": "Gabriel Bortoleto",
+      "number": "5",
+      "nat": "BRA",
+      "nationality": "Brazilian",
+      "team": "audi",
+      "pts": 14,
+      "profile": {
+        "url": "https://www.formula1.com/en/drivers/gabriel-bortoleto",
+        "season": [
+          [ "Season Position", "15th" ],
+          [ "Season Points", "10" ],
+          [ "Grand Prix Races", "18" ],
+          [ "Grand Prix Points", "10" ],
+          [ "Grand Prix Wins", "0" ],
+          [ "Grand Prix Podiums", "0" ],
+          [ "Grand Prix Poles", "0" ],
+          [ "Grand Prix Top 10s", "3" ],
+          [ "DHL Fastest Laps", "0" ],
+          [ "DNFs", "1" ],
+          [ "Sprint Races", "6" ],
+          [ "Sprint Points", "0" ],
+          [ "Sprint Wins", "0" ],
+          [ "Sprint Podiums", "0" ],
+          [ "Sprint Poles", "0" ],
+          [ "Sprint Top 10s", "1" ]
+        ],
+        "career": [
+          [ "Grands Prix Entered", "41" ],
+          [ "Career Points", "29" ],
+          [ "Highest Race Finish", "6 (x1)" ],
+          [ "Podiums", "0" ],
+          [ "Highest Grid Position", "7 (x3)" ],
+          [ "Pole Positions", "0" ],
+          [ "World Championships", "0" ],
+          [ "DNFs", "8" ]
+        ],
+        "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/audi/gabbor01/2026audigabbor01right.webp",
+        "country": "Brazil",
+        "dob": "14/10/2004",
+        "birthplace": "São Paulo, Brazil"
+      }
+    },
+    {
       "id": "hulkenberg",
       "name": "Nico Hülkenberg",
       "number": "27",
@@ -2316,50 +2360,6 @@ window.F1DATA = {
         "country": "Germany",
         "dob": "19/08/1987",
         "birthplace": "Emmerich am Rhein, Germany"
-      }
-    },
-    {
-      "id": "bortoleto",
-      "name": "Gabriel Bortoleto",
-      "number": "5",
-      "nat": "BRA",
-      "nationality": "Brazilian",
-      "team": "audi",
-      "pts": 10,
-      "profile": {
-        "url": "https://www.formula1.com/en/drivers/gabriel-bortoleto",
-        "season": [
-          [ "Season Position", "15th" ],
-          [ "Season Points", "10" ],
-          [ "Grand Prix Races", "18" ],
-          [ "Grand Prix Points", "10" ],
-          [ "Grand Prix Wins", "0" ],
-          [ "Grand Prix Podiums", "0" ],
-          [ "Grand Prix Poles", "0" ],
-          [ "Grand Prix Top 10s", "3" ],
-          [ "DHL Fastest Laps", "0" ],
-          [ "DNFs", "1" ],
-          [ "Sprint Races", "6" ],
-          [ "Sprint Points", "0" ],
-          [ "Sprint Wins", "0" ],
-          [ "Sprint Podiums", "0" ],
-          [ "Sprint Poles", "0" ],
-          [ "Sprint Top 10s", "1" ]
-        ],
-        "career": [
-          [ "Grands Prix Entered", "41" ],
-          [ "Career Points", "29" ],
-          [ "Highest Race Finish", "6 (x1)" ],
-          [ "Podiums", "0" ],
-          [ "Highest Grid Position", "7 (x3)" ],
-          [ "Pole Positions", "0" ],
-          [ "World Championships", "0" ],
-          [ "DNFs", "8" ]
-        ],
-        "photo": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/audi/gabbor01/2026audigabbor01right.webp",
-        "country": "Brazil",
-        "dob": "14/10/2004",
-        "birthplace": "São Paulo, Brazil"
       }
     },
     {
@@ -2540,6 +2540,7 @@ window.F1DATA = {
       }
     },
     { "id": "tsunoda", "name": "Yuki Tsunoda", "number": "22", "nat": "JPN", "nationality": "Japanese", "team": "racingbulls", "pts": 1, "roster": false },
+    { "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "number": "50", "nat": "JPN", "nationality": "Japanese", "team": "haas", "pts": 1 },
     {
       "id": "stroll",
       "name": "Lance Stroll",
@@ -2628,7 +2629,6 @@ window.F1DATA = {
         "birthplace": "Nastola, Finland"
       }
     },
-    { "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "number": "50", "nat": "JPN", "nationality": "Japanese", "team": "haas", "pts": 0 },
     {
       "id": "perez",
       "name": "Sergio Pérez",
