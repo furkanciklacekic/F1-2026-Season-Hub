@@ -1548,6 +1548,7 @@ window.F1DATA = {
         { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:19.105" },
         { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:19.852" }
       ],
+      "yt": "tIiRK7hKScU",
       "track": {
         "url": "https://www.formula1.com/en/racing/2026/mexico",
         "map": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp",
