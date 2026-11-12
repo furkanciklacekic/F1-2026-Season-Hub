@@ -1561,7 +1561,6 @@ window.F1DATA = {
         { "pos": "12", "id": "piastri", "name": "Oscar Piastri", "team": "mclaren", "q1": "1:17.659", "q2": "1:17.646" },
         { "pos": "13", "id": "bortoleto", "name": "Gabriel Bortoleto", "team": "audi", "q1": "1:17.727", "q2": "1:17.680" },
         { "pos": "8", "id": "arvid_lindblad", "name": "Arvid Lindblad", "team": "racingbulls", "q1": "1:18.210", "q2": "1:17.135", "q3": "1:17.117" },
-        { "pos": "8", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls", "q2": "1:17.207", "q3": "1:17.029" },
         { "pos": "9", "id": "gasly", "name": "Pierre Gasly", "team": "alpine", "q1": "1:18.194", "q2": "1:17.278", "q3": "1:17.153" },
         { "pos": "10", "id": "hulkenberg", "name": "Nico Hülkenberg", "team": "audi", "q1": "1:17.868", "q2": "1:17.306" },
         { "pos": "11", "id": "colapinto", "name": "Franco Colapinto", "team": "alpine", "q1": "1:18.517", "q2": "1:17.640" },
@@ -1572,7 +1571,8 @@ window.F1DATA = {
         { "pos": "18", "id": "ryo_hirakawa", "name": "Ryo Hirakawa", "team": "haas", "q1": "1:18.958" },
         { "pos": "19", "id": "stroll", "name": "Lance Stroll", "team": "astonmartin", "q1": "1:19.072" },
         { "pos": "20", "id": "perez", "name": "Sergio Pérez", "team": "cadillac", "q1": "1:19.105" },
-        { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:19.852" }
+        { "pos": "21", "id": "bottas", "name": "Valtteri Bottas", "team": "cadillac", "q1": "1:19.852" },
+        { "pos": "22", "id": "lawson", "name": "Liam Lawson", "team": "racingbulls" }
       ],
       "yt": "tIiRK7hKScU",
       "track": {
